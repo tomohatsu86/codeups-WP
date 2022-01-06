@@ -1,0 +1,13 @@
+.c-logo{
+  width: rem(70);
+  position: relative;
+  z-index: 9999;
+  
+  @include mq("tab"){
+    width: rem(94);
+  }
+}
+
+.c-logo__link img{
+  display: block;
+}
