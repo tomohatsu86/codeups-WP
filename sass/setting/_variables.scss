@@ -1,18 +1,20 @@
 // 色
 $background: #111; // 背景
-$background-white: #fff; // 背景白
-$background-black: #333; // 背景白
+// $background-white: #fff; // 背景白
+// $background-black: #333; // 背景白
 $text-color: #fff; // テキスト色
-$text-color-black: #333; // テキスト色-黒
-
+// $text-color-black: #333; // テキスト色-黒
+$black: #333;
+$black2: #111;
+$white: #fff;
 
 // マウスホバー
 $opacity: 0.7; // 透過度
 $hover-opacity: 0.8;
 
 // フォント
-$font-family-base: "Noto Sans JP",sans-serif;// ベースフォント
-$font-family-sub: "Noto Serif JP",serif;// ベースフォント
+$base-font-family: "Noto Sans JP",sans-serif;// ベースフォント
+$second-font-family: "Noto Serif JP",serif;// ベースフォント
 $font-size-base: 16px; // ベースフォントサイズ
 $font-weight-base: 400; // ベースフォントウェイト
 

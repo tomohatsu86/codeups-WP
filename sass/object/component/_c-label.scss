@@ -1,0 +1,14 @@
+.c-label{
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+  letter-spacing: 0;
+  color: $white;
+  text-align: center;
+  padding: rem(5) rem(22);
+  border: rem(1) solid $white;
+  
+  @include mq("tab"){
+    font-size: rem(14);
+  }
+}

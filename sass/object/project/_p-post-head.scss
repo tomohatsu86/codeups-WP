@@ -1,0 +1,10 @@
+.p-post-head{
+  width: rem(211);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mq("tab"){
+    width: rem(227);
+  }
+}

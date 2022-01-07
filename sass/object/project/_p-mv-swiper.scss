@@ -1,0 +1,28 @@
+/* メインビューのSwiperのcss */
+@keyframes zoomUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+.swiper-slide-active .p-mv-slide-img,
+.swiper-slide-duplicate-active .p-mv-slide-img,
+.swiper-slide-prev .p-mv-slide-img{
+  animation: zoomUp 10s linear 0s 1 normal both;  
+}
+
+.swiper .p-mv-slide-img{
+  width: 100%;
+  height: inherit;
+}
+
+.swiper .p-mv-slide-img img{
+  display: block;
+  width: 100%;
+  height: inherit;
+  object-position: 50% 50%;
+  object-fit: cover;
+}

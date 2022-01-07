@@ -1,0 +1,62 @@
+.p-mv{
+  width: 100%;
+  height: 100vh;
+  height: (770 / 375) * 100vw;
+  
+  @include mq("tab"){
+    height: (851 / 1280) * 100vw;
+  }
+}
+
+.p-mv__container{
+  width: 100%;
+  height: inherit;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.p-mv__container::after{
+  content: "";
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(17, 17, 17, 0.2);
+}
+
+.p-mv__text{
+  font-family: $base-font-family;
+  font-weight: $bold;
+  letter-spacing: rem(0.5);
+  line-height: 1.0;
+  color: $white;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 5;
+}
+
+.p-mv__title{
+  font-size: rem(28);
+  display: block;
+  
+  @include mq("tab"){
+    font-size: rem(50);
+  }
+}
+
+.p-mv__sub-title{
+  font-size: rem(20);
+  display: block;
+  margin-top: rem(24);
+
+  @include mq("tab"){
+    font-size: rem(25);
+  }
+}

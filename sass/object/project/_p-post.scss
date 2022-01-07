@@ -1,0 +1,28 @@
+.p-post{
+  width: 100%;
+
+  @include mq("tab"){
+    width: rem(860);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.p-post__body{
+  max-width: rem(572);
+  margin-top: rem(10);
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+  letter-spacing: rem(0);
+  color: $white;
+
+  @include mq("tab"){
+    margin: 0;
+  }
+}
+
+.p-post__body a{
+  display: block;
+}
