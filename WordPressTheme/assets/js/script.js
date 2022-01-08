@@ -21,6 +21,7 @@ jQuery(function() {
 	// 	jQuery("." + targetClass).toggleClass("is-checked");
 	// 	return false;
 	// });
+	
   $("#menu-button").on('click',function () {
     if($('.js-drawer-open').hasClass('is-open')){
       $('.js-drawer-menu').fadeOut(300);

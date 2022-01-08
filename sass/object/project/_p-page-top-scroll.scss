@@ -1,0 +1,11 @@
+.p-page-top-scroll__btn{
+  position: fixed;
+  bottom: rem(44);
+  right: rem(21);
+  z-index: 99999;
+
+  @include mq("tab"){
+    bottom: rem(32);
+    right: rem(31);
+  }
+}

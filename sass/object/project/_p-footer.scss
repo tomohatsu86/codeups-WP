@@ -1,0 +1,52 @@
+.p-footer{
+  width: 100%;
+}
+
+.p-footer__inner{
+  width: 100%;
+  padding: 0 $padding-sp;
+  margin: 0 auto;
+
+  @include mq("tab") {
+    max-width: rem(1312);
+    padding-right: 0;
+    padding-left: $padding-pc;
+  }
+
+}
+
+.p-footer__contents{
+
+  @include mq("tab"){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.p-footer__logo{
+  width: rem(70);
+  margin: 0 auto;
+
+  @include mq("tab"){
+    margin: 0;
+  }
+}
+
+.p-footer__copyright{
+  margin-top: rem(25);
+  margin-bottom: rem(63);
+  font-family: $base-font-family;
+  font-size: rem(11);
+  font-weight: $regular;
+  color: $white;
+  letter-spacing: rem(1.2);
+  text-align: center;
+
+  @include mq("tab"){
+    margin-top: rem(65);
+    margin-bottom: rem(31);
+    font-size: rem(15);
+  }
+
+}

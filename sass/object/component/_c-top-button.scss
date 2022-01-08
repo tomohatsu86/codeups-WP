@@ -1,0 +1,29 @@
+.c-top-btn{
+  width: rem(45);
+  height: rem(45);
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+}
+
+.c-top-btn:hover{
+  background-color: $black;
+}
+
+.c-top-btn::after{
+  content: "";
+  display: block;
+  width: rem(17);
+  height: rem(17);
+  border-top: rem(2) solid $black;
+  border-right: rem(2) solid $black;
+  transform:  translateY(6px) rotate(-45deg);
+  transition: .3s;
+}
+
+.c-top-btn:hover:after{
+  border-top: rem(2) solid $white;
+  border-right: rem(2) solid $white;
+}

@@ -1,0 +1,45 @@
+.p-sp-footer-nav{
+  width: 100%;
+  background-color: #111;
+
+  @include mq("tab"){
+    display: none;
+  }
+}
+
+.p-sp-footer-nav__items{
+  width: 100%;
+
+}
+
+.p-sp-footer-nav__item a{
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+  color: $white;
+  letter-spacing: rem(1.2);
+  text-align: center;
+  display: block;
+  padding: rem(4) 0;
+  position: relative;
+}
+
+.p-sp-footer-nav__item a::after{
+  content: "";
+  display: block;
+  height: 1px;
+  width: 0;
+  background: #FFEA2E;
+  position: absolute;
+  bottom: rem(2);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: .3s;
+}
+
+.p-sp-footer-nav__item a:hover:after{
+    width: 20%;
+}
+
+
+

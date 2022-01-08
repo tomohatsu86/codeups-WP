@@ -1,0 +1,7 @@
+.l-footer-top{
+  margin-top: rem(51);
+  
+  @include mq("tab"){
+    margin-top: rem(21);
+  }
+}
