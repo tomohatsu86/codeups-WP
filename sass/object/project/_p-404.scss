@@ -1,0 +1,36 @@
+.p-page-404__wrapper{
+  width: 100%;
+  text-align: center;
+  padding-top: rem(130);
+  padding-bottom: rem(110);
+  
+  @include mq("tab"){
+    padding-top: rem(200);
+    padding-bottom: rem(110);
+  }
+}
+
+.p-page-404__title{
+  font-family: $base-font-family;
+  font-size: rem(40);
+  font-weight: $regular;
+  color: #FFEA2E;
+  opacity: 0.3;
+  
+}
+
+.p-page-404__text{
+  font-family: $base-font-family;
+  font-size: rem(20);
+  font-weight: $regular;
+  color: $white;
+  margin-top: rem(80);
+  
+  @include mq("tab"){
+    font-size: rem(30);
+  }
+}
+
+.p-page-404__btn{
+  margin-top: rem(80);
+}

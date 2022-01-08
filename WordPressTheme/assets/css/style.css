@@ -592,9 +592,7 @@ summary {
 }
 
 .l-inner {
-	height: inherit;
 	margin: 0 auto;
-	max-width: 33.75rem;
 	padding-left: 20px;
 	padding-right: 20px;
 	width: 100%;
@@ -643,6 +641,48 @@ summary {
 }
 
 .c-btn-all:active {
+	top: 2px;
+}
+
+.c-btn-more {
+	background-color: #333;
+	border: 0.0625rem solid #fff;
+	color: #fff;
+	display: inline-block;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1.25rem;
+	font-weight: 300;
+	letter-spacing: 0.125rem;
+	max-width: 20.9375rem;
+	padding: 0.5625rem 0rem;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	z-index: 1;
+}
+
+.c-btn-more::after {
+	background-color: #fff;
+	content: "";
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: all 0.3s ease-in;
+	width: 0;
+	z-index: -1;
+}
+
+.c-btn-more:hover {
+	color: #333;
+}
+
+.c-btn-more:hover::after {
+	left: 0;
+	width: 100%;
+}
+
+.c-btn-more:active {
 	top: 2px;
 }
 
@@ -753,6 +793,33 @@ summary {
 	border-top: 0.125rem solid #fff;
 }
 
+.p-page-404__wrapper {
+	padding-bottom: 6.875rem;
+	padding-top: 8.125rem;
+	text-align: center;
+	width: 100%;
+}
+
+.p-page-404__title {
+	color: #FFEA2E;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 2.5rem;
+	font-weight: 300;
+	opacity: 0.3;
+}
+
+.p-page-404__text {
+	color: #fff;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1.25rem;
+	font-weight: 300;
+	margin-top: 5rem;
+}
+
+.p-page-404__btn {
+	margin-top: 5rem;
+}
+
 .p-footer {
 	width: 100%;
 }
@@ -835,15 +902,14 @@ summary {
 }
 
 .p-mv {
-	height: 100vh;
 	height: 205.33333vw;
+	position: relative;
 	width: 100%;
 }
 
 .p-mv__container {
 	height: inherit;
 	overflow: hidden;
-	position: relative;
 	width: 100%;
 }
 
@@ -1089,6 +1155,7 @@ summary {
 	display: none;
 	height: 100vh;
 	left: 0;
+	overflow: scroll;
 	position: absolute;
 	top: 0;
 	width: 100%;
@@ -1100,10 +1167,12 @@ summary {
 }
 
 .p-sp-global-nav__items {
-	left: 50%;
+	left: 0;
+	padding-bottom: 6.25rem;
+	padding-top: 13.0625rem;
 	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%);
+	right: 0;
+	top: 0;
 	width: 100%;
 }
 
@@ -1205,6 +1274,13 @@ html {
 	color: #fff;
 }
 
+.c-btn-more {
+	font-size: 1rem;
+	letter-spacing: 0rem;
+	max-width: 22.5rem;
+	padding: 1.0625rem 0rem;
+}
+
 .c-label {
 	font-size: 0.875rem;
 }
@@ -1216,6 +1292,15 @@ html {
 .c-test {
 	color: green;
 	font-size: 3.125rem;
+}
+
+.p-page-404__wrapper {
+	padding-bottom: 6.875rem;
+	padding-top: 12.5rem;
+}
+
+.p-page-404__text {
+	font-size: 1.875rem;
 }
 
 .p-footer__inner {

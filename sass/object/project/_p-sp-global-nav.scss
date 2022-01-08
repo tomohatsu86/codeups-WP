@@ -7,7 +7,7 @@
   height: 100vh;
   background-color: #111;
   z-index: 8888;
-  
+  overflow: scroll;
 }
 
 .p-sp-global-nav.is-open{
@@ -17,9 +17,11 @@
 .p-sp-global-nav__items{
   width: 100%;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: rem(209);
+  padding-bottom: rem(100);
 
 }
 

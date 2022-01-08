@@ -2,13 +2,13 @@
   <div class="p-footer__inner">
     <div class="p-footer__contents">
       <div class="p-footer__logo">
-        <a href="<?php echo home_url(); ?>" class="logo__link">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo__link">
           <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/logo/CodeUps.svg" alt="ロゴ">
         </a>
       </div>
       <div class="p-footer__content p-sp-footer-nav">
         <ul class="p-sp-footer-nav__items">
-          <li class="p-sp-footer-nav__item"><a href="<?php echo home_url(); ?>">トップ</a></li>
+          <li class="p-sp-footer-nav__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">トップ</a></li>
           <li class="p-sp-footer-nav__item"><a href="<?php echo get_template_directory_uri() ?>/archive-news.html">お知らせ</a></li>
           <li class="p-sp-footer-nav__item"><a href="<?php echo get_template_directory_uri() ?>/page-content.html">事業内容</a></li>
           <li class="p-sp-footer-nav__item"><a href="<?php echo get_template_directory_uri() ?>/page-overview.html">企業概要</a></li>
