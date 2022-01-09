@@ -20,7 +20,22 @@
       </h1>
       
       <!-- PC-グローバルナビ -->
-      <div class="p-header-nav p-pc-global-nav">
+      <?php
+      $defaults = array(
+        'theme_location'  => 'global',
+        'depth'           => 1,
+        'container'       => 'nav',
+        'container_id'    => false,
+        'container_class' => 'p-header-nav p-pc-global-nav',
+        'menu_class'      => 'p-pc-global-nav__items',//ulのクラス
+        'menu_id'         => false,
+        'add_li_class'    => 'p-pc-global-nav__item', // liタグへclass追加
+        'add_a_class'     => 'nav-link' // aタグへclass追加
+      );
+      wp_nav_menu( $defaults );
+      ?>
+
+      <!-- <div class="p-header-nav p-pc-global-nav">
         <ul class="p-pc-global-nav__items">
           <li class="p-pc-global-nav__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">トップ</a></li>
           <li class="p-pc-global-nav__item"><a href="<?php echo get_template_directory_uri() ?>/archive-news.php">お知らせ</a></li>
@@ -30,7 +45,7 @@
           <li class="p-pc-global-nav__item"><a href="<?php echo get_template_directory_uri() ?>/archive-blog.php">ブログ</a></li>
           <li class="p-pc-global-nav__item p-pc-global-nav__item--white"><a href="<?php echo get_template_directory_uri() ?>/page-contact.php">お問い合わせ</a></li>
         </ul>
-      </div>
+      </div> -->
 
       <!-- ドロワーメニューボタン -->
       <button class="p-header__drawer c-hamburger js-drawer-open" id="menu-button">
@@ -41,7 +56,22 @@
     </div>
     
     <!-- sp-グローバルナビ -->
-    <div class="p-header-nav p-sp-global-nav js-drawer-menu">
+    <?php
+      $defaults = array(
+        'theme_location'  => 'drawer',
+        'depth'           => 1,
+        'container'       => 'nav',
+        'container_id'    => false,
+        'container_class' => 'p-header-nav p-sp-global-nav js-drawer-menu',
+        'menu_class'      => 'p-sp-global-nav__items',//ulのクラス
+        'menu_id'         => false,
+        'add_li_class'    => 'p-sp-global-nav__item', // liタグへclass追加
+        'add_a_class'     => 'nav-link' // aタグへclass追加
+      );
+      wp_nav_menu( $defaults );
+      ?>
+
+    <!-- <div class="p-header-nav p-sp-global-nav js-drawer-menu">
       <ul class="p-sp-global-nav__items">
         <li class="p-sp-global-nav__item"><a href="<?php echo home_url(); ?>">トップ</a></li>
         <li class="p-sp-global-nav__item"><a href="<?php echo home_url( '/archive-news/'); ?>">お知らせ</a></li>
@@ -51,6 +81,6 @@
         <li class="p-sp-global-nav__item"><a href="<?php echo get_template_directory_uri() ?>/archive-blog.php">ブログ</a></li>
         <li class="p-sp-global-nav__item"><a href="<?php echo get_template_directory_uri() ?>/page-contact.php">お問い合わせ</a></li>
       </ul>
-    </div>
+    </div> -->
 
   </header>

@@ -5,7 +5,7 @@
     width: rem(860);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
   }
 }
 
@@ -17,9 +17,10 @@
   font-weight: $regular;
   letter-spacing: rem(0);
   color: $white;
-
+  margin: 0;
+  
   @include mq("tab"){
-    margin: 0;
+    margin-left: rem(61);
   }
 }
 

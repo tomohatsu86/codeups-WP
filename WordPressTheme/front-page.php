@@ -56,7 +56,6 @@ $contact = esc_url( home_url( '/contact/' ) );
         <?php if ( $news_query->have_posts() ) : ?>
         <?php while ( $news_query->have_posts() ) : ?>
         <?php $news_query->the_post(); ?>
-
         <li class="p-posts__item p-post">
           <div class="p-post__header p-post-head">
             <time class="p-post-head__date c-date" datetime="<?php the_time( 'c' ); ?>"><?php the_time('Y.m.d'); ?></time>
@@ -66,7 +65,6 @@ $contact = esc_url( home_url( '/contact/' ) );
             <a href="<?php the_permalink(); ?>" class=""><?php the_title() ?></a>
           </div>
         </li>
-
         <?php endwhile; ?>
         <?php endif; ?>
         <?php wp_reset_postdata(); ?>

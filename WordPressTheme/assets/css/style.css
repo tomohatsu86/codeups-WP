@@ -1100,6 +1100,7 @@ summary {
 	font-size: 1rem;
 	font-weight: 300;
 	letter-spacing: 0rem;
+	margin: 0;
 	margin-top: 0.625rem;
 	max-width: 35.75rem;
 }
@@ -1381,12 +1382,11 @@ html {
 .p-post {
 	align-items: center;
 	display: flex;
-	justify-content: space-between;
 	width: 53.75rem;
 }
 
 .p-post__body {
-	margin: 0;
+	margin-left: 3.8125rem;
 }
 
 .p-sp-footer-nav {

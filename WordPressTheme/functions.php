@@ -53,21 +53,43 @@ add_action('wp_enqueue_scripts', 'my_script_init');
  *
  * @codex https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/register_nav_menus
  */
-// function my_menu_init() {
-// 	register_nav_menus(
-// 		array(
-// 			'global'  => 'ヘッダーメニュー',
-// 			'utility' => 'ユーティリティメニュー',
-// 			'drawer'  => 'ドロワーメニュー',
-// 		)
-// 	);
-// }
-// add_action( 'init', 'my_menu_init' );
+function my_menu_init() {
+	register_nav_menus(
+		array(
+			'global'  => 'グローバルメニュー',
+			'utility' => 'ユーティリティメニュー',
+			'drawer'  => 'ドロワーメニュー',
+			'footer-sp'  => 'フッターメニューSP',
+			'footer-pc'  => 'フッターメニューPC',
+		)
+	);
+}
+add_action( 'init', 'my_menu_init' );
 /**
  * メニューの登録
  *
  * 参考：https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/register_nav_menus
  */
+
+
+// wp_nav_menuのliにclass追加
+function add_additional_class_on_li($classes, $item, $args)
+{
+  if (isset($args->add_li_class)) {
+    $classes['class'] = $args->add_li_class;
+  }
+  return $classes;
+}
+add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+// wp_nav_menuのaにclass追加
+function add_additional_class_on_a($classes, $item, $args)
+{
+  if (isset($args->add_li_class)) {
+    $classes['class'] = $args->add_a_class;
+  }
+  return $classes;
+}
+add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
 
 
 /**
