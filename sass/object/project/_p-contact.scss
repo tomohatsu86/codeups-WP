@@ -1,0 +1,53 @@
+.p-contact{
+  width: 100%;
+  background-color: $black;
+  padding-bottom: rem(64);
+  padding-top: rem(35);
+  
+  @include mq("tab"){
+    padding-top: rem(91);
+    padding-bottom: rem(149);
+  }
+}
+
+.p-contact__header .p-section-head__title-ja{
+  padding-bottom: rem(0);
+  padding-top: rem(47);
+  
+  @include mq("tab"){
+    padding-top: rem(85);
+  }
+}
+
+.p-contact__header .p-section-head__title-en{
+  bottom: 20%;
+  
+  @include mq("tab"){
+    bottom: 0;
+    
+  }
+}
+
+.p-contact__content p{
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+  letter-spacing: rem(2);
+  color: $white;
+  text-align: start;
+  margin-top: rem(18);
+  
+  @include mq("tab"){
+    margin-top: rem(16);
+    text-align: center;
+  }
+}
+
+.p-contact__btn{
+  margin-top: rem(44);
+  text-align: center;
+
+  @include mq("tab"){
+    margin-top: rem(58);
+  }
+}

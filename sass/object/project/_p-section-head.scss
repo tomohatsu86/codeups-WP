@@ -1,0 +1,46 @@
+.p-section-head{
+  width: 100%;
+  padding: 0 $padding-sp;
+  margin: 0 auto;
+  
+  @include mq("tab"){
+    max-width: rem(1164);
+    padding: 0;
+  }
+}
+
+.p-section-head__title-en{
+  font-family: $second-font-family;
+  font-size: rem(50);
+  font-weight: $regular;
+  letter-spacing: rem(2);
+  line-height: 0.9;
+  color: #F9F871;
+  opacity: 0.2;
+  display: block;
+  margin-bottom: rem(-57);
+  text-align: center;
+  
+  @include mq("tab"){
+    font-size: rem(110);
+    margin-bottom: rem(-127);
+    text-align: left;
+  }
+}
+
+.p-section-head__title-ja{
+  font-family: $base-font-family;
+  font-size: rem(20);
+  font-weight: $regular;
+  letter-spacing: rem(2);
+  color: $white;
+  text-align: center;
+  padding-top: rem(48);
+  padding-bottom: rem(48);
+  
+  @include mq("tab"){
+    font-size: rem(30);
+    padding-top: rem(44);
+    padding-bottom: rem(36);
+  }
+}

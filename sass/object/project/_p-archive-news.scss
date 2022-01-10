@@ -1,0 +1,23 @@
+.p-archive-news{
+  width: 100%;
+}
+
+.p-archive-news__inner{
+  width: 100%;
+  max-width: rem(924);
+  padding: 0 $padding-sp;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @include mq("tab"){
+    padding: 0 $padding-pc;
+  }
+}
+
+.p-archive-news__pagenation{
+  margin-top: rem(80);
+
+  @include mq("tab"){
+    margin-top: rem(104);
+  }
+}

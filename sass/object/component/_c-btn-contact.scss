@@ -1,0 +1,47 @@
+.c-btn-contact{
+  width: 100%;
+  max-width: rem(335);
+  font-family: $base-font-family;
+  font-size: rem(20);
+  font-weight: $regular;
+  letter-spacing: 0.02em;
+  color: $white;
+  background-color: $black;
+  border: rem(1) solid $white;
+  padding: rem(9) rem(0);
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  text-align: center;
+
+  @include mq("tab"){
+  max-width: rem(360);
+  padding: rem(17) rem(0);
+  letter-spacing: 0;
+
+  }
+
+}
+
+.c-btn-contact::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: $white;
+  transition: all 0.3s ease-in;
+
+}
+
+.c-btn-contact:hover {
+  color: $black;
+  
+}
+
+.c-btn-contact:hover::after {
+  left: 0;
+  width: 100%;
+}
