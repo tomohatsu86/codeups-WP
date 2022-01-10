@@ -22,13 +22,14 @@
   top: 0;
   left: 0;
   z-index: 1;
-  // background-color: rgba(17, 17, 17, 0.2);
+  background-color: rgba(17, 17, 17, 0.2);
 }
 
 .p-underlayer-mv__text{
   font-family: $base-font-family;
+  font-size: rem(30);
   font-weight: $bold;
-  letter-spacing: rem(0.5);
+  letter-spacing: 0.02em;
   line-height: 1.0;
   color: $white;
   width: 100%;
@@ -38,4 +39,8 @@
   left: 50%;
   transform: translate(-50%,-50%);
   z-index: 5;
+  
+  @include mq("tab"){
+    font-size: rem(35);
+  }
 }

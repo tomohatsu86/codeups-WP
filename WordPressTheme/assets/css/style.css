@@ -848,6 +848,7 @@ summary {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
+	margin-left: 1rem;
 	position: relative;
 	text-transform: uppercase;
 	transition: 0.3s;
@@ -863,23 +864,23 @@ summary {
 	color: #333;
 }
 
-.c-wp-pagenavi--yellow .current {
+.c-wp-pagenavi--yellow span.current {
 	background-color: #fff;
 	color: #333;
 }
 
-.c-wp-pagenavi--yellow .previouspostslink,
-.c-wp-pagenavi--yellow .nextpostslink {
+.c-wp-pagenavi--yellow a.previouspostslink,
+.c-wp-pagenavi--yellow a.nextpostslink {
 	margin: 0 1.5rem;
 	padding: 0 0.8125rem;
 }
 
-.c-wp-pagenavi--yellow .page {
+.c-wp-pagenavi--yellow a.page {
 	padding: 0 0.5rem;
 }
 
-.page + .page {
-	margin-left: 1rem;
+.c-wp-pagenavi--yellow span.current {
+	padding: 0 0.5rem;
 }
 
 .c-wp-pagenavi {
@@ -895,6 +896,7 @@ summary {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
+	margin-left: 1rem;
 	position: relative;
 	text-transform: uppercase;
 	transition: 0.3s;
@@ -906,42 +908,38 @@ summary {
 .c-wp-pagenavi span:hover,
 .c-wp-pagenavi span:focus {
 	background-color: #fff;
+	border: 0.0625rem solid #fff;
 	color: #333;
 }
 
-.c-wp-pagenavi .current {
+.c-wp-pagenavi span.current {
 	background-color: #fff;
+	border: 0.0625rem solid #fff;
 	color: #333;
 }
 
-.c-wp-pagenavi .current--yellow {
-	background-color: #F9F871;
-	border: 0.0625rem solid #F9F871;
-	color: #333;
-}
-
-.c-wp-pagenavi .previouspostslink,
-.c-wp-pagenavi .nextpostslink {
+.c-wp-pagenavi a.previouspostslink,
+.c-wp-pagenavi a.nextpostslink {
 	padding: 0 0.8125rem;
 }
 
-.c-wp-pagenavi .previouspostslink {
+.c-wp-pagenavi a.previouspostslink {
 	margin: 0 1.5rem 0 0;
 }
 
-.c-wp-pagenavi .nextpostslink {
+.c-wp-pagenavi a.nextpostslink {
 	margin: 0 0 0 1.5rem;
 }
 
-.c-wp-pagenavi .page {
+.c-wp-pagenavi a.page {
 	padding: 0 0.5rem;
 }
 
-.page + .page {
-	margin-left: 1rem;
+.c-wp-pagenavi span.current {
+	padding: 0 0.5rem;
 }
 
-.c-wp-pagenavi .archive {
+.c-wp-pagenavi a.archive {
 	margin: 0 1.5rem;
 	padding: 0 1.125rem;
 }
@@ -1185,6 +1183,15 @@ summary {
 	position: fixed;
 	right: 1.3125rem;
 	z-index: 99999;
+}
+
+.p-pagenation {
+	width: 100%;
+}
+
+.p-pagenation__content {
+	display: flex;
+	justify-content: center;
 }
 
 .p-pc-footer-nav {
@@ -1464,6 +1471,7 @@ summary {
 }
 
 .p-underlayer-mv__container::after {
+	background-color: rgba(17, 17, 17, 0.2);
 	content: "";
 	height: inherit;
 	left: 0;
@@ -1476,9 +1484,10 @@ summary {
 .p-underlayer-mv__text {
 	color: #fff;
 	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1.875rem;
 	font-weight: 700;
 	left: 50%;
-	letter-spacing: 0.03125rem;
+	letter-spacing: 0.02em;
 	line-height: 1.0;
 	position: absolute;
 	text-align: center;
@@ -1486,15 +1495,6 @@ summary {
 	transform: translate(-50%, -50%);
 	width: 100%;
 	z-index: 5;
-}
-
-.p-pagenation {
-	width: 100%;
-}
-
-.p-pagenation__content {
-	display: flex;
-	justify-content: center;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1596,7 +1596,7 @@ html {
 	font-size: 3.125rem;
 }
 
-.c-wp-pagenavi--yellow .current {
+.c-wp-pagenavi--yellow span.current {
 	background-color: #F9F871;
 	border: 0.0625rem solid #F9F871;
 	color: #333;
@@ -1753,6 +1753,10 @@ html {
 
 .p-underlayer-mv {
 	height: 28.90625vw;
+}
+
+.p-underlayer-mv__text {
+	font-size: 2.1875rem;
 }
 
 }

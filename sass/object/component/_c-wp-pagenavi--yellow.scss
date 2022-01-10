@@ -15,6 +15,7 @@
   transition: 0.3s;
   position: relative;
   z-index: 0;
+  margin-left: rem(16);
 }
 
 .c-wp-pagenavi--yellow a:hover,
@@ -26,7 +27,7 @@
   border: rem(1) solid #F9F871;
 }
 
-.c-wp-pagenavi--yellow .current{
+.c-wp-pagenavi--yellow span.current{
   background-color: $white;
   color: $black;
 
@@ -37,18 +38,22 @@
   }
 }
 
-.c-wp-pagenavi--yellow .previouspostslink,
-.c-wp-pagenavi--yellow .nextpostslink{
+.c-wp-pagenavi--yellow a.previouspostslink,
+.c-wp-pagenavi--yellow a.nextpostslink{
   padding: 0 rem(13);
   margin: 0 rem(24);
 }
 
-.c-wp-pagenavi--yellow .page{
+.c-wp-pagenavi--yellow a.page{
   padding: 0 rem(8);
 }
 
-.page + .page{
-  margin-left: rem(16);
+.c-wp-pagenavi--yellow span.current{
+  padding: 0 rem(8);
 }
+
+// .page + .page{
+//   margin-left: rem(16);
+// }
 
 
