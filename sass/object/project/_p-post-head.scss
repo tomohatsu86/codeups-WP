@@ -1,10 +1,17 @@
 .p-post-head{
-  width: rem(211);
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
   @include mq("tab"){
-    width: rem(227);
+    width: rem(288);
+  }
+}
+
+.p-post-head__label{
+  margin-left: rem(29);
+  
+  @include mq("tab"){
+    margin-left: rem(29);
   }
 }

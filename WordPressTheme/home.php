@@ -37,57 +37,34 @@
     <div class="news__contents">
       <ul class="news__content posts">
 
-      <?php
-          $news_query = new WP_Query(
-            array(
-              'post_type'      => 'post',
-              'category_name' => 'news',
-              'posts_per_page' => 4,
-              // 'orderby' => 'date',
-            )
-          );
-        ?>
-        <?php if ( $news_query->have_posts() ) : ?>
-        <?php while ( $news_query->have_posts() ) : ?>
-        <?php $news_query->the_post(); ?>
-        <li class="p-posts__item p-post">
-          <div class="p-post__header p-post-head">
-            <time class="p-post-head__date c-date" datetime="<?php the_time( 'c' ); ?>"><?php the_time('Y.m.d'); ?></time>
-            <span class="p-post-head__label c-label">お知らせ</span>
-          </div>
-          <div class="p-post__body p-hover--underline">
-            <a href="<?php the_permalink(); ?>" class=""><?php the_title() ?></a>
-          </div>
-        </li>
-
-        <li class="posts__item post">
-          <div class="post__header post-head">
-            <time class="post-head__date date" datetime="2020-07-20">2020.07.20</time>
-            <span class="post-head__label label">お知らせ</span>
-          </div>
-          <div class="post__body hover--yellow">
-            <a href="#" class="">記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。</a>
-          </div>
-        </li>
-
+      <?php if ( have_posts()): ?>
+        <?php while(have_posts()):the_post(); ?>
+          <li class="p-posts__item p-post" id="post-<?php the_ID(); ?>">
+            <div class="p-post__header p-post-head">
+              <time class="p-post-head__date c-date" datetime="<?php the_time( 'c' ); ?>"><?php the_time('Y.m.d'); ?></time>
+              <span class="p-post-head__label c-label"><?php the_category(); ?></span>
+            </div>
+            <div class="p-post__body p-hover--yellow">
+              <a href="<?php the_permalink(); ?>" class=""><?php the_title() ?></a>
+            </div>
+          </li>
         <?php endwhile; ?>
         <?php endif; ?>
-        <?php wp_reset_postdata(); ?>
-
       </ul>
     </div>
 
     
     
     <!-- ページネーション -->
-    <div class="p-archive-news__pagenation pagenation u-desktop">
-      <div class="pagenation__content wp-pagenavi">
-        <a class="previouspostslink" rel="prev" href="#">prev</a>
+    <div class="p-archive-news__pagenation p-pagenation u-desktop">
+      <div class="p-pagenation__content c-wp-pagenavi">
+      <?php wp_pagenavi(); ?>
+        <!-- <a class="previouspostslink" rel="prev" href="#">prev</a>
         <span class="page current">1</span>
         <a href="#" class="page">2</a>
         <a href="#" class="page">3</a>
         <a href="#" class="page">4</a>
-        <a class="nextpostslink" rel="next" href="#">next</a>
+        <a class="nextpostslink" rel="next" href="#">next</a> -->
       </div>
     </div>
 

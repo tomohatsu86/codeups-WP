@@ -56,10 +56,10 @@ $contact = esc_url( home_url( '/contact/' ) );
         <?php if ( $news_query->have_posts() ) : ?>
         <?php while ( $news_query->have_posts() ) : ?>
         <?php $news_query->the_post(); ?>
-        <li class="p-posts__item p-post">
+        <li class="p-posts__item p-post" id="post-<?php the_ID(); ?>">
           <div class="p-post__header p-post-head">
             <time class="p-post-head__date c-date" datetime="<?php the_time( 'c' ); ?>"><?php the_time('Y.m.d'); ?></time>
-            <span class="p-post-head__label c-label">お知らせ</span>
+            <span class="p-post-head__label c-label"><?php the_category(); ?></span>
           </div>
           <div class="p-post__body p-hover--underline">
             <a href="<?php the_permalink(); ?>" class=""><?php the_title() ?></a>

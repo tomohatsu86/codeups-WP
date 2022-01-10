@@ -34,6 +34,27 @@ jQuery(function() {
     }
   });
 
+	
+// ドロワーメニュー内のリンクをクリックしたらメニューを閉じる
+$(".nav-link").on("click", function() {
+  let $screenwidth = $(window).width();
+  let $breakpoint_md = 768;
+  if ($screenwidth < $breakpoint_md){
+		if($('.js-drawer-open').hasClass('is-open')){
+      $('.js-drawer-menu').fadeOut(300);
+      $('.js-drawer-open').removeClass('is-open');
+      $("html").removeClass("is-fixed");
+    }else{
+      $('.js-drawer-menu').fadeIn(300);
+      $('.js-drawer-open').addClass('is-open');
+      $("html").addClass("is-fixed");
+    }
+    // $(".js-drawer-menu").toggleClass("is-open");
+    // $(".js-drawer-open").toggleClass("is-open");
+    // $("html").toggleClass("is-fixed");
+  }
+});
+
 	/* スムーススクロール */
 	jQuery('a[href^="#"]').click(function() {
 		let header = jQuery(".js-header").height();

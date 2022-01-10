@@ -1,0 +1,54 @@
+.c-wp-pagenavi--yellow{
+  clear: both;
+	text-align:center;
+}
+
+.c-wp-pagenavi--yellow a,
+.c-wp-pagenavi--yellow span{
+  background-color: transparent;
+  border: rem(1) solid $white;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+  color: $white;
+  text-transform: uppercase;
+  transition: 0.3s;
+  position: relative;
+  z-index: 0;
+}
+
+.c-wp-pagenavi--yellow a:hover,
+.c-wp-pagenavi--yellow a:focus,
+.c-wp-pagenavi--yellow span:hover,
+.c-wp-pagenavi--yellow span:focus{
+  background-color: #F9F871;
+  color: $black;
+  border: rem(1) solid #F9F871;
+}
+
+.c-wp-pagenavi--yellow .current{
+  background-color: $white;
+  color: $black;
+
+  @include mq("tab"){
+    background-color: #F9F871;
+    color: $black;
+    border: rem(1) solid #F9F871;
+  }
+}
+
+.c-wp-pagenavi--yellow .previouspostslink,
+.c-wp-pagenavi--yellow .nextpostslink{
+  padding: 0 rem(13);
+  margin: 0 rem(24);
+}
+
+.c-wp-pagenavi--yellow .page{
+  padding: 0 rem(8);
+}
+
+.page + .page{
+  margin-left: rem(16);
+}
+
+

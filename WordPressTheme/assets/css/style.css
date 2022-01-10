@@ -835,6 +835,117 @@ summary {
 	border-top: 0.125rem solid #fff;
 }
 
+.c-wp-pagenavi--yellow {
+	clear: both;
+	text-align: center;
+}
+
+.c-wp-pagenavi--yellow a,
+.c-wp-pagenavi--yellow span {
+	background-color: transparent;
+	border: 0.0625rem solid #fff;
+	color: #fff;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	position: relative;
+	text-transform: uppercase;
+	transition: 0.3s;
+	z-index: 0;
+}
+
+.c-wp-pagenavi--yellow a:hover,
+.c-wp-pagenavi--yellow a:focus,
+.c-wp-pagenavi--yellow span:hover,
+.c-wp-pagenavi--yellow span:focus {
+	background-color: #F9F871;
+	border: 0.0625rem solid #F9F871;
+	color: #333;
+}
+
+.c-wp-pagenavi--yellow .current {
+	background-color: #fff;
+	color: #333;
+}
+
+.c-wp-pagenavi--yellow .previouspostslink,
+.c-wp-pagenavi--yellow .nextpostslink {
+	margin: 0 1.5rem;
+	padding: 0 0.8125rem;
+}
+
+.c-wp-pagenavi--yellow .page {
+	padding: 0 0.5rem;
+}
+
+.page + .page {
+	margin-left: 1rem;
+}
+
+.c-wp-pagenavi {
+	clear: both;
+	text-align: center;
+}
+
+.c-wp-pagenavi a,
+.c-wp-pagenavi span {
+	background-color: transparent;
+	border: 0.0625rem solid #fff;
+	color: #fff;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	position: relative;
+	text-transform: uppercase;
+	transition: 0.3s;
+	z-index: 0;
+}
+
+.c-wp-pagenavi a:hover,
+.c-wp-pagenavi a:focus,
+.c-wp-pagenavi span:hover,
+.c-wp-pagenavi span:focus {
+	background-color: #fff;
+	color: #333;
+}
+
+.c-wp-pagenavi .current {
+	background-color: #fff;
+	color: #333;
+}
+
+.c-wp-pagenavi .current--yellow {
+	background-color: #F9F871;
+	border: 0.0625rem solid #F9F871;
+	color: #333;
+}
+
+.c-wp-pagenavi .previouspostslink,
+.c-wp-pagenavi .nextpostslink {
+	padding: 0 0.8125rem;
+}
+
+.c-wp-pagenavi .previouspostslink {
+	margin: 0 1.5rem 0 0;
+}
+
+.c-wp-pagenavi .nextpostslink {
+	margin: 0 0 0 1.5rem;
+}
+
+.c-wp-pagenavi .page {
+	padding: 0 0.5rem;
+}
+
+.page + .page {
+	margin-left: 1rem;
+}
+
+.c-wp-pagenavi .archive {
+	margin: 0 1.5rem;
+	padding: 0 1.125rem;
+}
+
 .p-page-404__wrapper {
 	padding-bottom: 6.875rem;
 	padding-top: 8.125rem;
@@ -972,6 +1083,10 @@ summary {
 
 .p-hover--underline:hover:hover {
 	text-decoration: underline;
+}
+
+.p-hover--yellow:hover {
+	color: #F9F871;
 }
 
 /* メインビューのSwiperのcss */
@@ -1183,8 +1298,11 @@ summary {
 .p-post-head {
 	align-items: center;
 	display: flex;
-	justify-content: space-between;
-	width: 13.1875rem;
+	width: 100%;
+}
+
+.p-post-head__label {
+	margin-left: 1.8125rem;
 }
 
 .p-post {
@@ -1370,6 +1488,15 @@ summary {
 	z-index: 5;
 }
 
+.p-pagenation {
+	width: 100%;
+}
+
+.p-pagenation__content {
+	display: flex;
+	justify-content: center;
+}
+
 @media (prefers-reduced-motion: reduce) {
 
 html:focus-within {
@@ -1467,6 +1594,12 @@ html {
 .c-test {
 	color: green;
 	font-size: 3.125rem;
+}
+
+.c-wp-pagenavi--yellow .current {
+	background-color: #F9F871;
+	border: 0.0625rem solid #F9F871;
+	color: #333;
 }
 
 .p-page-404__wrapper {
@@ -1584,17 +1717,17 @@ html {
 }
 
 .p-post-head {
-	width: 14.1875rem;
+	width: 18rem;
+}
+
+.p-post-head__label {
+	margin-left: 1.8125rem;
 }
 
 .p-post {
 	align-items: center;
 	display: flex;
 	width: 53.75rem;
-}
-
-.p-post__body {
-	margin-left: 3.8125rem;
 }
 
 .p-section-head {
