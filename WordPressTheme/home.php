@@ -10,29 +10,12 @@
 </div>
 
 <!-- パンくずリスト -->
-<nav class="breadcrumb">
-  <div class="l-inner">
-    <div class="breadcrumb__body">
-      <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li itemprop="itemListElement" itemtype="https://schema.org/ListItem">
-          <a itemprop="item" href="./index.html">
-            <span itemprop="name">トップ</span>
-          </a>
-          <meta itemprop="position" content="1" />
-        </li>
-        <li itemprop="itemListElement" itemtype="https://schema.org/ListItem">
-          <a itemprop="item" href="./p-archive-news.html">
-            <span itemprop="name">お知らせ一覧</span>
-          </a>
-          <meta itemprop="position" content="2" />
-        </li>
-      </ol>
-    </div>
-  </div>
-</nav>
+<div class="p-archive-news__breadcrumb">
+<?php get_template_part('template-parts/breadcrumb'); ?>
+</div>
 
 <!-- お知らせ -->
-<section class="p-archive-news l-news-top" id="p-archive-news">
+<section class="p-archive-news l-news-archive" id="p-archive-news">
   <div class="p-archive-news__inner">
     <div class="news__contents">
       <ul class="news__content posts">
@@ -52,8 +35,6 @@
         <?php endif; ?>
       </ul>
     </div>
-
-    
     
     <!-- ページネーション -->
     <div class="p-archive-news__pagenation p-pagenation u-desktop">
@@ -70,7 +51,6 @@
 
   </div>
 </section>
-
 
 <!-- お問い合わせ -->
 <section class="p-contact l-contact-top" id="p-contact">

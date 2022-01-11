@@ -602,6 +602,10 @@ summary {
 	width: 100%;
 }
 
+.l-news-archive {
+	margin-top: 4.375rem;
+}
+
 .l-news-top {
 	margin-top: 1.5rem;
 }
@@ -993,6 +997,32 @@ summary {
 
 .p-archive-news__pagenation {
 	margin-top: 5rem;
+}
+
+.p-breadcrumb {
+	color: #fff;
+	display: block;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	margin: 0 auto;
+	padding: 1rem 0;
+	width: 100%;
+}
+
+.p-breadcrumb__body span + .p-breadcrumb__body span {
+	padding: 0 0.3125rem;
+}
+
+.p-breadcrumb__body ol {
+	display: flex;
+	width: 100%;
+}
+
+.p-breadcrumb__body li:nth-child(1)::after,
+.p-breadcrumb__body li:nth-child(2)::after {
+	content: '>';
+	padding: 0 0.3125rem;
 }
 
 .p-contact {
@@ -1546,6 +1576,10 @@ html {
 	max-width: 1164px;
 	padding-left: 32px;
 	padding-right: 32px;
+}
+
+.l-news-archive {
+	margin-top: 3.3125rem;
 }
 
 .l-news-top {

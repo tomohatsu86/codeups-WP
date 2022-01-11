@@ -1,0 +1,8 @@
+.l-news-archive{
+  margin-top: rem(70);
+  
+  @include mq("tab"){
+    margin-top: rem(53);
+    
+  }
+}

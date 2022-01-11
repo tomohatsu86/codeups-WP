@@ -1,0 +1,26 @@
+.p-breadcrumb{
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+  color: $white;
+  padding: rem(16) 0;
+}
+
+.p-breadcrumb__body span + .p-breadcrumb__body span{
+  padding: 0 rem(5);
+
+}
+
+.p-breadcrumb__body ol{
+  width: 100%;
+  display: flex;
+}
+
+.p-breadcrumb__body li:nth-child(1)::after,
+.p-breadcrumb__body li:nth-child(2)::after{
+  content: '>';
+  padding: 0 rem(5);
+}
