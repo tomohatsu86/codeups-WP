@@ -37,35 +37,14 @@
     </div>
     
     <!-- ページネーション -->
-    <div class="p-archive-news__pagenation p-pagenation u-desktop">
-      <div class="p-pagenation__content c-wp-pagenavi">
-      <?php wp_pagenavi(); ?>
-        <!-- <a class="previouspostslink" rel="prev" href="#">prev</a>
-        <span class="page current">1</span>
-        <a href="#" class="page">2</a>
-        <a href="#" class="page">3</a>
-        <a href="#" class="page">4</a>
-        <a class="nextpostslink" rel="next" href="#">next</a> -->
-      </div>
+    <div class="p-archive-news__pagenation u-desktop">
+      <?php get_template_part('template-parts/pagenation'); ?>
     </div>
-
+    
   </div>
 </section>
 
 <!-- お問い合わせ -->
-<section class="p-contact l-contact-top" id="p-contact">
-  <div class="l-inner">
-    <div class="p-contact__header p-section-head">
-      <span class="p-section-head__title-en">Contact</span>
-      <h2 class="p-section-head__title-ja">お問い合わせ</h2>
-    </div>
-    <div class="p-contact__content">
-      <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-    </div>
-    <div class="p-contact__btn">
-      <a href="./page-contact.html" class="c-btn-contact">お問い合わせへ</a>
-    </div>
-  </div>
-</section>
+<?php get_template_part('template-parts/section-contact'); ?>
 
 <?php get_footer(); ?>
