@@ -10,9 +10,7 @@
 </div>
 
 <!-- パンくずリスト -->
-<div class="p-archive-news__breadcrumb">
 <?php get_template_part('template-parts/breadcrumb'); ?>
-</div>
 
 <!-- お知らせ -->
 <section class="p-archive-news l-news-archive" id="p-archive-news">

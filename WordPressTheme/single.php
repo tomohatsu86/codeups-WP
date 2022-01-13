@@ -1,68 +1,69 @@
 <?php get_header(); ?>
 
 <!-- パンくずリスト -->
-<div class="p-single-blog__breadcrumb">
 <?php get_template_part('template-parts/breadcrumb'); ?>
-</div>
 
-<div class="p-single-blog__contents">
+<div class="p-single__contents l-single">
   <div class="l-inner">
     
-    <div class="p-single-blog__mainbox">
-
-      <div class="p-single-blog__header">
-        <h1 class="p-single-blog__title">
-          タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。
+    <div class="p-single__mainbox">
+    <?php if ( have_posts() ) : ?>
+    <?php while( have_posts() ) : the_post(); ?>
+      <div class="p-single__header">
+        <h1 class="p-single__title">
+          <?php the_title(); ?>
         </h1>
-        <div class="p-single-blog__info">
-          <time class="p-single-blog__date date" datetime="2021-06-13">2020/06/13</time>
-          <span class="p-single-blog__label label">カテゴリ１</span>
+        <div class="p-single__info">
+          <time class="p-single__date c-date" datetime="<?php the_time( 'c' ); ?>"><?php the_time('Y/m/d'); ?></time>
+          <span class="p-single__label c-label"><?php the_category(); ?></span>
         </div>
       </div>
+      <div class="p-single__body">
 
-      <div class="p-single-blog__body">
-        <div class="p-single-blog__img">
+        <?php the_content(); ?>
+
+        <div class="p-single__img">
           <img src="./assets/images/single-blog/single-blog-top.jpg" alt="写真：報告をしている男性と聞いている社員たち">
         </div>
-        <div class="p-single-blog__item">
-          <p class="p-single-blog__text">
+        <div class="p-single__item">
+          <p class="p-single__text">
             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
           </p>
         </div>
-        <div class="p-single-blog__item">
-          <h2 class="p-single-blog__title p-single-blog__title--h2">
+        <div class="p-single__item">
+          <h2 class="p-single__title p-single__title--h2">
             見出し2
           </h2>
         </div>
-        <div class="p-single-blog__item">
-          <p class="p-single-blog__text">
+        <div class="p-single__item">
+          <p class="p-single__text">
             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
           </p>
         </div>
-        <div class="p-single-blog__item">
-          <h3 class="p-single-blog__title p-single-blog__title--h3">
+        <div class="p-single__item">
+          <h3 class="p-single__title p-single__title--h3">
             見出し3見出し3見出し3
           </h3>
         </div>
-        <div class="p-single-blog__item">
-          <p class="p-single-blog__text">
+        <div class="p-single__item">
+          <p class="p-single__text">
             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
           </p>
         </div>
-        <div class="p-single-blog__item">
-          <div class="p-single-blog__img">
-            <img src="./assets/images/single-blog/single-blog-img2.jpg" alt="写真：オレンジのテーブルに置かれたスマホ">
+        <div class="p-single__item">
+          <div class="p-single__img">
+            <img src="./assets/images/single/single-img2.jpg" alt="写真：オレンジのテーブルに置かれたスマホ">
           </div>
         </div>
-        <div class="p-single-blog__item">
-          <ul class="p-single-blog__list-dot">
+        <div class="p-single__item">
+          <ul class="p-single__list-dot">
             <li>リストが入ります。リストが入ります。リストが入ります。リストが入ります。</li>
             <li>リストが入ります。リストが入ります。リストが入ります。リストが入ります。</li>
             <li>リストが入ります。リストが入ります。リストが入ります。リストが入ります。</li>
             <li>リストが入ります。リストが入ります。リストが入ります。リストが入ります。</li>
           </ul>
         </div>
-        <div class="p-single-blog__item">
+        <div class="p-single__item">
           <ol class="p-single-blog__list-number">
             <li>リストが入ります。リストが入ります。リストが入ります。リストが入ります。</li>
             <li>リストが入ります。リストが入ります。リストが入ります。リストが入ります。</li>
@@ -72,34 +73,22 @@
         </div>
         
         <!-- ページネーション -->
-        <div class="p-single-blog__pagenation pagenation">
+        <div class="p-single__pagenation pagenation">
           <div class="p-pagenation__content c-wp-pagenavi">
             <a class="previouspostslink" rel="prev" href="#">prev</a>
             <a href="./archive-blog.html" class="archive">一覧</a>
             <a class="nextpostslink" rel="next" href="#">next</a>
           </div>
         </div>
-        <!-- ページネーション -->
-        <div class="p-single-blog__pagenation">
-        <?php get_template_part('template-parts/pagenation'); ?>
-        </div>
-        
-        <!-- ページネーション -->
-        <div class="p-pagenation">
-        <div class="p-pagenation__content c-wp-pagenavi">
-        <?php wp_pagenavi(); ?>
-          <!-- <a class="previouspostslink" rel="prev" href="#">prev</a>
-          <span class="page current">1</span>
-          <a href="#" class="page">2</a>
-          <a href="#" class="page">3</a>
-          <a href="#" class="page">4</a>
-          <a class="nextpostslink" rel="next" href="#">next</a> -->
-        </div>
-      </div>
+
         
       </div>
+    <?php endwhile;?>
+    <?php endif; ?>
     </div>
 
+
+    <!-- おすすめ・関連記事一覧 -->
     <div class="p-single-blog__content recommend-article">
       <div class="recommend-article__btn recommend-btn">
         <a href="#" class="btn-recommend u-mobile">おすすめ記事</a>

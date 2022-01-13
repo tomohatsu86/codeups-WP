@@ -1,4 +1,8 @@
+<?php if ( is_single() ) : ?>
+<nav class="p-breadcrumb l-breadcrumb">
+<?php else: ?>
 <nav class="p-breadcrumb">
+<?php endif; ?>
   <div class="l-inner">
     <div class="p-breadcrumb__body">
     <?php if(function_exists('bcn_display')){

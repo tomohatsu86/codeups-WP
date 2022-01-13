@@ -72,7 +72,7 @@ $contact = esc_url( home_url( '/contact/' ) );
 
       </ul>
       <div class="p-news__btn">
-        <a href="./archive-p-news.html" class="c-btn-all">すべて見る</a>
+        <a href="<?php echo get_permalink( 9 ); ?>" class="c-btn-all">すべて見る</a>
       </div>
       </div>
     </div>

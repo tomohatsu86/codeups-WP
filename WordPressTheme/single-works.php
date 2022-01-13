@@ -1,9 +1,7 @@
 <?php get_header(); ?>
 
 <!-- パンくずリスト -->
-<div class="p-single-works__breadcrumb">
 <?php get_template_part('template-parts/breadcrumb'); ?>
-</div>
 
 <div class="p-single-works__contents">
       <div class="l-inner">
@@ -153,7 +151,7 @@
       </div>
     </div>
 
-    
+
 <!-- お問い合わせ -->
 <?php get_template_part('template-parts/section-contact'); ?>
 
