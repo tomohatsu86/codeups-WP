@@ -15,3 +15,12 @@
 		display: none;
 	}
 }
+
+.u-hidden-tab{
+	// タブレット以下は非表示
+	display: none;
+
+	@include mq("tab") {
+		display: block;
+	}
+}

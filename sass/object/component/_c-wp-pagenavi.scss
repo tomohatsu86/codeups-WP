@@ -39,18 +39,6 @@
 //   border: rem(1) solid #F9F871;
 // }
 
-.c-wp-pagenavi a.previouspostslink,
-.c-wp-pagenavi a.nextpostslink{
-  padding: 0 rem(13);
-}
-.c-wp-pagenavi a.previouspostslink{
-  margin: 0 rem(24) 0 0;
-}
-
-.c-wp-pagenavi a.nextpostslink{
-  margin: 0 0 0 rem(24);
-}
-
 .c-wp-pagenavi a.page{
   padding: 0 rem(8);
 }
@@ -61,6 +49,20 @@
 // .page + .page{
 //   margin-left: rem(16);
 // }
+
+
+.c-wp-pagenavi a.previouspostslink,
+.c-wp-pagenavi a.nextpostslink{
+  padding: 0 rem(13);
+}
+
+.c-wp-pagenavi a.previouspostslink{
+  margin: 0 rem(24) 0 0;
+}
+
+.c-wp-pagenavi a.nextpostslink{
+  margin: 0 0 0 rem(24);
+}
 
 .c-wp-pagenavi a.archive{
   padding: 0 rem(18);

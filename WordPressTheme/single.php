@@ -22,7 +22,7 @@
 
         <?php the_content(); ?>
 
-        <div class="p-single__img">
+        <!-- <div class="p-single__img">
           <img src="./assets/images/single-blog/single-blog-top.jpg" alt="写真：報告をしている男性と聞いている社員たち">
         </div>
         <div class="p-single__item">
@@ -70,17 +70,10 @@
             <li>リストが入ります。リストが入ります。リストが入ります。リストが入ります。</li>
             <li>リストが入ります。リストが入ります。リストが入ります。リストが入ります。</li>
           </ol>
-        </div>
+        </div> -->
         
         <!-- ページネーション -->
-        <div class="p-single__pagenation pagenation">
-          <div class="p-pagenation__content c-wp-pagenavi">
-            <a class="previouspostslink" rel="prev" href="#">prev</a>
-            <a href="./archive-blog.html" class="archive">一覧</a>
-            <a class="nextpostslink" rel="next" href="#">next</a>
-          </div>
-        </div>
-
+        <?php get_template_part('template-parts/pagenation'); ?>
         
       </div>
     <?php endwhile;?>

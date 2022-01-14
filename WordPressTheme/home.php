@@ -35,9 +35,7 @@
     </div>
     
     <!-- ページネーション -->
-    <div class="p-archive-news__pagenation u-desktop">
-      <?php get_template_part('template-parts/pagenation'); ?>
-    </div>
+    <?php get_template_part('template-parts/pagenation'); ?>
     
   </div>
 </section>

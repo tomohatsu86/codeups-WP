@@ -174,3 +174,19 @@ function my_excerpt_more( $more ) {
 
 }
 add_filter( 'excerpt_more', 'my_excerpt_more' );
+
+
+
+// 投稿ページのページネーションに関して
+//prev_post_linkとnext_post_linkのaタグにクラスを付与
+function add_prev_post_link_class($output) {
+  return str_replace('<a href=', '<a class="previouspostslink" href=', $output);
+}
+add_filter( 'previous_post_link', 'add_prev_post_link_class' );
+
+function add_next_post_link_class($output) {
+  return str_replace('<a href=', '<a class="nextpostslink" href=', $output);
+}
+add_filter( 'next_post_link', 'add_next_post_link_class' ); 
+
+// 参考：https://www.nxworld.net/wp-add-class-previous-posts-link-and-next-posts-link.html

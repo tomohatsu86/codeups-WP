@@ -18,7 +18,7 @@
         'menu_class'      => 'p-sp-footer-nav__items',//ulのクラス
         'menu_id'         => false,
         'add_li_class'    => 'p-sp-footer-nav__item', // liタグへclass追加
-        'add_a_class'     => 'nav-link' // aタグへclass追加
+        'add_a_class'     => 'footer-nav-link' // aタグへclass追加
       );
       wp_nav_menu( $defaults );
       ?>
@@ -45,7 +45,7 @@
         'menu_class'      => 'p-pc-footer-nav__items',//ulのクラス
         'menu_id'         => false,
         'add_li_class'    => 'p-pc-footer-nav__item', // liタグへclass追加
-        'add_a_class'     => 'nav-link' // aタグへclass追加
+        'add_a_class'     => 'footer-nav-link' // aタグへclass追加
       );
       wp_nav_menu( $defaults );
       ?>

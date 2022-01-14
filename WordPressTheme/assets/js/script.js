@@ -36,7 +36,7 @@ jQuery(function() {
 
 	
 // ドロワーメニュー内のリンクをクリックしたらメニューを閉じる
-$(".nav-link").on("click", function() {
+$(".drawer-nav-link").on("click", function() {
   let $screenwidth = $(window).width();
   let $breakpoint_md = 768;
   if ($screenwidth < $breakpoint_md){
