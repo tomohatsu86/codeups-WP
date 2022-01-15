@@ -11,7 +11,7 @@
       <?php previous_post_link('%link', 'prev'); ?>
     <?php endif; ?>
     <div class="archive">
-      <a href="<?php echo get_permalink( 9 ); ?>" class="archive">一覧</a>
+      <a href="<?php echo esc_url( home_url( '/news/' ) ); ?>" class="archive">一覧</a>
     </div>
     <?php if (get_next_post()): ?>
       <?php next_post_link('%link', 'next'); ?>

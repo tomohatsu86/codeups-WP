@@ -4,7 +4,7 @@
 <div class="p-archive-news-mv p-underlayer-mv">
   <div class="p-underlayer-mv__container">
     <div class="p-underlayer-mv__text">
-      <span class="mv__title">お知らせ</span>
+      <span class="mv__title"><?php echo get_the_title('9'); ?></span>
     </div>
   </div>
 </div>

@@ -1,0 +1,59 @@
+.c-img-link{
+  width: 50%;
+  position: relative;
+}
+
+.c-img-link__wrapper{
+  position: relative;
+  padding-top: calc((168 / 188) * 100%);
+  overflow: hidden;
+
+  @include mq("tab"){
+    padding-top: calc((320 / 320) * 100%);
+  }
+}
+
+.c-img-link__wrapper a{
+  font-family: $base-font-family;
+  font-size: rem(20);
+  font-weight: $regular;
+  letter-spacing: rem(2);
+  color: $white;
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: ease .3s;
+
+  @include mq("tab"){
+    font-size: rem(25);
+    letter-spacing: rem(0.5);
+  }
+}
+
+.c-img-link__wrapper a:after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: $white;
+  opacity: 0;
+  transition: .3s;
+}
+
+.c-img-link__wrapper a:hover::after{
+  opacity: 0.6;
+}
+
+.c-img-link__text{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

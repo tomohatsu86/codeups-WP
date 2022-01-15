@@ -1,0 +1,23 @@
+.c-bg-line01{
+  display: block;
+  position: relative;
+}
+
+.c-bg-line01::before{
+  content: "";
+  display: block;
+  width: 100%;
+  height: rem(1);
+  background-color: #F9F871;
+  position: absolute;
+  top: rem(345);
+  left: 0;
+  transform: skewY(61.09deg);
+
+
+  @include mq("tab"){
+    top: rem(552);
+    transform: skewY(45deg);
+  }
+}
+

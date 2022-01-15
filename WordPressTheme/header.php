@@ -11,7 +11,7 @@
   <?php wp_body_open(); ?>
 
   <!-- ヘッダー -->
-  <header class="p-header l-header">
+  <header class="p-header l-header js-header">
     <div class="p-header__inner">
       <h1 class="p-header__logo c-logo">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="c-logo__link">

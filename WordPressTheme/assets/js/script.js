@@ -62,6 +62,7 @@ $(".drawer-nav-link").on("click", function() {
 		let id = jQuery(this).attr("href");
 		let target = jQuery("#" == id ? "html" : id);
 		let position = jQuery(target).offset().top - header;
+
 		if ("fixed" !== jQuery("#header").css("position")) {
 			position = jQuery(target).offset().top;
 		}
@@ -76,6 +77,21 @@ $(".drawer-nav-link").on("click", function() {
 		);
 		return false;
 	});
+	
+		// 別ページの場合は以下
+		var urlHash = location.hash;
+		if (urlHash) {
+			$('body,html').stop().scrollTop(0);
+			setTimeout(function(){
+				// ヘッダー固定の場合はヘッダーの高さを数値で入れる、固定でない場合は0
+				var headerHight = 0;
+				var target = $(urlHash);
+				var position = target.offset().top - headerHight;
+				$('body,html').stop().animate({scrollTop:position}, 800);
+		}, 100);
+		}
+
+
 
 	/* 電話リンク */
 	let ua = navigator.userAgent;
@@ -184,6 +200,7 @@ thumbs.controller.control = slider;
 
 
 });
+
 
 
 });

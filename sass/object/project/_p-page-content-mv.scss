@@ -1,0 +1,13 @@
+.p-page-content-mv{
+  width: 100%;
+  background-image: url(../img/page-content/page-content-mv-sp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+    
+  @include mq("tab"){
+    background-image: url(../img/page-content/page-content-mv-pc.jpg);
+    
+  }
+}
