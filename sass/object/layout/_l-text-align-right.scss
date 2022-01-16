@@ -1,0 +1,6 @@
+.l-text-align-right{
+  
+  @include mq("tab"){
+    text-align: right;
+  }
+}
