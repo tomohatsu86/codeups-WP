@@ -19,13 +19,17 @@
         </div>
       </div>
       <div class="p-single__body">
-
+        <!-- <div class="p-single__thumbnail">
+        <?php if (has_post_thumbnail()): ?>
+          <?php the_post_thumbnail( 'full' ); ?>
+        <?php else: ?>
+          <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/no-image.jpg" alt="no image">
+        <?php endif; ?>
+        </div> -->
+        
         <?php the_content(); ?>
-
-        <!-- <div class="p-single__img">
-          <img src="./assets/images/single-blog/single-blog-top.jpg" alt="写真：報告をしている男性と聞いている社員たち">
-        </div>
-        <div class="p-single__item">
+        
+        <!--<div class="p-single__item">
           <p class="p-single__text">
             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
           </p>
