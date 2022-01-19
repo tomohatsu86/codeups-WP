@@ -1,0 +1,25 @@
+.p-archive-blog__contents{
+  margin-top: rem(69);
+  
+  @include mq("tab"){
+    margin-top: rem(99);
+    
+  }
+}
+
+.p-archive-blog__content{
+  margin-top: rem(37);
+  
+  @include mq("tab"){
+    margin-top: rem(40);
+    
+  }
+}
+
+// .p-archive-blog__pagenation{
+//   margin-top: rem(80);
+
+//   @include mq("tab"){
+//     margin-top: rem(104);
+//   }
+// }

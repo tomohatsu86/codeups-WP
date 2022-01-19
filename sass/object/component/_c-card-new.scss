@@ -1,0 +1,17 @@
+.c-card-new::before{
+  content: "New";
+  width: rem(60);
+  height: rem(60);
+  background-color: #FFBA6A;
+  border-radius: 50%;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  line-height: rem(60);
+  color: $black;
+  text-align: center;
+  position: absolute;
+  top: rem(-16);
+  left: rem(-15);
+  z-index: 99;
+}
+

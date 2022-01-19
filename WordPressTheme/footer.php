@@ -1,9 +1,10 @@
+</main>
 <footer class="p-footer l-footer-top">
   <div class="p-footer__inner">
     <div class="p-footer__contents">
       <div class="p-footer__logo">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo__link">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/logo/CodeUps.svg" alt="ロゴ">
+          <img src="<?php echo get_template_directory_uri() ?>./assets/img/common/logo/CodeUps.svg" alt="ロゴ">
         </a>
       </div>
 

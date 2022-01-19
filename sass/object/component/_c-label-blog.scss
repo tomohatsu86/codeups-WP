@@ -1,0 +1,16 @@
+.c-label-blog{
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $regular;
+  letter-spacing: rem(1);
+  color: #000;
+  text-align: left;
+  padding: rem(2) rem(4);
+  background-color: #FFEA2E;
+  
+  @include mq("tab"){
+    font-size: rem(14);
+    padding: rem(3) rem(5);
+    
+  }
+}

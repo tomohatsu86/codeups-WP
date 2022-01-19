@@ -1,0 +1,13 @@
+.p-archive-blog-mv{
+  width: 100%;
+  background-image: url(../img/archive-blog/archive-blog-mv-sp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include mq("tab"){
+    background-image: url(../img/archive-blog/archive-blog-mv-pc.jpg);
+    
+  }
+
+}

@@ -1,0 +1,38 @@
+.p-category-list{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p-category-list .current{
+  background-color: $white;
+  color: $black;
+}
+
+.p-category-list__item{
+  display: block;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+  letter-spacing: rem(1);
+  color: $white;
+  text-transform: uppercase;
+  padding: rem(3) rem(8);
+  
+  @include mq("tab"){
+    padding: rem(3) rem(10);
+  }
+}
+
+.p-category-list__item + .p-category-list__item{
+  margin-left: rem(8);
+  
+  @include mq("tab"){
+    margin-left: rem(30);
+  }
+}
+
+.p-category-list__item a{
+  display: block;
+}
+
