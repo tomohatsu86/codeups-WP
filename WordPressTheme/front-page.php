@@ -66,8 +66,10 @@ $contact = esc_url( home_url( '/contact/' ) );
           </div>
         </li>
         <?php endwhile; ?>
-        <?php endif; ?>
         <?php wp_reset_postdata(); ?>
+        <?php else; ?>
+        <p>現在、投稿がありません</p>
+        <?php endif; ?>
 
 
       </ul>

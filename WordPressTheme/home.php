@@ -30,6 +30,9 @@
             </div>
           </li>
         <?php endwhile; ?>
+        <?php else: ?>
+        <!-- 投稿が無い場合の処理 -->
+        <p>現在、投稿がありません</p>
         <?php endif; ?>
       </ul>
     </div>

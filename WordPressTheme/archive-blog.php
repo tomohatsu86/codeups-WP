@@ -15,8 +15,7 @@
 
 <div class="p-archive-blog__contents">
       <div class="l-inner">
-
-    
+  
         <ul class="p-archive-blog__list p-category-list">
           <li class="p-category-list__item current"><a href="#">all</a></li>
           <li class="p-category-list__item"><a href="#">カテゴリ１</a></li>
@@ -26,130 +25,51 @@
 
 
         <div class="p-archive-blog__content p-cards-3">
+        <?php
+          $the_query = new WP_Query(
+            array(
+              'post_type' => 'blog', //カスタム投稿タイプを指定
+              'taxonomy' => 'blog_category', //カスタムタクソノミーを指定
+              'posts_per_page' => 9, //表示する記事数
+              )
+            );
+            ?>
+        <?php if ( $the_query->have_posts() ) : ?>
+          <?php while ( $the_query->have_posts() ) : ?>
+            <?php $the_query->the_post(); ?>
+              <?php $terms = get_the_terms($post->ID, 'blog_category'); ?>
 
+              <a class="p-cards-3__item p-card-medium" href="./single-blog.html">
+                <figure class="p-card-medium__img">
+                  <!-- <span class="c-card-new"></span> -->
 
+                  <?php if (has_post_thumbnail()): ?>
+                    <?php the_post_thumbnail( 'full' ); ?>
+                  <?php else: ?>
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/no-image.jpg" alt="no image">
+                  <?php endif; ?>
 
-          <a class="p-cards-3__item p-card-medium" href="./single-blog.html">
-            <figure class="p-card-medium__img">
-              <span class="c-card-new u-mobile"></span>
-              <img src="./assets/images/archive-blog/archive-blog1.jpg" alt="写真：パソコンの画面とキーボード">
-            </figure>
-            <div class="p-card-medium__body">
-              <h3 class="p-card-medium__title">タイトルが入ります。タイトルが入ります。</h3>
-              <p class="p-card-medium__excerpt">説明文が入ります。説明文が入ります。説明文が入ります。</p>
-            </div>
-            <div class="p-card-medium__info">
-              <span class="p-card-medium__label c-label-blog">カテゴリ</span>
-              <time class="p-card-medium__date c-date-blog" datetime="2021-07-20">2021.07.20</time>
-            </div>
-          </a>
+                </figure>
+                <div class="p-card-medium__body">
+                  <h3 class="p-card-medium__title"><?php the_title() ?></h3>
+                  <p class="p-card-medium__excerpt"><?php the_excerpt(); ?></p>
+                </div>
+                <div class="p-card-medium__info">
+                  <?php if (!empty($terms)) : ?>
+                  <?php foreach ( $terms as $term ) : ?>
+                  <span class="p-card-medium__label c-label-blog"><?php echo $term->name; ?></span>
+                  <?php endforeach; ?>
+                  <?php endif; ?>
+                  <time class="p-card-medium__date c-date-blog" datetime="<?php the_time( 'c' ); ?>"><?php the_time('Y.m.d'); ?></time>
+                </div>
+              </a>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+            <?php else: ?>
+            <!-- 投稿が無い場合の処理 -->
+            <p>現在、投稿がありません</p>
+            <?php endif; ?>
 
-
-          
-          <a class="p-cards-3__item p-card-medium">
-            <figure class="p-card-medium__img">
-              <img src="./assets/images/archive-blog/archive-blog2.jpg" alt="写真：デスクに置かれたノートパソコン">
-            </figure>
-            <div class="p-card-medium__body">
-              <h3 class="p-card-medium__title">タイトルが入ります。タイトルが入ります。</h3>
-              <p class="p-card-medium__excerpt">説明文が入ります。説明文が入ります。説明文が入ります。</p>
-            </div>
-            <div class="p-card-medium__info">
-              <span class="p-card-medium__label c-label-blog">カテゴリ</span>
-              <time class="p-card-medium__date c-date-blog" datetime="2021-07-20">2021.07.20</time>
-            </div>
-          </a>
-          <a class="p-cards-3__item p-card-medium">
-            <figure class="p-card-medium__img">
-              <img src="./assets/images/archive-blog/archive-blog3.jpg" alt="写真：ノートパソコン">
-            </figure>
-            <div class="p-card-medium__body">
-              <h3 class="p-card-medium__title">タイトルが入ります。タイトルが入ります。</h3>
-              <p class="p-card-medium__excerpt">説明文が入ります。説明文が入ります。説明文が入ります。</p>
-            </div>
-            <div class="p-card-medium__info">
-              <span class="p-card-medium__label c-label-blog">カテゴリ</span>
-              <time class="p-card-medium__date c-date-blog" datetime="2021-07-20">2021.07.20</time>
-            </div>
-          </a>
-          <a class="p-cards-3__item p-card-medium">
-            <figure class="p-card-medium__img">
-              <img src="./assets/images/archive-blog/archive-blog4.jpg" alt="写真：iPhoneの画面">
-            </figure>
-            <div class="p-card-medium__body">
-              <h3 class="p-card-medium__title">タイトルが入ります。タイトルが入ります。</h3>
-              <p class="p-card-medium__excerpt">説明文が入ります。説明文が入ります。説明文が入ります。</p>
-            </div>
-            <div class="p-card-medium__info">
-              <span class="p-card-medium__label c-label-blog">カテゴリ</span>
-              <time class="p-card-medium__date c-date-blog" datetime="2021-07-20">2021.07.20</time>
-            </div>
-          </a>
-          <a class="p-cards-3__item p-card-medium">
-            <figure class="p-card-medium__img">
-              <img src="./assets/images/archive-blog/archive-blog5.jpg" alt="写真：パソコンの画面に移るプログラム">
-            </figure>
-            <div class="p-card-medium__body">
-              <h3 class="p-card-medium__title">タイトルが入ります。タイトルが入ります。</h3>
-              <p class="p-card-medium__excerpt">説明文が入ります。説明文が入ります。説明文が入ります。</p>
-            </div>
-            <div class="p-card-medium__info">
-              <span class="p-card-medium__label c-label-blog">カテゴリ</span>
-              <time class="p-card-medium__date c-date-blog" datetime="2021-07-20">2021.07.20</time>
-            </div>
-          </a>
-          <a class="p-cards-3__item p-card-medium">
-            <figure class="p-card-medium__img">
-              <img src="./assets/images/archive-blog/archive-blog6.jpg" alt="写真：パソコンを操作する">
-            </figure>
-            <div class="p-card-medium__body">
-              <h3 class="p-card-medium__title">タイトルが入ります。タイトルが入ります。</h3>
-              <p class="p-card-medium__excerpt">説明文が入ります。説明文が入ります。説明文が入ります。</p>
-            </div>
-            <div class="p-card-medium__info">
-              <span class="p-card-medium__label c-label-blog">カテゴリ</span>
-              <time class="p-card-medium__date c-date-blog" datetime="2021-07-20">2021.07.20</time>
-            </div>
-          </a>
-          <a class="p-cards-3__item p-card-medium">
-            <figure class="p-card-medium__img">
-              <img src="./assets/images/archive-blog/archive-blog7.jpg" alt="写真：机の上のノートパソコン">
-            </figure>
-            <div class="p-card-medium__body">
-              <h3 class="p-card-medium__title">タイトルが入ります。タイトルが入ります。</h3>
-              <p class="p-card-medium__excerpt">説明文が入ります。説明文が入ります。説明文が入ります。</p>
-            </div>
-            <div class="p-card-medium__info">
-              <span class="p-card-medium__label c-label-blog">カテゴリ</span>
-              <time class="p-card-medium__date c-date-blog" datetime="2021-07-20">2021.07.20</time>
-            </div>
-          </a>
-          <a class="p-cards-3__item p-card-medium">
-            <figure class="p-card-medium__img">
-              <img src="./assets/images/archive-blog/archive-blog8.jpg" alt="写真：作業する女性">
-            </figure>
-            <div class="p-card-medium__body">
-              <h3 class="p-card-medium__title">タイトルが入ります。タイトルが入ります。</h3>
-              <p class="p-card-medium__excerpt">説明文が入ります。説明文が入ります。説明文が入ります。</p>
-            </div>
-            <div class="p-card-medium__info">
-              <span class="p-card-medium__label c-label-blog">カテゴリ</span>
-              <time class="p-card-medium__date c-date-blog" datetime="2021-07-20">2021.07.20</time>
-            </div>
-          </a>
-          <a class="p-cards-3__item p-card-medium">
-            <figure class="p-card-medium__img">
-              <img src="./assets/images/archive-blog/archive-blog9.jpg" alt="写真：ディスプレイ">
-            </figure>
-            <div class="p-card-medium__body">
-              <h3 class="p-card-medium__title">タイトルが入ります。タイトルが入ります。</h3>
-              <p class="p-card-medium__excerpt">説明文が入ります。説明文が入ります。説明文が入ります。</p>
-            </div>
-            <div class="p-card-medium__info">
-              <span class="p-card-medium__label c-label-blog">カテゴリ</span>
-              <time class="p-card-medium__date c-date-blog" datetime="2021-07-20">2021.07.20</time>
-            </div>
-          </a>
         </div>
         
       </div>
