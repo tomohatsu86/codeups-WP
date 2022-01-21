@@ -1155,6 +1155,14 @@ summary {
 	width: 100%;
 }
 
+.p-archive-works-mv {
+	background-image: url(../img/archive-works/archive-works-mv-sp.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+}
+
 .p-breadcrumb {
 	color: #fff;
 	display: block;
@@ -2349,6 +2357,10 @@ html {
 
 .p-archive-news__inner {
 	padding: 0 32px;
+}
+
+.p-archive-works-mv {
+	background-image: url(../img/archive-works/archive-works-mv-pc.jpg);
 }
 
 .p-card-medium__info {

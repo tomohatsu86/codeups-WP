@@ -1,0 +1,21 @@
+.p-breadcrumb {
+	display: block;
+	padding: rem(50) 0;
+	width: 100%;
+}
+
+.p-breadcrumb__body span + .p-breadcrumb__body span {
+	padding: 0 rem(5);
+}
+
+.p-breadcrumb__body ol {
+	display: flex;
+	width: 100%;
+}
+
+.p-breadcrumb__body li:nth-child(1)::after,
+.p-breadcrumb__body li:nth-child(2)::after {
+	content: '>';
+	padding: 0 rem(5);
+}
+

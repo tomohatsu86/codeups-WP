@@ -67,7 +67,8 @@ $contact = esc_url( home_url( '/contact/' ) );
         </li>
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
-        <?php else; ?>
+        <?php else: ?>
+        <!-- 投稿が無い場合の処理 -->
         <p>現在、投稿がありません</p>
         <?php endif; ?>
 

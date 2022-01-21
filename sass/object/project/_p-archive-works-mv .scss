@@ -1,0 +1,12 @@
+.p-archive-works-mv{
+  width: 100%;
+  background-image: url(../img/archive-works/archive-works-mv-sp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  @include mq("tab"){
+    background-image: url(../img/archive-works/archive-works-mv-pc.jpg);
+  
+  }
+}

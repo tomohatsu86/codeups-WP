@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
 <!-- ブログ一覧メインビュー -->
-<div class="p-archive-blog-mv p-underlayer-mv">
+<div class="p-archive-works-mv p-underlayer-mv">
   <div class="p-underlayer-mv__container">
     <div class="p-underlayer-mv__text">
-      <span class="mv__title">ブログ</span>
+      <span class="mv__title">制作実績</span>
     </div>
   </div>
 </div>
@@ -23,11 +23,17 @@
         $args = array(
         'taxonomy' => 'blog_category'
         );
-        $categories = get_categories($args);
-        foreach($categories as $category) {
-        echo '<li><a class="p-category-list__item" href="'.get_category_link($category->term_id).'">'.$category->name.'</a></li>';
+      ?>
+      <?php
+        $blog_categories = get_terms($args);
+        if ( !empty($blog_categories));
+      ?>
+      <?php 
+        foreach($blog_categories as $blog_category) {
+        echo '<li><a class="p-category-list__item" href="'.get_term_link($blog_category).'">'.$blog_category->name.'</a></li>';
         }
       ?>
+      <?php endif; ?>
       <!-- <li class="p-category-list__item"><a href="#">カテゴリ１</a></li>
       <li class="p-category-list__item"><a href="#">カテゴリカテゴリ</a></li>
       <li class="p-category-list__item"><a href="#">カテ</a></li> -->
@@ -38,15 +44,15 @@
     <?php
       $the_query = new WP_Query(
         array(
-          'post_type' => 'blog', //カスタム投稿タイプを指定
-          'taxonomy' => 'blog_category', //カスタムタクソノミーを指定
-          'posts_per_page' => 9, //表示する記事数
+          'post_type' => 'works', //カスタム投稿タイプを指定
+          'taxonomy' => 'works_category', //カスタムタクソノミーを指定
+          'posts_per_page' => 3, //表示する記事数
         )
       ); ?>
     <?php if ( $the_query->have_posts() ) : ?>
       <?php while ( $the_query->have_posts() ) : ?>
         <?php $the_query->the_post(); ?>
-          <?php $terms = get_the_terms($post->ID, 'blog_category'); ?>
+          <?php $terms = get_the_terms($post->ID, 'works_category'); ?>
 
           <a class="p-cards-3__item p-card-medium" href="<?php the_permalink(); ?>">
             <figure class="p-card-medium__img">
@@ -66,8 +72,8 @@
             <div class="p-card-medium__info">
               <span class="p-card-medium__label c-label-blog">
               <?php
-                $term = get_the_terms($post->ID,'blog_category');
-                echo $term[0]->name;
+                $term = get_the_terms($post->ID,'works_category');
+                  echo $term[0]->name;
               ?>
               </span>
               <time class="p-card-medium__date c-date-blog" datetime="<?php the_time( 'c' ); ?>"><?php the_time('Y.m.d'); ?></time>
