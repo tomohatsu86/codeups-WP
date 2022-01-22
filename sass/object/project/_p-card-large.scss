@@ -1,0 +1,52 @@
+.p-card-large{
+  display: block;
+  color: $white;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.p-card-large__img{
+  position: relative;
+  width: 100%;
+  // 画面幅いっぱいにはみ出させる
+  margin-left: -20px;
+  margin-right: -20px;
+  width: calc(100% + 40px);
+
+  @include mq("tab"){
+    width: 100%;
+    margin: rem(16) auto;
+  }
+}
+
+.p-card-large__img::before{
+  content: "";
+  display: block;
+  padding-top: calc((249 / 375 ) * 100%);
+
+  @include mq("tab"){
+    padding-top: calc((349 / 525 ) * 100%);
+  }
+}
+
+.p-card-large__img img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+}
+
+.p-card-large__body{
+  text-align: center;
+}
+
+.p-card-large__title{
+  font-family: $base-font-family;
+  font-weight: $medium;
+  letter-spacing: 0.02em;
+  font-size: rem(20);
+  margin-top: rem(24);
+}
+

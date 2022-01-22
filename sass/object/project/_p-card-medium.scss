@@ -49,13 +49,17 @@
 .p-card-medium__info{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
   padding: rem(4) rem(23) rem(16);
   margin-top: auto;
   
   @include mq("tab"){
     padding: rem(17) rem(23) rem(16);
   }
+}
+
+.p-card-medium__date{
+  margin-left: auto;
 }
 
 

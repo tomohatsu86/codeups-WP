@@ -1,0 +1,13 @@
+.c-label-card-l{
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+  letter-spacing: 0.2em;
+  color: $white;
+  text-align: center;
+  padding: rem(8) rem(20);
+  background-color: $black2;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

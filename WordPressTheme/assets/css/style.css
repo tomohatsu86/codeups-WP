@@ -895,7 +895,21 @@ summary {
 	width: 100%;
 }
 
-.c-label-blog {
+.c-label-card-l {
+	background-color: #111;
+	color: #fff;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	letter-spacing: 0.2em;
+	padding: 0.5rem 1.25rem;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+
+.c-label-card-m {
 	background-color: #FFEA2E;
 	color: #000;
 	font-family: "Noto Sans JP", sans-serif;
@@ -1163,6 +1177,15 @@ summary {
 	width: 100%;
 }
 
+.p-archive-works__contents {
+	margin-top: 4.3125rem;
+}
+
+.p-archive-works__content {
+	margin-top: 2.3125rem;
+	width: 100%;
+}
+
 .p-breadcrumb {
 	color: #fff;
 	display: block;
@@ -1186,6 +1209,48 @@ summary {
 .p-breadcrumb__body li:nth-child(2)::after {
 	content: '>';
 	padding: 0 0.3125rem;
+}
+
+.p-card-large {
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	transition: .3s;
+}
+
+.p-card-large__img {
+	margin-left: -20px;
+	margin-right: -20px;
+	position: relative;
+	width: 100%;
+	width: calc(100% + 40px);
+}
+
+.p-card-large__img::before {
+	content: "";
+	display: block;
+	padding-top: calc((249 / 375 ) * 100%);
+}
+
+.p-card-large__img img {
+	height: 100%;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+
+.p-card-large__body {
+	text-align: center;
+}
+
+.p-card-large__title {
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1.25rem;
+	font-weight: 500;
+	letter-spacing: 0.02em;
+	margin-top: 1.5rem;
 }
 
 .p-card-medium {
@@ -1240,9 +1305,26 @@ summary {
 .p-card-medium__info {
 	align-items: center;
 	display: flex;
-	justify-content: space-between;
 	margin-top: auto;
 	padding: 0.25rem 1.4375rem 1rem;
+}
+
+.p-card-medium__date {
+	margin-left: auto;
+}
+
+.p-cards-2 {
+	width: 100%;
+}
+
+.p-cards-2__item {
+	margin: 0 auto;
+	max-width: 32.8125rem;
+	width: 100%;
+}
+
+.p-cards-2__item + .p-cards-2__item {
+	margin-top: 3rem;
 }
 
 .p-cards-3 {
@@ -2298,7 +2380,7 @@ html {
 	letter-spacing: 0.03125rem;
 }
 
-.c-label-blog {
+.c-label-card-m {
 	font-size: 0.875rem;
 	padding: 0.1875rem 0.3125rem;
 }
@@ -2363,8 +2445,52 @@ html {
 	background-image: url(../img/archive-works/archive-works-mv-pc.jpg);
 }
 
+.p-archive-works__contents {
+	margin-top: 6.1875rem;
+}
+
+.p-archive-works__content {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2.5rem;
+	max-width: 68.75rem;
+}
+
+.p-card-large__img {
+	margin: 1rem auto;
+	width: 100%;
+}
+
+.p-card-large__img::before {
+	padding-top: calc((349 / 525 ) * 100%);
+}
+
 .p-card-medium__info {
 	padding: 1.0625rem 1.4375rem 1rem;
+}
+
+.p-cards-2 {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.p-cards-2__item {
+	margin: 0;
+	width: calc(50% - 3rem * 1 / 2);
+}
+
+.p-cards-2__item + .p-cards-2__item {
+	margin-left: 3rem;
+	margin-top: 0;
+}
+
+.p-cards-2__item:nth-child(2n + 1) {
+	margin-left: 0;
+}
+
+.p-cards-2__item:nth-child(n + 3),
+.p-cards-2__item:nth-child(n + 4) {
+	margin-top: 7.125rem;
 }
 
 .p-cards-3 {

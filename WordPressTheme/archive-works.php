@@ -21,72 +21,65 @@
       <li class="p-category-list__item current"><a href="#">all</a></li>
       <?php
         $args = array(
-        'taxonomy' => 'blog_category'
+        'taxonomy' => 'works_category',
+        'hide_empty'    => false,
+        'orderby' => 'description'
         );
       ?>
-      <?php
-        $blog_categories = get_terms($args);
-        if ( !empty($blog_categories));
-      ?>
-      <?php 
-        foreach($blog_categories as $blog_category) {
-        echo '<li><a class="p-category-list__item" href="'.get_term_link($blog_category).'">'.$blog_category->name.'</a></li>';
+      <?php $works_categories = get_terms($args);
+        if ( !empty($works_categories)){
+          foreach($works_categories as $works_category) {
+          echo '<li><a class="p-category-list__item" href="'.get_term_link($works_category).'">'.$works_category->name.'</a></li>';
+          };
         }
-      ?>
-      <?php endif; ?>
+        ?>
       <!-- <li class="p-category-list__item"><a href="#">カテゴリ１</a></li>
       <li class="p-category-list__item"><a href="#">カテゴリカテゴリ</a></li>
       <li class="p-category-list__item"><a href="#">カテ</a></li> -->
     </ul>
 
-
-    <div class="p-archive-blog__content p-cards-3">
+    <div class="p-archive-works__content p-cards-2">
     <?php
       $the_query = new WP_Query(
         array(
           'post_type' => 'works', //カスタム投稿タイプを指定
           'taxonomy' => 'works_category', //カスタムタクソノミーを指定
-          'posts_per_page' => 3, //表示する記事数
+          'posts_per_page' => 6, //表示する記事数
         )
-      ); ?>
+      ); 
+    ?>
     <?php if ( $the_query->have_posts() ) : ?>
       <?php while ( $the_query->have_posts() ) : ?>
         <?php $the_query->the_post(); ?>
           <?php $terms = get_the_terms($post->ID, 'works_category'); ?>
-
-          <a class="p-cards-3__item p-card-medium" href="<?php the_permalink(); ?>">
-            <figure class="p-card-medium__img">
-              <!-- <span class="c-card-new"></span> -->
-
+          <a class="p-cards-2__item p-card-large" href="<?php the_permalink(); ?>">
+            <figure class="p-card-large__img">
               <?php if (has_post_thumbnail()): ?>
                 <?php the_post_thumbnail( 'full' ); ?>
               <?php else: ?>
                 <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/no-image.jpg" alt="no image">
               <?php endif; ?>
-
-            </figure>
-            <div class="p-card-medium__body">
-              <h3 class="p-card-medium__title"><?php the_title() ?></h3>
-              <p class="p-card-medium__excerpt"><?php the_excerpt(); ?></p>
-            </div>
-            <div class="p-card-medium__info">
-              <span class="p-card-medium__label c-label-blog">
               <?php
-                $term = get_the_terms($post->ID,'works_category');
-                  echo $term[0]->name;
+                $term = get_the_terms($post->ID,'works_category'); ?>
+                <?php if ( !empty($term)){; ?>
+                  <span class="p-card-large__label c-label-card-l">
+                    <?php echo $term[0]->name; ?>
+                  </span>
+                <?php }; 
               ?>
-              </span>
-              <time class="p-card-medium__date c-date-blog" datetime="<?php the_time( 'c' ); ?>"><?php the_time('Y.m.d'); ?></time>
+            </figure>
+            <div class="p-card-large__body">
+              <h3 class="p-card-large__title"><?php the_title() ?></h3>
             </div>
           </a>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-        <?php else: ?>
-        <!-- 投稿が無い場合の処理 -->
-        <p>現在、投稿がありません</p>
-        <?php endif; ?>
-
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
+    <?php else: ?>
+      <!-- 投稿が無い場合の処理 -->
+      <p>現在、投稿がありません</p>
+    <?php endif; ?>
     </div>
+
   </div>
 </div>
 
