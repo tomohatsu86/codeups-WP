@@ -45,6 +45,7 @@
           'post_type' => 'works', //カスタム投稿タイプを指定
           'taxonomy' => 'works_category', //カスタムタクソノミーを指定
           'posts_per_page' => 6, //表示する記事数
+          'paged' => get_query_var('paged'),//現在何ページ目かを取得
         )
       ); 
     ?>
@@ -85,6 +86,7 @@
 
 <!-- ページネーション -->
 <?php get_template_part('template-parts/pagenation'); ?>
+
 <!-- ページネーション -->
 <!-- <div class="archive-blog__pagenation pagenation">
   <div class="pagenation__content wp-pagenavi--yellow">

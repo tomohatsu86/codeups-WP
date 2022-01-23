@@ -46,13 +46,13 @@
           'post_type' => 'blog', //カスタム投稿タイプを指定
           'taxonomy' => 'blog_category', //カスタムタクソノミーを指定
           'posts_per_page' => 9, //表示する記事数
+          'paged' => get_query_var('paged'),//現在何ページ目かを取得
         )
       ); ?>
     <?php if ( $the_query->have_posts() ) : ?>
       <?php while ( $the_query->have_posts() ) : ?>
         <?php $the_query->the_post(); ?>
           <?php $terms = get_the_terms($post->ID, 'blog_category'); ?>
-
           <a class="p-cards-3__item p-card-medium" href="<?php the_permalink(); ?>">
             <figure class="p-card-medium__img">
               <!-- <span class="c-card-new"></span> -->
@@ -93,8 +93,8 @@
 <!-- ページネーション -->
 <?php get_template_part('template-parts/pagenation'); ?>
 <!-- ページネーション -->
-<!-- <div class="archive-blog__pagenation pagenation">
-  <div class="pagenation__content wp-pagenavi--yellow">
+<!-- <div class="p-pagenavi">
+  <div class="p-pagenavi__content wp-pagenavi--yellow">
     <a class="previouspostslink" rel="prev" href="#">prev</a>
     <span class="page current">1</span>
     <a href="#" class="page">2</a>
