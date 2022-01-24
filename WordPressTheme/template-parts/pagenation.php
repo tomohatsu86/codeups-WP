@@ -19,23 +19,26 @@
     </div>
 
   <?php elseif ( is_archive() ) : ?>
-    
-    <!-- <div class="p-pagenation__content c-wp-pagenavi"> -->
 
     <?php if (is_post_type_archive('blog')) : ?>
       <div class="p-pagenation__content c-wp-pagenavi--yellow">
-      <?php else: ?>
-      <div class="p-pagenation__content c-wp-pagenavi">
-        aaaaaaaaaaaaaaaaa
-    <?php endif; ?>
-    
-      <?php wp_pagenavi(array('query' => $GLOBALS['the_query'])); ?>
-
+      <?php if(function_exists('wp_pagenavi'))
+        wp_pagenavi(array('query' => $GLOBALS['the_query'])); 
+      ?>
       </div>
+    <?php else: ?>
+      <div class="p-pagenation__content c-wp-pagenavi">
+      <?php if(function_exists('wp_pagenavi'))
+        wp_pagenavi(array('query' => $GLOBALS['the_query'])); 
+      ?>
+      </div>
+    <?php endif; ?>
 
   <?php else: ?>
     <div class="p-pagenation__content c-wp-pagenavi">
-      <?php wp_pagenavi(); ?>
+      <?php if(function_exists('wp_pagenavi'))
+        wp_pagenavi(); 
+      ?>
     </div>
   <?php endif; ?>
 

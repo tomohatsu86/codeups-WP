@@ -18,7 +18,7 @@
 
     <ul class="p-archive-blog__list p-category-list">
 
-      <li class="p-category-list__item current"><a href="#">all</a></li>
+      <li class="p-category-list__item current"><a href="<?php echo get_post_type_archive_link( 'blog' ); ?>">all</a></li>
       <?php
         $args = array(
         'taxonomy' => 'blog_category',

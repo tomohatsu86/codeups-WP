@@ -33,9 +33,6 @@
           };
         }
         ?>
-      <!-- <li class="p-category-list__item"><a href="#">カテゴリ１</a></li>
-      <li class="p-category-list__item"><a href="#">カテゴリカテゴリ</a></li>
-      <li class="p-category-list__item"><a href="#">カテ</a></li> -->
     </ul>
 
     <div class="p-archive-works__content p-cards-2">
