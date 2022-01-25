@@ -30,22 +30,25 @@
         if ( !empty($works_categories)){
           foreach($works_categories as $works_category) {
           echo '<li><a class="p-category-list__item" href="'.get_term_link($works_category).'">'.$works_category->name.'</a></li>';
-          };
-        }
-        ?>
+        };
+      }
+      ?>
     </ul>
 
-    <div class="p-archive-works__content p-cards-2">
     <?php
+      $term = get_queried_object();
+      var_dump($term);
       $the_query = new WP_Query(
-        array(
-          'post_type' => 'works', //カスタム投稿タイプを指定
-          'taxonomy' => 'works_category', //カスタムタクソノミーを指定
-          'posts_per_page' => 6, //表示する記事数
-          'paged' => get_query_var('paged'),//現在何ページ目かを取得
+        array( 
+          'post_type' => 'works',
+          'taxonomy' => 'works_category',
+          'term' => $term->slug,
+          'posts_per_page' => 6,
         )
-      ); 
+      );
     ?>
+
+    <div class="p-archive-works__content p-cards-2">
     <?php if ( $the_query->have_posts() ) : ?>
       <?php while ( $the_query->have_posts() ) : ?>
         <?php $the_query->the_post(); ?>
@@ -74,12 +77,41 @@
       <?php wp_reset_postdata(); ?>
     <?php else: ?>
       <!-- 投稿が無い場合の処理 -->
-      <p>現在、投稿がありません</p>
+      <p>お探しの記事、ページは見つかりませんでした。</p>
     <?php endif; ?>
     </div>
 
   </div>
 </div>
+
+<?php
+  $the_query = new WP_Query(
+    array(
+      'post_type' => 'works', //カスタム投稿タイプを指定
+      'taxonomy' => 'works_category', //カスタムタクソノミーを指定
+      'posts_per_page' => 6, //表示する記事数
+      'paged' => get_query_var('paged'),//現在何ページ目かを取得
+    )
+  ); 
+?>
+<?php 
+  $cat = get_query_var( 'works_category' ); //指定したいタクソノミーを指定
+  $the_query = new WP_Query(
+    array(
+      'post_type' => array('works'), 
+      'tax_query' => array(
+          'relation' => 'OR',
+          array(
+              'taxonomy' => 'works_category',
+              'field' => 'slug',
+              'terms' => $cat, /* 上記で指定した変数を指定 */
+          ),
+      ),
+      'posts_per_page' => '10' ,/* 1ページに表示させたい件数 */
+      'paged' => get_query_var('paged'),//現在何ページ目かを取得
+    )
+  );
+?>
 
 <!-- ページネーション -->
 <?php get_template_part('template-parts/pagenation'); ?>
