@@ -38,20 +38,11 @@
       <li class="p-category-list__item"><a href="#">カテ</a></li> -->
     </ul>
 
-
     <div class="p-archive-blog__content p-cards-3">
-    <?php
-      $the_query = new WP_Query(
-        array(
-          'post_type' => 'blog', //カスタム投稿タイプを指定
-          'taxonomy' => 'blog_category', //カスタムタクソノミーを指定
-          'posts_per_page' => 9, //表示する記事数
-          'paged' => get_query_var('paged'),//現在何ページ目かを取得
-        )
-      ); ?>
-    <?php if ( $the_query->have_posts() ) : ?>
-      <?php while ( $the_query->have_posts() ) : ?>
-        <?php $the_query->the_post(); ?>
+
+    <?php if ( have_posts() ) : ?>
+      <?php while ( have_posts() ) : ?>
+        <?php the_post(); ?>
           <?php $terms = get_the_terms($post->ID, 'blog_category'); ?>
           <a class="p-cards-3__item p-card-medium" href="<?php the_permalink(); ?>">
             <figure class="p-card-medium__img">

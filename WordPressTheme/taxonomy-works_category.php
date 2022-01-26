@@ -35,7 +35,7 @@
       ?>
     </ul>
 
-    <?php
+    <!-- <?php
       $term = get_queried_object();
       var_dump($term);
       $the_query = new WP_Query(
@@ -43,10 +43,12 @@
           'post_type' => 'works',
           'taxonomy' => 'works_category',
           'term' => $term->slug,
-          'posts_per_page' => 6,
+          'posts_per_page' => 8,
         )
       );
-    ?>
+    ?> -->
+    
+    <?php var_dump($wp_query); //中身確認 ?>
 
     <div class="p-archive-works__content p-cards-2">
     <?php if ( $the_query->have_posts() ) : ?>
@@ -84,6 +86,22 @@
   </div>
 </div>
 
+<!-- ページネーション -->
+<?php get_template_part('template-parts/pagenation'); ?>
+
+<!-- ページネーション -->
+<!-- <div class="archive-blog__pagenation pagenation">
+  <div class="pagenation__content wp-pagenavi--yellow">
+    <a class="previouspostslink" rel="prev" href="#">prev</a>
+    <span class="page current">1</span>
+    <a href="#" class="page">2</a>
+    <a href="#" class="page">3</a>
+    <a href="#" class="page">4</a>
+    <a class="nextpostslink" rel="next" href="#">next</a>
+  </div>
+</div> -->
+</section>
+
 <?php
   $the_query = new WP_Query(
     array(
@@ -112,22 +130,6 @@
     )
   );
 ?>
-
-<!-- ページネーション -->
-<?php get_template_part('template-parts/pagenation'); ?>
-
-<!-- ページネーション -->
-<!-- <div class="archive-blog__pagenation pagenation">
-  <div class="pagenation__content wp-pagenavi--yellow">
-    <a class="previouspostslink" rel="prev" href="#">prev</a>
-    <span class="page current">1</span>
-    <a href="#" class="page">2</a>
-    <a href="#" class="page">3</a>
-    <a href="#" class="page">4</a>
-    <a class="nextpostslink" rel="next" href="#">next</a>
-  </div>
-</div> -->
-</section>
 
 <!-- お問い合わせ -->
 <?php get_template_part('template-parts/section-contact'); ?>

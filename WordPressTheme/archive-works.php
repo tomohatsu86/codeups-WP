@@ -37,21 +37,12 @@
       <li class="p-category-list__item"><a href="#">カテゴリカテゴリ</a></li>
       <li class="p-category-list__item"><a href="#">カテ</a></li> -->
     </ul>
-
+    
     <div class="p-archive-works__content p-cards-2">
-    <?php
-      $the_query = new WP_Query(
-        array(
-          'post_type' => 'works', //カスタム投稿タイプを指定
-          'taxonomy' => 'works_category', //カスタムタクソノミーを指定
-          'posts_per_page' => 6, //表示する記事数
-          'paged' => get_query_var('paged'),//現在何ページ目かを取得
-        )
-      ); 
-    ?>
-    <?php if ( $the_query->have_posts() ) : ?>
-      <?php while ( $the_query->have_posts() ) : ?>
-        <?php $the_query->the_post(); ?>
+      
+    <?php if ( have_posts() ) : ?>
+      <?php while ( have_posts() ) : ?>
+        <?php the_post(); ?>
           <?php $terms = get_the_terms($post->ID, 'works_category'); ?>
           <a class="p-cards-2__item p-card-large" href="<?php the_permalink(); ?>">
             <figure class="p-card-large__img">

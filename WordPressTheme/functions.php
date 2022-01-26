@@ -190,3 +190,20 @@ function add_next_post_link_class($output) {
 add_filter( 'next_post_link', 'add_next_post_link_class' ); 
 
 // 参考：https://www.nxworld.net/wp-add-class-previous-posts-link-and-next-posts-link.html
+
+
+// アーカイブページのメインクエリのデータ取得条件を変更する
+function my_custom_query_vars( $query ) {
+	if ( !is_admin() && $query->is_main_query()) {
+		// ページによって条件変更
+			if ( is_post_type_archive('blog') ) {
+					$query->set( 'posts_per_page' , 9 );
+
+			}elseif( is_post_type_archive('works') ) {
+					$query->set( 'posts_per_page' , 6 );
+
+			}
+	}
+	return $query;
+}
+add_action( 'pre_get_posts', 'my_custom_query_vars' );

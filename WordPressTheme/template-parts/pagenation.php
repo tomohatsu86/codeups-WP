@@ -23,13 +23,13 @@
     <?php if (is_post_type_archive('blog')) : ?>
       <div class="p-pagenation__content c-wp-pagenavi--yellow">
       <?php if(function_exists('wp_pagenavi'))
-        wp_pagenavi(array('query' => $GLOBALS['the_query'])); 
+        wp_pagenavi(); 
       ?>
       </div>
     <?php else: ?>
       <div class="p-pagenation__content c-wp-pagenavi">
       <?php if(function_exists('wp_pagenavi'))
-        wp_pagenavi(array('query' => $GLOBALS['the_query'])); 
+        wp_pagenavi(); 
       ?>
       </div>
     <?php endif; ?>
@@ -37,7 +37,7 @@
   <?php else: ?>
     <div class="p-pagenation__content c-wp-pagenavi">
       <?php if(function_exists('wp_pagenavi'))
-        wp_pagenavi(); 
+        wp_pagenavi(array('query' => $GLOBALS['the_query'])); 
       ?>
     </div>
   <?php endif; ?>
