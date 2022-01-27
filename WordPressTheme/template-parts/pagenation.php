@@ -18,6 +18,13 @@
       <?php endif; ?>
     </div>
 
+  <?php elseif ( is_tax() ) : ?>
+    <div class="p-pagenation__content c-wp-pagenavi">
+      <?php if(function_exists('wp_pagenavi'))
+        wp_pagenavi(array('query' => $GLOBALS['the_query'])); 
+      ?>
+      </div>
+
   <?php elseif ( is_archive() ) : ?>
 
     <?php if (is_post_type_archive('blog')) : ?>

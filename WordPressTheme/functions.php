@@ -201,7 +201,7 @@ function my_custom_query_vars( $query ) {
 
 			}elseif( is_post_type_archive('works') ) {
 					$query->set( 'posts_per_page' , 6 );
-
+					
 			}
 	}
 	return $query;
