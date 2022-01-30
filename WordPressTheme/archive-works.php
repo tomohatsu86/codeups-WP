@@ -43,7 +43,6 @@
     <?php if ( have_posts() ) : ?>
       <?php while ( have_posts() ) : ?>
         <?php the_post(); ?>
-          <?php $terms = get_the_terms($post->ID, 'works_category'); ?>
           <a class="p-cards-2__item p-card-large" href="<?php the_permalink(); ?>">
             <figure class="p-card-large__img">
               <?php if (has_post_thumbnail()): ?>

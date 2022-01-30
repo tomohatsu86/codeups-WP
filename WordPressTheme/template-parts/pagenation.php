@@ -19,22 +19,22 @@
     </div>
 
   <?php elseif ( is_tax() ) : ?>
-    <div class="p-pagenation__content c-wp-pagenavi">
+    <div id="is-tax" class="p-pagenation__content c-wp-pagenavi">
       <?php if(function_exists('wp_pagenavi'))
-        wp_pagenavi(array('query' => $GLOBALS['the_query'])); 
+        wp_pagenavi(); 
       ?>
       </div>
 
   <?php elseif ( is_archive() ) : ?>
 
     <?php if (is_post_type_archive('blog')) : ?>
-      <div class="p-pagenation__content c-wp-pagenavi--yellow">
+      <div id="archive-blog" class="p-pagenation__content c-wp-pagenavi--yellow">
       <?php if(function_exists('wp_pagenavi'))
         wp_pagenavi(); 
       ?>
       </div>
     <?php else: ?>
-      <div class="p-pagenation__content c-wp-pagenavi">
+      <div id="archive-" class="p-pagenation__content c-wp-pagenavi">
       <?php if(function_exists('wp_pagenavi'))
         wp_pagenavi(); 
       ?>
@@ -44,7 +44,7 @@
   <?php else: ?>
     <div class="p-pagenation__content c-wp-pagenavi">
       <?php if(function_exists('wp_pagenavi'))
-        wp_pagenavi(array('query' => $GLOBALS['the_query'])); 
+        wp_pagenavi(); 
       ?>
     </div>
   <?php endif; ?>

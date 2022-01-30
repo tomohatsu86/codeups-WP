@@ -19,63 +19,16 @@
         </div>
       </div>
       <div class="p-single__body">
-        <!-- <div class="p-single__thumbnail">
+        <div class="p-single__thumbnail">
         <?php if (has_post_thumbnail()): ?>
           <?php the_post_thumbnail( 'full' ); ?>
         <?php else: ?>
           <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/no-image.jpg" alt="no image">
         <?php endif; ?>
-        </div> -->
+        </div>
         
         <?php the_content(); ?>
-        
-        <!--<div class="p-single__item">
-          <p class="p-single__text">
-            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-          </p>
-        </div>
-        <div class="p-single__item">
-          <h2 class="p-single__title p-single__title--h2">
-            見出し2
-          </h2>
-        </div>
-        <div class="p-single__item">
-          <p class="p-single__text">
-            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-          </p>
-        </div>
-        <div class="p-single__item">
-          <h3 class="p-single__title p-single__title--h3">
-            見出し3見出し3見出し3
-          </h3>
-        </div>
-        <div class="p-single__item">
-          <p class="p-single__text">
-            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-          </p>
-        </div>
-        <div class="p-single__item">
-          <div class="p-single__img">
-            <img src="./assets/images/single/single-img2.jpg" alt="写真：オレンジのテーブルに置かれたスマホ">
-          </div>
-        </div>
-        <div class="p-single__item">
-          <ul class="p-single__list-dot">
-            <li>リストが入ります。リストが入ります。リストが入ります。リストが入ります。</li>
-            <li>リストが入ります。リストが入ります。リストが入ります。リストが入ります。</li>
-            <li>リストが入ります。リストが入ります。リストが入ります。リストが入ります。</li>
-            <li>リストが入ります。リストが入ります。リストが入ります。リストが入ります。</li>
-          </ul>
-        </div>
-        <div class="p-single__item">
-          <ol class="p-single-blog__list-number">
-            <li>リストが入ります。リストが入ります。リストが入ります。リストが入ります。</li>
-            <li>リストが入ります。リストが入ります。リストが入ります。リストが入ります。</li>
-            <li>リストが入ります。リストが入ります。リストが入ります。リストが入ります。</li>
-            <li>リストが入ります。リストが入ります。リストが入ります。リストが入ります。</li>
-          </ol>
-        </div> -->
-        
+                
         <!-- ページネーション -->
         <?php get_template_part('template-parts/pagenation'); ?>
         

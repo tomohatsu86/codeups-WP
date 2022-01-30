@@ -43,7 +43,6 @@
     <?php if ( have_posts() ) : ?>
       <?php while ( have_posts() ) : ?>
         <?php the_post(); ?>
-          <?php $terms = get_the_terms($post->ID, 'blog_category'); ?>
           <a class="p-cards-3__item p-card-medium" href="<?php the_permalink(); ?>">
             <figure class="p-card-medium__img">
               <!-- <span class="c-card-new"></span> -->
