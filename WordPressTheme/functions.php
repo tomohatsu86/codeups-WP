@@ -196,10 +196,10 @@ add_filter( 'next_post_link', 'add_next_post_link_class' );
 function my_custom_query_vars( $query ) {
 	if ( !is_admin() && $query->is_main_query()) {
 		// ページによって条件変更
-			if ( is_post_type_archive('blog') ) {
+			if ( is_post_type_archive('blog') || is_tax('blog_category')) {
 					$query->set( 'posts_per_page' , 9 );
 
-			}elseif( is_post_type_archive('works') ) {
+			}elseif( is_post_type_archive('works') || is_tax('works_category')) {
 					$query->set( 'posts_per_page' , 6 );
 					
 			}

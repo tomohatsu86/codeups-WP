@@ -70,16 +70,7 @@
   </div>
 
   <!-- ページネーション -->
-  <div class="p-pagenation">
-    <div id="is-tax" class="p-pagenation__content c-wp-pagenavi">
-        <?php if(function_exists('wp_pagenavi'))
-          wp_pagenavi(); 
-        ?>
-    </div>
-  </div>
-
-<!-- ページネーションテンプレート読み込みは一旦コメントアウト -->
-<!-- <?php get_template_part('template-parts/pagenation'); ?> -->
+<?php get_template_part('template-parts/pagenation'); ?>
 
 </section>
 
