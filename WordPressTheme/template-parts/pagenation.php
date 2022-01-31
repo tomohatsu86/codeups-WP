@@ -7,6 +7,8 @@
   <?php if ( is_single() ) : ?>
     
     <div class="p-pagenation__content c-wp-pagenavi">
+
+    
       <?php if (get_previous_post()): ?>
         <?php previous_post_link('%link', 'prev'); ?>
       <?php endif; ?>

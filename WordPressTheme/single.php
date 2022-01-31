@@ -3,6 +3,7 @@
 <!-- パンくずリスト -->
 <?php get_template_part('template-parts/breadcrumb'); ?>
 
+
 <div class="p-single__contents l-single">
   <div class="l-inner">
     
@@ -15,7 +16,22 @@
         </h1>
         <div class="p-single__info">
           <time class="p-single__date c-date" datetime="<?php the_time( 'c' ); ?>"><?php the_time('Y/m/d'); ?></time>
-          <span class="p-single__label c-label"><?php the_category(); ?></span>
+
+          <?php if (get_post_type() === 'post'): ?>
+          <?php 
+            $cat = get_the_category(); ?>
+            <span class="p-single__label c-label"><?php echo $cat[0]->name; ?></span>
+
+          <?php elseif(get_post_type() === 'blog'): ?>
+          <?php
+            $term = get_the_terms($post->ID,'blog_category'); ?>
+            <?php if ( !empty($term)){; ?>
+              <span class="p-single__label c-label">
+                <?php echo $term[0]->name; ?>
+              </span>
+            <?php }; ?>
+
+          <?php endif; ?>
         </div>
       </div>
       <div class="p-single__body">
