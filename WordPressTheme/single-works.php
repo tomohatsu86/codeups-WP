@@ -64,28 +64,10 @@
               </p>
             </div>
           </div>
-          
-          <!-- ページネーション -->
-          <div class="p-single-works__pagenation pagenation">
-            <div class="pagenation__content wp-pagenavi">
-              <a class="previouspostslink" rel="prev" href="#">prev</a>
-              <a href="./archive-works.html" class="archive">一覧</a>
-              <a class="nextpostslink" rel="next" href="#">next</a>
-            </div>
-          </div>
-        </div>
+
         <!-- ページネーション -->
-        <div class="p-archive-news__pagenation p-pagenation u-desktop">
-          <div class="p-pagenation__content c-wp-pagenavi">
-          <?php wp_pagenavi(); ?>
-            <!-- <a class="previouspostslink" rel="prev" href="#">prev</a>
-            <span class="page current">1</span>
-            <a href="#" class="page">2</a>
-            <a href="#" class="page">3</a>
-            <a href="#" class="page">4</a>
-            <a class="nextpostslink" rel="next" href="#">next</a> -->
-          </div>
-        </div>
+        <?php get_template_part('template-parts/pagenation'); ?>
+
         
         <!-- おすすめ・関連記事 -->
         <div class="p-single-works__content recommend-article">
