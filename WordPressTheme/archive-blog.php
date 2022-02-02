@@ -16,7 +16,7 @@
 <div class="p-archive-blog__contents">
   <div class="l-inner">
 
-    <ul class="p-archive-blog__list p-category-list">
+    <ul class="p-archive-blog__list p-category-list js-category-list">
 
       <li class="p-category-list__item current"><a href="<?php echo get_post_type_archive_link( 'blog' ); ?>">all</a></li>
       <?php
@@ -33,9 +33,6 @@
           };
         }
         ?>
-      <!-- <li class="p-category-list__item"><a href="#">カテゴリ１</a></li>
-      <li class="p-category-list__item"><a href="#">カテゴリカテゴリ</a></li>
-      <li class="p-category-list__item"><a href="#">カテ</a></li> -->
     </ul>
 
     <div class="p-archive-blog__content p-cards-3">
@@ -45,7 +42,20 @@
         <?php the_post(); ?>
           <a class="p-cards-3__item p-card-medium" href="<?php the_permalink(); ?>">
             <figure class="p-card-medium__img">
-              <!-- <span class="c-card-new"></span> -->
+            <!-- 3件以内かつ3日以内の記事に「New」をつける -->
+              <?php
+                $limit = 1;
+                $num = $wp_query->current_post;//何件目の記事かを取得
+                
+                if ( $limit > $num ):
+                  $days = 30;
+                  $today = date_i18n('U');
+                  $entry_day = get_the_time('U');
+                  $keika = date('U',($today - $entry_day)) / 86400;//1日の秒数（60秒×60分×24時間=86400）
+                  if ( $days > $keika ): ?>
+                  <span class="c-card-new u-hidden-pc"></span>
+                <?php endif; ?>  
+              <?php endif; ?>  
 
               <?php if (has_post_thumbnail()): ?>
                 <?php the_post_thumbnail( 'full' ); ?>
@@ -82,17 +92,7 @@
 
 <!-- ページネーション -->
 <?php get_template_part('template-parts/pagenation'); ?>
-<!-- ページネーション -->
-<!-- <div class="p-pagenavi">
-  <div class="p-pagenavi__content wp-pagenavi--yellow">
-    <a class="previouspostslink" rel="prev" href="#">prev</a>
-    <span class="page current">1</span>
-    <a href="#" class="page">2</a>
-    <a href="#" class="page">3</a>
-    <a href="#" class="page">4</a>
-    <a class="nextpostslink" rel="next" href="#">next</a>
-  </div>
-</div> -->
+
 </section>
 
 <!-- お問い合わせ -->

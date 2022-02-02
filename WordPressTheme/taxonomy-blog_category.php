@@ -16,7 +16,7 @@
 <div class="p-archive-blog__contents">
   <div class="l-inner">
 
-    <ul class="p-archive-blog__list p-category-list">
+    <ul class="p-archive-blog__list p-category-list js-category-list">
 
       <li class="p-category-list__item current"><a href="<?php echo get_post_type_archive_link( 'blog' ); ?>">all</a></li>
       <?php

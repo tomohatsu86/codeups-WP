@@ -784,6 +784,23 @@ summary {
 	top: 2px;
 }
 
+.c-card-new::before {
+	background-color: #FFBA6A;
+	border-radius: 50%;
+	color: #333;
+	content: "New";
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1rem;
+	height: 3.75rem;
+	left: -0.9375rem;
+	line-height: 3.75rem;
+	position: absolute;
+	text-align: center;
+	top: -1rem;
+	width: 3.75rem;
+	z-index: 99;
+}
+
 .c-date-blog {
 	color: inherit;
 	font-family: "Noto Sans JP", sans-serif;
@@ -1336,23 +1353,6 @@ summary {
 	max-width: 33.75rem;
 	position: relative;
 	width: 100%;
-}
-
-.p-cards-3__item:first-child::before {
-	background-color: #FFBA6A;
-	border-radius: 50%;
-	color: #333;
-	content: "New";
-	font-family: "Noto Sans JP", sans-serif;
-	font-size: 1rem;
-	height: 3.75rem;
-	left: -0.9375rem;
-	line-height: 3.75rem;
-	position: absolute;
-	text-align: center;
-	top: -1rem;
-	width: 3.75rem;
-	z-index: 99;
 }
 
 .p-cards-3__item + .p-cards-3__item {
@@ -2501,10 +2501,6 @@ html {
 .p-cards-3__item {
 	margin: 0;
 	max-width: calc((100% - 1.5625rem * 2) / 3);
-}
-
-.p-cards-3__item:first-child::before {
-	display: none;
 }
 
 .p-cards-3__item + .p-cards-3__item {
