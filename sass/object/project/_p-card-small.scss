@@ -1,4 +1,4 @@
-.p-card-medium{
+.p-card-small{
   display: block;
   background-color: $white;
   color: $black;
@@ -8,17 +8,17 @@
   flex-direction: column;
 }
 
-.p-card-medium:hover {
+.p-card-small:hover {
   background-color: $black;
   color: $white;
 }
 
-.p-card-medium__img{
+.p-card-small__img{
   position: relative;
-  padding-top: calc((233 / 350) * 100%);
+  padding-top: calc((148 / 251) * 100%);
 }
 
-.p-card-medium__img img{
+.p-card-small__img img{
   display: block;
   position: absolute;
   top: 50%;
@@ -29,24 +29,33 @@
   object-fit: cover;
 }
 
-.p-card-medium__body{
+.p-card-small__body{
   font-family: $base-font-family;
   font-weight: $regular;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   padding: rem(2) rem(23) rem(0);
+  
+  @include mq("tab"){
+    padding: rem(4) rem(8) rem(0);
+  }
 }
 
-.p-card-medium__title{
+.p-card-small__title{
   font-size: rem(18);
   line-height: 2.0;
+  
+  @include mq("tab"){
+    font-size: rem(14);
+    line-height: (35 / 14);
+  }
 }
 
-.p-card-medium__excerpt{
+.p-card-small__excerpt{
   font-size: rem(14);
   line-height: 2.0;
 }
 
-.p-card-medium__info{
+.p-card-small__info{
   display: flex;
   align-items: center;
   // justify-content: space-between;
@@ -54,11 +63,11 @@
   margin-top: auto;
   
   @include mq("tab"){
-    padding: rem(10) rem(23) rem(16);
+    padding: rem(5) rem(23) rem(16);
   }
 }
 
-.p-card-medium__date{
+.p-card-small__date{
   margin-left: auto;
 }
 

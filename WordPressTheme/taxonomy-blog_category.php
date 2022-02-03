@@ -18,7 +18,7 @@
 
     <ul class="p-archive-blog__list p-category-list js-category-list">
 
-      <li class="p-category-list__item current"><a href="<?php echo get_post_type_archive_link( 'blog' ); ?>">all</a></li>
+      <li class="p-category-list__item"><a href="<?php echo get_post_type_archive_link( 'blog' ); ?>">all</a></li>
       <?php
         $args = array(
         'taxonomy' => 'blog_category',
@@ -29,13 +29,10 @@
       <?php $blog_categories = get_terms($args);
         if ( !empty($blog_categories)){
           foreach($blog_categories as $blog_category) {
-          echo '<li><a class="p-category-list__item" href="'.get_term_link($blog_category).'">'.$blog_category->name.'</a></li>';
+          echo '<li class="p-category-list__item" ><a href="'.get_term_link($blog_category).'">'.$blog_category->name.'</a></li>';
           };
         }
         ?>
-      <!-- <li class="p-category-list__item"><a href="#">カテゴリ１</a></li>
-      <li class="p-category-list__item"><a href="#">カテゴリカテゴリ</a></li>
-      <li class="p-category-list__item"><a href="#">カテ</a></li> -->
     </ul>
 
     <div class="p-archive-blog__content p-cards-3">
@@ -62,7 +59,7 @@
             <?php
                 $term = get_the_terms($post->ID,'blog_category'); ?>
                 <?php if ( !empty($term)){; ?>
-                  <span class="p-card-medium__label c-label-card-m">
+                  <span class="p-card-medium__label c-label-card-yellow">
                     <?php echo $term[0]->name; ?>
                   </span>
                 <?php }; ?>

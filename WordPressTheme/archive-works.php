@@ -16,9 +16,9 @@
 <div class="p-archive-blog__contents">
   <div class="l-inner">
 
-    <ul class="p-archive-blog__list p-category-list">
+    <ul class="p-archive-blog__list p-category-list js-category-list">
 
-      <li class="p-category-list__item current"><a href="<?php echo get_post_type_archive_link( 'works' ); ?>">all</a></li>
+      <li class="p-category-list__item"><a href="<?php echo get_post_type_archive_link( 'works' ); ?>">all</a></li>
       <?php
         $args = array(
           'taxonomy' => 'works_category',
@@ -29,13 +29,10 @@
       <?php $works_categories = get_terms($args);
         if ( !empty($works_categories)){
           foreach($works_categories as $works_category) {
-          echo '<li><a class="p-category-list__item" href="'.get_term_link($works_category).'">'.$works_category->name.'</a></li>';
+          echo '<li class="p-category-list__item" ><a href="'.get_term_link($works_category).'">'.$works_category->name.'</a></li>';
           };
         }
         ?>
-      <!-- <li class="p-category-list__item"><a href="#">カテゴリ１</a></li>
-      <li class="p-category-list__item"><a href="#">カテゴリカテゴリ</a></li>
-      <li class="p-category-list__item"><a href="#">カテ</a></li> -->
     </ul>
     
     <div class="p-archive-works__content p-cards-2">
@@ -53,7 +50,7 @@
               <?php
                 $term = get_the_terms($post->ID,'works_category'); ?>
                 <?php if ( !empty($term)){; ?>
-                  <span class="p-card-large__label c-label-card-l">
+                  <span class="p-card-large__label c-label-card-black">
                     <?php echo $term[0]->name; ?>
                   </span>
                 <?php }; 

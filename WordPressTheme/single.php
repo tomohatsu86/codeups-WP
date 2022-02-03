@@ -55,62 +55,95 @@
 
 
     <!-- おすすめ・関連記事一覧 -->
-    <div class="p-single-blog__content recommend-article">
-      <div class="recommend-article__btn recommend-btn">
-        <a href="#" class="btn-recommend u-mobile">おすすめ記事</a>
-        <a href="#" class="btn-recommend u-desktop">関連記事</a>
-      </div>
-      <div class="recommend-article__content cards-4">
-        <a class="cards-4__item card-small">
-          <figure class="card-small__img">
+    <div class="p-recommend-article l-recommend-article">
+      <h2 class="p-recommend-article__title">
+        <span class="u-mobile">おすすめ記事</span>
+        <span class="u-desktop">関連記事</span>
+      </h2>
+      <div class="p-recommend-article__content p-cards-4">
+      <?php
+        //カスタム投稿タイプを取得 
+        $post_type = get_post_type( $post );
+        //タクソノミースラッグ取得(単数)
+        $taxonomy_slug = array_keys(get_the_taxonomies());
+        // ターム情報を取得
+        $term = get_the_terms($post->ID, $taxonomy_slug);
+
+        var_dump($post_type);
+        var_dump($taxonomy_slug);
+        var_dump($term);
+      ?>
+      <?php
+        $args = array(
+          'numberposts' => 8, //８件表示(デフォルトは５件)
+          'post_type' => $post_type, //カスタム投稿タイプ名
+          'taxonomy' => $taxonomy_slug, //タクソノミー名
+          'term' => $term->slug, //ターム名 ←ここが追加
+          'orderby' => 'rand', //ランダム表示
+          'post__not_in' => array($post->ID); //表示中の記事を除外
+      ?>
+
+      <?php $myPosts = get_posts($args); if($myPosts) : ?>
+      <?php foreach($myPosts as $post) : setup_postdata($post); ?>
+        <p><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?><?php the_title(); ?></a></p>
+      <?php endforeach; ?>
+      <?php else : ?>
+        <p>関連アイテムはまだありません。</p>
+      <?php endif; wp_reset_postdata(); ?>
+      
+
+        <a class="p-cards-4__item p-card-small">
+          <figure class="p-card-small__img">
             <img src="./assets/images/single-blog/single-blog1.jpg" alt="写真：水の入ったグラスとノートパソコン">
           </figure>
-          <div class="card-small__body">
-            <h3 class="card-small__title">タイトルが入ります。タイトルが入ります。</h3>
-            <p class="card-small__excerpt u-mobile">説明文が入ります。説明文が入ります。説明文が入ります。</p>
+          <div class="p-card-small__body">
+            <h3 class="p-card-small__title">タイトルが入ります。タイトルが入ります。</h3>
+            <p class="p-card-small__excerpt u-mobile">説明文が入ります。説明文が入ります。説明文が入ります。</p>
           </div>
-          <div class="card-small__info">
-            <span class="card-small__label label-blog">カテゴリ</span>
-            <time class="card-small__date date-blog" datetime="2021-07-20">2021.07.20</time>
+          <div class="p-card-small__info">
+            <span class="p-card-small__label c-label-card-yellow">カテゴリ</span>
+            <time class="p-card-small__date c-date-blog" datetime="2021-07-20">2021.07.20</time>
           </div>
         </a>
-        <a class="cards-4__item card-small">
-          <figure class="card-small__img">
+
+
+        <a class="p-cards-4__item p-card-small">
+          <figure class="p-card-small__img">
             <img src="./assets/images/single-blog/single-blog2.jpg" alt="写真：沢山のモニターがある部屋">
           </figure>
-          <div class="card-small__body">
-            <h3 class="card-small__title">タイトルが入ります。タイトルが入ります。</h3>
-            <p class="card-small__excerpt u-mobile">説明文が入ります。説明文が入ります。説明文が入ります。</p>
+          <div class="p-card-small__body">
+            <h3 class="p-card-small__title">タイトルが入ります。タイトルが入ります。</h3>
+            <p class="p-card-small__excerpt u-mobile">説明文が入ります。説明文が入ります。説明文が入ります。</p>
           </div>
-          <div class="card-small__info">
-            <span class="card-small__label label-blog">カテゴリ</span>
-            <time class="card-small__date date-blog" datetime="2021-07-20">2021.07.20</time>
+          <div class="p-card-small__info">
+            <span class="p-card-small__label c-label-card-yellow">カテゴリ</span>
+            <time class="p-card-small__date c-date-blog" datetime="2021-07-20">2021.07.20</time>
           </div>
         </a>
-        <a class="cards-4__item card-small">
-          <figure class="card-small__img">
+        <a class="p-cards-4__item p-card-small">
+          <figure class="p-card-small__img">
             <img src="./assets/images/single-blog/single-blog3.jpg" alt="写真：タブレットを操作する男性">
           </figure>
-          <div class="card-small__body">
-            <h3 class="card-small__title">タイトルが入ります。タイトルが入ります。</h3>
-            <p class="card-small__excerpt u-mobile">説明文が入ります。説明文が入ります。説明文が入ります。</p>
+          <div class="p-card-small__body">
+            <h3 class="p-card-small__title">タイトルが入ります。タイトルが入ります。</h3>
+            <p class="p-card-small__excerpt u-mobile">説明文が入ります。説明文が入ります。説明文が入ります。</p>
           </div>
-          <div class="card-small__info">
-            <span class="card-small__label label-blog">カテゴリ</span>
-            <time class="card-small__date date-blog" datetime="2021-07-20">2021.07.20</time>
+          <div class="p-card-small__info">
+            <span class="p-card-small__label c-label-card-yellow">カテゴリ</span>
+            <time class="p-card-small__date c-date-blog" datetime="2021-07-20">2021.07.20</time>
           </div>
         </a>
-        <a class="cards-4__item card-small">
-          <figure class="card-small__img">
+        <a class="p-cards-4__item p-card-small">
+          <figure class="p-card-small__img">
             <img src="./assets/images/single-blog/single-blog4.jpg" alt="写真：お洒落な部屋のモニター">
           </figure>
-          <div class="card-small__body">
-            <h3 class="card-small__title">タイトルが入ります。タイトルが入ります。</h3>
-            <p class="card-small__excerpt u-mobile">説明文が入ります。説明文が入ります。説明文が入ります。</p>
+          <div class="p-card-small__body">
+            <h3 class="p-card-small__title">タイトルが入ります。タイトルが入ります。</h3>
+            <p class="p-card-small__excerpt u-mobile">説明文が入ります。説明文が入ります。説明文が入ります。</p>
           </div>
-          <div class="card-small__info">
-            <span class="card-small__label label-blog">カテゴリ</span>
-            <time class="card-small__date date-blog" datetime="2021-07-20">2021.07.20</time>
+          <div class="p-card-small__info">
+            <span class="p-card-small__label c-label-card-yellow">カテゴリ</span>
+            <time class="p-card-small__date c-date-blog" datetime="2021-07-20">2021.07.20</time>
           </div>
         </a>
       </div>
