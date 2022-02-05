@@ -1,4 +1,4 @@
-<section class="p-contact l-contact-top" id="p-contact">
+<section class="p-contact l-contact" id="p-contact">
   <div class="l-inner">
     <div class="p-contact__header p-section-head">
       <span class="p-section-head__title-en">Contact</span>

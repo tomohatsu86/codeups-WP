@@ -20,7 +20,12 @@
               $post_cat = get_the_category();
               $post_slug  = $post_cat[0]->slug;
             ?>
-          <a id ="aaa" href="<?php echo esc_url( home_url('/'). $post_slug .'/' ); ?>" class="archive">一覧</a>
+            <?php if( $post_slug === 'uncategorized' ) : ?>
+              <a id ="aaa" href="<?php echo esc_url( home_url( '/news/' ) ); ?>" class="archive">一覧</a>
+            <?php else: ?>
+            <a id ="aaa" href="<?php echo esc_url( home_url('/'). $post_slug .'/' ); ?>" class="archive">一覧</a>
+            <?php endif; ?>
+            
         <?php endif; ?>
       </div>
       <?php if (get_next_post()): ?>

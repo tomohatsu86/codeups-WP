@@ -63,11 +63,12 @@
   margin-top: auto;
   
   @include mq("tab"){
-    padding: rem(5) rem(23) rem(16);
+    padding: rem(5) rem(7) rem(14) rem(8);
   }
 }
 
 .p-card-small__date{
+  padding-left: rem(10);
   margin-left: auto;
 }
 

@@ -584,15 +584,11 @@ summary {
 	margin-top: 3.125rem;
 }
 
-.l-contact-top {
+.l-contact {
 	margin-top: 7.5rem;
 }
 
-.l-content-top {
-	margin-top: 6.9375rem;
-}
-
-.l-footer-top {
+.l-footer {
 	margin-top: 3.1875rem;
 }
 
@@ -620,7 +616,7 @@ summary {
 	margin-top: 4.375rem;
 }
 
-.l-news-top {
+.l-top-news {
 	margin-top: 1.5rem;
 }
 
@@ -630,6 +626,10 @@ summary {
 
 .l-single {
 	margin-top: 3.875rem;
+}
+
+.l-top-content {
+	margin-top: 6.9375rem;
 }
 
 .c-bg-line01 {
@@ -1332,6 +1332,7 @@ summary {
 
 .p-card-medium__date {
 	margin-left: auto;
+	padding-left: 0.625rem;
 }
 
 .p-card-small {
@@ -1392,6 +1393,7 @@ summary {
 
 .p-card-small__date {
 	margin-left: auto;
+	padding-left: 0.625rem;
 }
 
 .p-cards-2 {
@@ -1520,19 +1522,6 @@ summary {
 .p-contact__btn {
 	margin-top: 2.75rem;
 	text-align: center;
-}
-
-.p-content__header {
-	width: 100%;
-}
-
-.p-content__contents {
-	width: 100%;
-}
-
-.p-content__block {
-	display: flex;
-	width: 100%;
 }
 
 .p-footer {
@@ -1722,24 +1711,6 @@ summary {
 	display: block;
 	font-size: 1.25rem;
 	margin-top: 1.5rem;
-}
-
-.p-news {
-	width: 100%;
-}
-
-.p-news__inner {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 69.125rem;
-	padding: 0 20px;
-	width: 100%;
-}
-
-.p-news__btn {
-	margin-top: 1.875rem;
-	padding: 0;
-	text-align: center;
 }
 
 .p-page-content-mv {
@@ -2314,6 +2285,37 @@ summary {
 	width: 20%;
 }
 
+.p-top-content__header {
+	width: 100%;
+}
+
+.p-top-content__contents {
+	width: 100%;
+}
+
+.p-top-content__block {
+	display: flex;
+	width: 100%;
+}
+
+.p-top-news {
+	width: 100%;
+}
+
+.p-top-news__inner {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 69.125rem;
+	padding: 0 20px;
+	width: 100%;
+}
+
+.p-top-news__btn {
+	margin-top: 1.875rem;
+	padding: 0;
+	text-align: center;
+}
+
 .p-underlayer-mv {
 	height: 100vw;
 	width: 100%;
@@ -2398,15 +2400,11 @@ html {
 	font-size: 1.45455vw;
 }
 
-.l-contact-top {
+.l-contact {
 	margin-top: 8.5625rem;
 }
 
-.l-content-top {
-	margin-top: 10.75rem;
-}
-
-.l-footer-top {
+.l-footer {
 	margin-top: 1.3125rem;
 }
 
@@ -2420,7 +2418,7 @@ html {
 	margin-top: 3.3125rem;
 }
 
-.l-news-top {
+.l-top-news {
 	margin-top: 2rem;
 }
 
@@ -2434,6 +2432,10 @@ html {
 
 .l-text-align-right {
 	text-align: right;
+}
+
+.l-top-content {
+	margin-top: 10.75rem;
 }
 
 .c-bg-line01::before {
@@ -2585,7 +2587,7 @@ html {
 }
 
 .p-card-small__info {
-	padding: 0.3125rem 1.4375rem 1rem;
+	padding: 0.3125rem 0.4375rem 0.875rem 0.5rem;
 }
 
 .p-cards-2 {
@@ -2704,10 +2706,6 @@ html {
 	margin-top: 3.625rem;
 }
 
-.p-content__contents {
-	display: flex;
-}
-
 .p-footer__inner {
 	max-width: 82rem;
 	padding-left: 32px;
@@ -2781,21 +2779,6 @@ html {
 
 .p-mv__sub-title {
 	font-size: 1.5625rem;
-}
-
-.p-news__inner {
-	padding: 0 32px;
-}
-
-.p-news__contents {
-	align-items: center;
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-}
-
-.p-news__btn {
-	margin: 0;
 }
 
 .p-page-content-mv {
@@ -2963,6 +2946,25 @@ html {
 
 .p-sp-footer-nav {
 	display: none;
+}
+
+.p-top-content__contents {
+	display: flex;
+}
+
+.p-top-news__inner {
+	padding: 0 32px;
+}
+
+.p-top-news__contents {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.p-top-news__btn {
+	margin: 0;
 }
 
 .p-underlayer-mv {

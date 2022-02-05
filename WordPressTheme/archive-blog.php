@@ -66,7 +66,7 @@
             </figure>
             <div class="p-card-medium__body">
               <h3 class="p-card-medium__title"><?php the_title() ?></h3>
-              <p class="p-card-medium__excerpt"><?php the_excerpt(); ?></p>
+              <div class="p-card-medium__excerpt"><?php the_excerpt(); ?></div>
             </div>
             <div class="p-card-medium__info">
             <?php

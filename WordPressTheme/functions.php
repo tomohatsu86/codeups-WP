@@ -158,7 +158,7 @@ add_filter( 'get_the_archive_title', 'my_archive_title' );
  * @return int $length 変更後の文字数.
  */
 function my_excerpt_length( $length ) {
-	return 30;
+	return 38;
 }
 add_filter( 'excerpt_length', 'my_excerpt_length', 999 );
 

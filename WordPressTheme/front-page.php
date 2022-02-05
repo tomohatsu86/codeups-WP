@@ -38,10 +38,10 @@ $contact = esc_url( home_url( '/contact/' ) );
 </div>
 
 <!-- お知らせ -->
-<section class="p-news l-news-top" id="p-news">
-  <div class="p-news__inner">
-    <div class="p-news__contents">
-      <ul class="p-news__content p-posts">
+<section class="p-top-news l-top-news" id="p-top-news">
+  <div class="p-top-news__inner">
+    <div class="p-top-news__contents">
+      <ul class="p-top-news__content p-posts">
 
         <?php
           $news_query = new WP_Query(
@@ -71,26 +71,25 @@ $contact = esc_url( home_url( '/contact/' ) );
         <!-- 投稿が無い場合の処理 -->
         <p>現在、投稿がありません</p>
         <?php endif; ?>
-
-
       </ul>
-      <div class="p-news__btn">
+      <div class="p-top-news__btn">
         <a href="<?php echo $news ?>" class="c-btn-all">すべて見る</a>
       </div>
       </div>
     </div>
   </section>
 
+
   <!-- 事業内容 -->
-  <section class="p-content l-content-top" id="p-content">
+  <section class="p-top-content l-top-content" id="p-top-content">
     <span class="c-bg-line01"></span>
-    <div class="p-content__header p-section-head">
+    <div class="p-top-content__header p-section-head">
       <span class="p-section-head__title-en">Content</span>
       <h2 class="p-section-head__title-ja">事業内容</h2>
     </div>
-    <div class="p-content__contents">
-      <div class="p-content__block">
-        <div class="p-content__item c-img-link">
+    <div class="p-top-content__contents">
+      <div class="p-top-content__block">
+        <div class="p-top-content__item c-img-link">
           <div class="c-img-link__wrapper">
             <a href="<?php echo $content ?>">
               <img src="<?php echo get_template_directory_uri() ?>./assets/img/top/top-content1.jpg" alt="画像：手に持たれた電球">
@@ -98,7 +97,7 @@ $contact = esc_url( home_url( '/contact/' ) );
             </a>
           </div>
         </div>
-        <div class="p-content__item c-img-link">
+        <div class="p-top-content__item c-img-link">
           <figure class="c-img-link__wrapper">
             <a href="<?php echo $content ?>#item01">
               <img src="<?php echo get_template_directory_uri() ?>./assets/img/top/top-content2.jpg" alt="画像：談笑している写真">
@@ -107,8 +106,8 @@ $contact = esc_url( home_url( '/contact/' ) );
           </figure>
         </div>
       </div>
-      <div class="p-content__block">
-        <div class="p-content__item c-img-link">
+      <div class="p-top-content__block">
+        <div class="p-top-content__item c-img-link">
           <figure class="c-img-link__wrapper">
             <a href="<?php echo $content ?>#item02">
               <img src="<?php echo get_template_directory_uri() ?>./assets/img/top/top-content3.jpg" alt="画像：グラフの写真">
@@ -116,7 +115,7 @@ $contact = esc_url( home_url( '/contact/' ) );
             </a>
           </figure>
         </div>
-        <div class="p-content__item c-img-link">
+        <div class="p-top-content__item c-img-link">
           <figure class="c-img-link__wrapper">
             <a href="<?php echo $content ?>#item03">
               <img src="<?php echo get_template_directory_uri() ?>./assets/img/top/top-content4.jpg" alt="画像：手に持たれたスマホ">

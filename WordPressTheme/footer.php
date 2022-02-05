@@ -1,5 +1,5 @@
 </main>
-<footer class="p-footer l-footer-top">
+<footer class="p-footer l-footer">
   <div class="p-footer__inner">
     <div class="p-footer__contents">
       <div class="p-footer__logo">
