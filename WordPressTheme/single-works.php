@@ -24,12 +24,24 @@
         <?php }; ?>
         </div>
       </div>
+
       <div class="p-single-works__body">
+
+        <?php $works_images = scf::get('works_images'); 
+        if( !empty( $works_images[0]['works-img'] )){ ?>
+        
+        <!-- スライダー -->
         <div class="p-single-works__slider swiper">
+
           <!-- メインスライダー -->
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works1.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works2.jpg" alt=""></div>
+          <?php foreach ($works_images as $fields ) {
+            $imgurl = wp_get_attachment_image_src($fields['works-img'] , 'full'); ?>
+            <div class="swiper-slide">
+              <img src="<?php echo $imgurl[0]; ?>">
+            </div>
+          <?php } ?>
+          
             <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works3.jpg" alt=""></div>
             <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works4.jpg" alt=""></div>
             <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works5.jpg" alt=""></div>
@@ -53,25 +65,20 @@
             <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works8.jpg" alt=""></div>
           </div>
         </div>
+        <?php } ?>
 
-        <div class="p-single-works__item box">
-          <span class="box__title">制作のポイント</span>
-          <p class="box__text">
-            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-          </p>
-        </div>
-        <div class="p-single-works__item box">
-          <span class="box__title">デザインのポイント</span>
-          <p class="box__text">
-            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-          </p>
-        </div>
-        <div class="p-single-works__item box">
-          <span class="box__title">その他</span>
-          <p class="box__text">
-            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-          </p>
-        </div>
+        
+        <?php
+        $boxes = SCF::get('boxes');
+        foreach ($boxes as $fields) {; ?>
+          <div class="p-single-works__item p-box">
+            <span class="p-box__title"><?php echo $fields['box-title']; ?></span>
+            <p class="p-box__text">
+              <?php echo $fields['box-text']; ?>
+            </p>
+          </div>
+        <?php } ?>
+
       </div>
     </div>
 

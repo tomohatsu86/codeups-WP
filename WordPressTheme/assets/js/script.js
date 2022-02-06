@@ -178,7 +178,7 @@ var thumbs = new Swiper('.single-works__thumbs', {
 //---------------------------------------
 //制作実績詳細ページのメインswiper
 //---------------------------------------
-var slider = new Swiper('.single-works__slider', {
+var slider = new Swiper('.p-single-works__slider', {
 	slidesPerView: 1,
 	centeredSlides: true,
 	loop: true,

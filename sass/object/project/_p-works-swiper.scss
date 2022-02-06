@@ -1,0 +1,30 @@
+/* とっぷページの制作実績のSwiperのcss */
+.p-works__swiper{
+  // width: 100%;
+  max-width: rem(557);
+}
+
+.swiper .works-slide-img{
+  width: 100%;
+  height: inherit;
+}
+
+.swiper .works-slide-img img{
+  display: block;
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+  text-align: center;
+}
+
+.p-works__swiper .swiper-pagination-bullet{
+  background: #C4C4C4;
+  opacity: 1;
+}
+
+.p-works__swiper .swiper-pagination-bullet-active{
+  background: #F9F871;
+}

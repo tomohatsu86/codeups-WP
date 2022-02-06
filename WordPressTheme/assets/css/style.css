@@ -1207,6 +1207,38 @@ summary {
 	width: 100%;
 }
 
+.p-box {
+	margin: 4.6875rem auto 0;
+	max-width: 49.9375rem;
+	width: 100%;
+}
+
+.p-box__title {
+	background-color: #111;
+	border: 1px solid #fff;
+	border-radius: 2rem;
+	color: #fff;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1.25rem;
+	font-weight: 300;
+	letter-spacing: 0.04em;
+	margin-left: 1.5rem;
+	padding: 0.5rem 1.5rem;
+}
+
+.p-box__text {
+	background-color: #111;
+	border: 1px solid #fff;
+	color: #fff;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	letter-spacing: 0.04em;
+	line-height: calc(35/16);
+	margin-top: -1rem;
+	padding: 3.5rem 0.625rem 2.0625rem;
+}
+
 .p-breadcrumb {
 	color: #fff;
 	display: block;
@@ -2353,6 +2385,41 @@ summary {
 	transform: translate(-50%, -50%);
 	width: 100%;
 	z-index: 5;
+}
+
+/* とっぷページの制作実績のSwiperのcss */
+
+.p-works__swiper {
+	max-width: 34.8125rem;
+}
+
+.swiper .works-slide-img {
+	height: inherit;
+	width: 100%;
+}
+
+.swiper .works-slide-img img {
+	-o-object-fit: cover;
+	display: block;
+	height: inherit;
+	object-fit: cover;
+	width: 100%;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+	text-align: center;
+}
+
+.p-works__swiper .swiper-pagination-bullet {
+	background: #C4C4C4;
+	opacity: 1;
+}
+
+.p-works__swiper .swiper-pagination-bullet-active {
+	background: #F9F871;
 }
 
 .u-hidden-tab {
