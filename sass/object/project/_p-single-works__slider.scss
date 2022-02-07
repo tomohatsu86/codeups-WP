@@ -1,0 +1,79 @@
+.p-single-works__slider.swiper{
+  // 画面幅いっぱいにはみ出させる
+  margin-left: -20px;
+  margin-right: -20px;
+  width: calc(100% + 40px);
+
+  @include mq("tab"){
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.p-single-works__slider .swiper-slide{
+  position: relative;
+  margin-top: rem(16);
+  overflow: hidden;
+
+  @include mq("tab"){
+    width: 100%;
+    margin: rem(16) auto;
+  }
+}
+
+.p-single-works__slider .swiper-slide::before{
+  content: "";
+  display: block;
+  padding-top: calc((251 / 375 ) * 100%);
+  
+  @include mq("tab"){
+    padding-top: calc((427 / 799 ) * 100%);
+  }
+}
+
+.p-single-works__slider .swiper-slide img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-single-works__slider .swiper-button-prev,
+.p-single-works__slider .swiper-button-next{
+  width: rem(30);
+  height: rem(30);
+
+  @include mq("tab"){
+    width: rem(50);
+    height: rem(50);
+  }
+}
+
+.p-single-works__slider .swiper-button-prev:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/sigle-works/prev-btn.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+}
+
+.p-single-works__slider .swiper-button-next:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/sigle-works/next-btn.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}

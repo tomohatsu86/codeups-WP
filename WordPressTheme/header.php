@@ -48,7 +48,7 @@
       </div> -->
 
       <!-- ドロワーメニューボタン -->
-      <button class="p-header__drawer c-hamburger js-drawer-open" id="menu-button">
+      <button class="p-header__drawer c-hamburger js-drawer">
         <span></span>
         <span></span>
         <span></span>

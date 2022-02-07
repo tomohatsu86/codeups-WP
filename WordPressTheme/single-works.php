@@ -31,38 +31,31 @@
         if( !empty( $works_images[0]['works-img'] )){ ?>
         
         <!-- スライダー -->
-        <div class="p-single-works__slider swiper">
+        <div class="p-single-works__slider swiper js-single-works__slider">
 
           <!-- メインスライダー -->
           <div class="swiper-wrapper">
-          <?php foreach ($works_images as $fields ) {
-            $imgurl = wp_get_attachment_image_src($fields['works-img'] , 'full'); ?>
-            <div class="swiper-slide">
-              <img src="<?php echo $imgurl[0]; ?>">
-            </div>
-          <?php } ?>
-          
-            <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works3.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works4.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works5.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works6.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works7.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works8.jpg" alt=""></div>
+            <?php foreach ($works_images as $fields ) {;
+              $imgurl = wp_get_attachment_image_src($fields['works-img'] , 'full'); ?>
+              <div class="swiper-slide">
+                <img src="<?php echo $imgurl[0]; ?>">
+              </div>
+            <?php }; ?>
+
           </div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
+
           <!-- サムネイル -->
-        <div class="swiper p-single-works__thumbs">
+        <div class="p-single-works__thumbs swiper js-single-works__thumbs">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works1.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works2.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works3.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works4.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works5.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works6.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works7.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./assets/images/sigle-works/single-works8.jpg" alt=""></div>
+          <?php foreach ($works_images as $fields ) {;
+              $imgurl = wp_get_attachment_image_src($fields['works-img'] , 'full'); ?>
+              <div class="swiper-slide">
+                <img src="<?php echo $imgurl[0]; ?>">
+              </div>
+          <?php }; ?>
           </div>
         </div>
         <?php } ?>

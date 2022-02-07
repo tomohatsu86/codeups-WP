@@ -2019,6 +2019,104 @@ summary {
 	text-align: center;
 }
 
+.p-single-works__slider.swiper {
+	margin-left: -20px;
+	margin-right: -20px;
+	width: calc(100% + 40px);
+}
+
+.p-single-works__slider .swiper-slide {
+	margin-top: 1rem;
+	overflow: hidden;
+	position: relative;
+}
+
+.p-single-works__slider .swiper-slide::before {
+	content: "";
+	display: block;
+	padding-top: calc((251 / 375 ) * 100%);
+}
+
+.p-single-works__slider .swiper-slide img {
+	-o-object-fit: cover;
+	height: 100%;
+	left: 50%;
+	object-fit: cover;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+
+.p-single-works__slider .swiper-button-prev,
+.p-single-works__slider .swiper-button-next {
+	height: 1.875rem;
+	width: 1.875rem;
+}
+
+.p-single-works__slider .swiper-button-prev:after {
+	background-image: url(../img/sigle-works/prev-btn.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.p-single-works__slider .swiper-button-next:after {
+	background-image: url(../img/sigle-works/next-btn.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.p-single-works__thumbs {
+	margin-top: 2rem;
+	overflow: hidden;
+	padding: 0;
+	width: 100%;
+}
+
+.p-single-works__thumbs.swiper {
+	margin-left: -20px;
+	margin-right: -20px;
+	width: calc(100% + 40px);
+}
+
+.p-single-works__thumbs .swiper-slide {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.p-single-works__thumbs .swiper-slide::before {
+	content: "";
+	display: block;
+	padding-top: calc((163 / 163 ) * 100%);
+}
+
+.p-single-works__thumbs .swiper-slide img {
+	-o-object-fit: cover;
+	height: 100%;
+	left: 50%;
+	object-fit: cover;
+	opacity: .1;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+
+.p-single-works__thumbs .swiper-slide-active img {
+	opacity: 1;
+}
+
 .p-single-works__contents {
 	margin-top: 4.3125rem;
 }
@@ -2951,6 +3049,33 @@ html {
 	font-size: 1.875rem;
 	padding-bottom: 2.25rem;
 	padding-top: 2.75rem;
+}
+
+.p-single-works__slider.swiper {
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+
+.p-single-works__slider .swiper-slide {
+	margin: 1rem auto;
+	width: 100%;
+}
+
+.p-single-works__slider .swiper-slide::before {
+	padding-top: calc((427 / 799 ) * 100%);
+}
+
+.p-single-works__slider .swiper-button-prev,
+.p-single-works__slider .swiper-button-next {
+	height: 3.125rem;
+	width: 3.125rem;
+}
+
+.p-single-works__thumbs.swiper {
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
 }
 
 .p-single-works__contents {

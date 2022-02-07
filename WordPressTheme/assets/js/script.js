@@ -1,5 +1,6 @@
 // ローディング判定
 jQuery(function ($) {
+
 jQuery(window).on("load", function() {
 	jQuery("body").attr("data-loading", "true");
 });
@@ -22,8 +23,8 @@ jQuery(function() {
 	// 	return false;
 	// });
 	
-  $("#menu-button").on('click',function () {
-    if($('.js-drawer-open').hasClass('is-open')){
+  $(".js-drawer").on('click',function () {
+    if($('.js-drawer').hasClass('is-open')){
       $('.js-drawer-menu').fadeOut(300);
       $(this).removeClass('is-open');
       $("html").removeClass("is-fixed");
@@ -35,25 +36,25 @@ jQuery(function() {
   });
 
 	
-// ドロワーメニュー内のリンクをクリックしたらメニューを閉じる
-$(".drawer-nav-link").on("click", function() {
-  let $screenwidth = $(window).width();
-  let $breakpoint_md = 768;
-  if ($screenwidth < $breakpoint_md){
-		if($('.js-drawer-open').hasClass('is-open')){
-      $('.js-drawer-menu').fadeOut(300);
-      $('.js-drawer-open').removeClass('is-open');
-      $("html").removeClass("is-fixed");
-    }else{
-      $('.js-drawer-menu').fadeIn(300);
-      $('.js-drawer-open').addClass('is-open');
-      $("html").addClass("is-fixed");
-    }
-    // $(".js-drawer-menu").toggleClass("is-open");
-    // $(".js-drawer-open").toggleClass("is-open");
-    // $("html").toggleClass("is-fixed");
-  }
-});
+	// ドロワーメニュー内のリンクをクリックしたらメニューを閉じる
+	$(".drawer-nav-link").on("click", function() {
+	let $screenwidth = $(window).width();
+	let $breakpoint_md = 768;
+	if ($screenwidth < $breakpoint_md){
+		if($('.js-drawer').hasClass('is-open')){
+			$('.js-drawer-menu').fadeOut(300);
+			$('.js-drawer').removeClass('is-open');
+			$("html").removeClass("is-fixed");
+		}else{
+			$('.js-drawer-menu').fadeIn(300);
+			$('.js-drawer').addClass('is-open');
+			$("html").addClass("is-fixed");
+		}
+		// $(".js-drawer-menu").toggleClass("is-open");
+		// $(".js-drawer-open").toggleClass("is-open");
+		// $("html").toggleClass("is-fixed");
+	}
+	});
 
 	/* スムーススクロール */
 	jQuery('a[href^="#"]').click(function() {
@@ -91,8 +92,6 @@ $(".drawer-nav-link").on("click", function() {
 		}, 100);
 		}
 
-
-
 	/* 電話リンク */
 	let ua = navigator.userAgent;
 	if (ua.indexOf("iPhone") < 0 && ua.indexOf("Android") < 0) {
@@ -100,120 +99,123 @@ $(".drawer-nav-link").on("click", function() {
 			.css("cursor", "default")
 			.on("click", function(e) {
 				e.preventDefault();
-			});
+		});
 	}
 
+});
 
-//---------------------------------------
-//トップページファーストビューのswiper
-//---------------------------------------
-let mvSwipeOption = {
-	loop: true,
-	effect: 'fade',
-	autoplay: {
-		delay: 4000,
-		disableOnInteraction: false,
-	},
-	speed: 2000,
-	// pagination: {
-	//   el: '.swiper-pagination',
-	//   clickable: true,
-	// }
-}
-new Swiper('.p-mv-swiper', mvSwipeOption);
-
-//---------------------------------------
-
-//---------------------------------------
-//トップページワークスのswiper
-//---------------------------------------
-let worksSwipeOption = {
-	loop: true,
-	effect: 'slide',
-	autoplay: {
-		delay: 2000,
-		disableOnInteraction: false,
-	},
-	speed: 2000,
-	pagination: {
-		el: '.works-swiper-pagination',
-		clickable: true,
+jQuery(function() {
+	//---------------------------------------
+	//トップページファーストビューのswiper
+	//---------------------------------------
+	let mvSwipeOption = {
+		loop: true,
+		effect: 'fade',
+		autoplay: {
+			delay: 4000,
+			disableOnInteraction: false,
+		},
+		speed: 2000,
+		// pagination: {
+		//   el: '.swiper-pagination',
+		//   clickable: true,
+		// }
 	}
-}
-new Swiper('.works__swiper', worksSwipeOption);
-//---------------------------------------
+	new Swiper('.p-mv-swiper', mvSwipeOption);
 
+	//---------------------------------------
 
-//---------------------------------------
-//制作実績詳細ページのサムネイルswiper
-//---------------------------------------
-var thumbs = new Swiper('.single-works__thumbs', {
-	slidesPerView: 2,
-	spaceBetween: 24,
-	// アクティブサムネイルを中央に固定表示
-	centeredSlides: true,
-	loop: true,
-	loopedSlides: 8,
-	slideToClickedSlide: true,
-
-	// 各スライドの進行状況を監視
-	// watchSlidesProgress: true,
-	// ビューポートにあるスライドに表示クラスを追加
-	// watchSlidesVisibility: true,
-
-	// レスポンシブ設定
-	breakpoints:{
-		// 画面幅が 768px 以上の場合（window width >= 768px）
-		768: {
-			slidesPerView: 8,
-			spaceBetween: 8,
-			centeredSlides: false,
-			loop: false
+	//---------------------------------------
+	//トップページワークスのswiper
+	//---------------------------------------
+	let worksSwipeOption = {
+		loop: true,
+		effect: 'slide',
+		autoplay: {
+			delay: 2000,
+			disableOnInteraction: false,
+		},
+		speed: 2000,
+		pagination: {
+			el: '.works-swiper-pagination',
+			clickable: true,
 		}
-	},
-	
-});
-//---------------------------------------
+	}
+	new Swiper('.works__swiper', worksSwipeOption);
+	//---------------------------------------
 
-//---------------------------------------
-//制作実績詳細ページのメインswiper
-//---------------------------------------
-var slider = new Swiper('.p-single-works__slider', {
-	slidesPerView: 1,
-	centeredSlides: true,
-	loop: true,
-	loopedSlides: 8, //スライドの枚数と同じ値を指定
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-	// thumbs: {
-	// //サムネイルのスライダーを指定
-	// swiper: thumbs
-	// },
-});
 
-slider.controller.control = thumbs;
-thumbs.controller.control = slider;
+	//---------------------------------------
+	//制作実績詳細ページのサムネイルswiper
+	//---------------------------------------
+	var thumbs = new Swiper('.js-single-works__thumbs', {
+		slidesPerView: 2,
+		spaceBetween: 24,
+		// アクティブサムネイルを中央に固定表示
+		centeredSlides: true,
+		loop: true,
+		loopedSlides: 8,
+		slideToClickedSlide: true,
 
-//---------------------------------------
+		// 各スライドの進行状況を監視
+		// watchSlidesProgress: true,
+		// ビューポートにあるスライドに表示クラスを追加
+		// watchSlidesVisibility: true,
 
-//---------------------------------------
-//アーカイブページのタブの切り替えCSSあてる
-//---------------------------------------
-$(function(){
-	$('.js-category-list li a').each(function(){
-			var $href = $(this).attr('href');
-			if(location.href.match($href)) {
-			$(this).addClass('current');
-			} else {
-			$(this).removeClass('current');
+		// レスポンシブ設定
+		breakpoints:{
+			// 画面幅が 768px 以上の場合（window width >= 768px）
+			768: {
+				slidesPerView: 8,
+				spaceBetween: 8,
+				centeredSlides: false,
+				loop: false,
+				loopedSlides: 8,
+				slideToClickedSlide: true,
 			}
+		},
+		
 	});
-});
+
+	//---------------------------------------
+
+	//---------------------------------------
+	//制作実績詳細ページのメインswiper
+	//---------------------------------------
+	var slider = new Swiper('.js-single-works__slider', {
+		slidesPerView: 1,
+		centeredSlides: true,
+		loop: true,
+		loopedSlides: 8, //スライドの枚数と同じ値を指定
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		// thumbs: {
+		// //サムネイルのスライダーを指定
+		// swiper: thumbs
+		// },
+	});
+
+	slider.controller.control = thumbs;
+	thumbs.controller.control = slider;
+
+	//---------------------------------------
+
+	//---------------------------------------
+	//アーカイブページのタブの切り替えCSSあてる
+	//---------------------------------------
+	$(function(){
+		$('.js-category-list li a').each(function(){
+				var $href = $(this).attr('href');
+				if(location.href.match($href)) {
+				$(this).addClass('current');
+				} else {
+				$(this).removeClass('current');
+				}
+		});
+	});
 
 });
-
-
 
 });
