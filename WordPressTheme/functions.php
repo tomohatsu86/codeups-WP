@@ -121,7 +121,7 @@ add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
 function my_archive_title( $title ) {
 
 	if ( is_home() ) { /* ホームの場合 */
-		$title = 'ブログ';
+		$title = 'お知らせ';
 	} elseif ( is_category() ) { /* カテゴリーアーカイブの場合 */
 		$title = '' . single_cat_title( '', false ) . '';
 	} elseif ( is_tag() ) { /* タグアーカイブの場合 */
@@ -201,6 +201,9 @@ function my_custom_query_vars( $query ) {
 
 			}elseif( is_post_type_archive('works') || is_tax('works_category')) {
 					$query->set( 'posts_per_page' , 6 );
+
+			}elseif( is_post_type_archive('news') || is_tax('works_category')) {
+					$query->set( 'posts_per_page' , 10 );
 					
 			}
 	}

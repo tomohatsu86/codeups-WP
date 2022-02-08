@@ -137,11 +137,11 @@ jQuery(function() {
 		},
 		speed: 2000,
 		pagination: {
-			el: '.works-swiper-pagination',
+			el: '.p-top-works-swiper-pagination',
 			clickable: true,
 		}
 	}
-	new Swiper('.works__swiper', worksSwipeOption);
+	new Swiper('.p-top-works__swiper', worksSwipeOption);
 	//---------------------------------------
 
 

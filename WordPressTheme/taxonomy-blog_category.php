@@ -4,7 +4,7 @@
 <div class="p-archive-blog-mv p-underlayer-mv">
   <div class="p-underlayer-mv__container">
     <div class="p-underlayer-mv__text">
-      <span class="mv__title">ブログ</span>
+      <span class="mv__title"><?php echo get_the_archive_title(); ?></span>
     </div>
   </div>
 </div>

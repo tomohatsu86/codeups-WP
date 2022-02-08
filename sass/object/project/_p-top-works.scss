@@ -1,0 +1,20 @@
+.p-top-works{
+  width: 100%;
+}
+
+.p-top-works__wrapper{
+  background: linear-gradient(0deg, $black 0%, $black 80%, transparent 80%, transparent 100%);
+  padding-bottom: rem(21);
+  position: relative;
+  z-index: 1;
+
+  @include mq("tab"){
+    background: linear-gradient(90deg, transparent 0%, transparent 30%, $black 30%, $black 100%);
+    padding-top: rem(81);
+    padding-bottom: rem(56);
+  }
+}
+
+.p-top-works__item{
+  padding-bottom: rem(56);
+}

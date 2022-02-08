@@ -1,0 +1,21 @@
+.p-top-blog{
+  width: 100%;
+}
+
+.p-top-blog__contents{
+  margin-top: rem(16);
+  position: relative;
+  
+  @include mq("tab"){
+    margin-top: rem(0);
+  }
+}
+
+.p-top-blog__btn{
+  margin-top: rem(24);
+  text-align: center;
+  
+  @include mq("tab"){
+    margin-top: rem(48);
+  }
+}

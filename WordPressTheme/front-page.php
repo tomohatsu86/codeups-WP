@@ -48,8 +48,8 @@ $contact = esc_url( home_url( '/contact/' ) );
             array(
               'post_type'      => 'post',
               'category_name' => 'news',
-              'posts_per_page' => 4,
-              // 'orderby' => 'date',
+              'posts_per_page' => 1,
+              'orderby' => 'date',
             )
           );
         ?>
@@ -84,7 +84,7 @@ $contact = esc_url( home_url( '/contact/' ) );
   <section class="p-top-content l-top-content" id="p-top-content">
     <span class="c-bg-line01"></span>
     <div class="p-top-content__header p-section-head">
-      <span class="p-section-head__title-en">Content</span>
+      <span class="p-section-head__title-en l-text-align-left">Content</span>
       <h2 class="p-section-head__title-ja">事業内容</h2>
     </div>
     <div class="p-top-content__contents">
@@ -128,6 +128,163 @@ $contact = esc_url( home_url( '/contact/' ) );
   </section>
 
 
+  <!-- 制作実績 -->
+  <section class="p-top-works l-top-works" id="p-top-works">
+      <div class="p-top-works__header p-section-head">
+        <span class="p-section-head__title-en l-text-align-right">Works</span>
+        <h2 class="p-section-head__title-ja">制作実績</h2>
+      </div>
+      <div class="p-top-works__wrapper">
+        <div class="p-top-works__contents p-top-media">
+          <div class="p-top-media__items">
+            <div class="p-top-media__img p-top-works__swiper swiper">
+              <div class="swiper-wrapper">
+                <?php
+                  $works_query = new WP_Query(
+                    array(
+                      'post_type' => 'works',
+                      'post_status' => 'publish', // 公開済の投稿を指定
+                      'posts_per_page' => 3,
+                      'orderby' => 'date',
+                    )
+                  );
+                ?>
+                <?php if ( $works_query->have_posts() ) : ?>
+                <?php while ( $works_query->have_posts() ) : ?>
+                <?php $works_query->the_post(); ?>
+                  <div class="swiper-slide">
+                    <div class="p-top-works-slide-img">
+                      <?php if (has_post_thumbnail()): ?>
+                        <?php the_post_thumbnail( 'full' ); ?>
+                      <?php else: ?>
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/no-image.jpg" alt="no image">
+                      <?php endif; ?>
+                    </div>
+                  </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+                <?php else: ?>
+                <!-- 投稿が無い場合の処理 -->
+                <p>現在、投稿がありません</p>
+                <?php endif; ?>
+              </div>
+
+              <!-- Add Pagination -->
+              <div class="p-top-works-swiper-pagination">
+              </div>
+            </div>
+
+            <div class="p-top-media__item">
+              <h3 class="p-top-media__title">メインタイトルが入ります</h3>
+              <p class="p-top-media__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+              <div class="p-top-media__btn">
+                <a href="<?php echo $works ?>" class="c-btn-more">詳しく見る</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 企業概要 -->
+    <section class="p-top-overview l-top-overview" id="p-top-overview">
+      <span class="c-bg-line02"></span>
+      <div class="p-top-overview__header p-section-head">
+        <span class="p-section-head__title-en l-text-align-left">Overview</span>
+        <h2 class="p-section-head__title-ja">企業概要</h2>
+      </div>
+      <div class="p-top-overview__wrapper p-top-media">
+        <div class="p-top-media__items">
+          <div class="p-top-media__img">
+            <img src="<?php echo get_template_directory_uri() ?>./assets/img/top/top-overview.jpg" alt="">
+          </div>
+          <div class="p-top-media__item">
+            <h3 class="p-top-media__title p-top-media__title--overview">メインタイトルが入ります。</h3>
+            <p class="p-top-media__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            <div class="p-top-media__btn">
+              <a href="<?php echo $overview ?>" class="c-btn-more">詳しく見る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ブログ -->
+    <section class="p-top-blog l-top-blog" id="p-top-blog">
+      <div class="l-inner">
+        <div class="p-top-blog__header p-section-head">
+          <span class="p-section-head__title-en l-text-align-right">Blog</span>
+          <h2 class="p-section-head__title-ja">ブログ</h2>
+        </div>
+        <div class="p-top-blog__contents p-cards-3">
+        <?php
+          $blog_query = new WP_Query(
+            array(
+              'post_type' => 'blog',
+              'post_status' => 'publish', // 公開済の投稿を指定
+              'posts_per_page' => 3,
+              'orderby' => 'date',
+            )
+          );
+        ?>
+
+        <?php if ( $blog_query->have_posts() ) : ?>
+          <?php while ( $blog_query->have_posts() ) : ?>
+            <?php $blog_query->the_post(); ?>
+              <a class="p-cards-3__item p-card-medium" href="<?php the_permalink(); ?>">
+                <figure class="p-card-medium__img">
+                <!-- 3件以内かつ3日以内の記事に「New」をつける -->
+                  <?php
+                    $limit = 1;
+                    $num = $wp_query->current_post;//何件目の記事かを取得
+                    
+                    if ( $limit > $num ):
+                      $days = 30;
+                      $today = date_i18n('U');
+                      $entry_day = get_the_time('U');
+                      $keika = date('U',($today - $entry_day)) / 86400;//1日の秒数（60秒×60分×24時間=86400）
+                      if ( $days > $keika ): ?>
+                      <span class="c-card-new"></span>
+                    <?php endif; ?>  
+                  <?php endif; ?>  
+
+                  <?php if (has_post_thumbnail()): ?>
+                    <?php the_post_thumbnail( 'full' ); ?>
+                  <?php else: ?>
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/no-image.jpg" alt="no image">
+                  <?php endif; ?>
+
+                </figure>
+                <div class="p-card-medium__body">
+                  <h3 class="p-card-medium__title"><?php the_title() ?></h3>
+                  <div class="p-card-medium__excerpt"><?php the_excerpt(); ?></div>
+                </div>
+                <div class="p-card-medium__info">
+                <?php
+                    $term = get_the_terms($post->ID,'blog_category'); ?>
+                    <?php if ( !empty($term)){; ?>
+                      <span class="p-card-medium__label c-label-card-yellow">
+                        <?php echo $term[0]->name; ?>
+                      </span>
+                    <?php }; ?>
+                  <time class="p-card-medium__date c-date-blog" datetime="<?php the_time( 'c' ); ?>"><?php the_time('Y.m.d'); ?></time>
+                </div>
+              </a>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
+        <?php else: ?>
+          <!-- 投稿が無い場合の処理 -->
+          <p>現在、投稿がありません</p>
+        <?php endif; ?>
+        </div>
+
+        <div class="p-top-blog__btn">
+          <a href="<?php echo $blog ?>" class="c-btn-more">詳しく見る</a>
+        </div>
+      </div>
+    </section>
 
     
 <!-- お問い合わせ -->

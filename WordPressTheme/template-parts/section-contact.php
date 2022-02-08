@@ -1,7 +1,7 @@
 <section class="p-contact l-contact" id="p-contact">
   <div class="l-inner">
     <div class="p-contact__header p-section-head">
-      <span class="p-section-head__title-en">Contact</span>
+      <span class="p-section-head__title-en l-text-align-left">Contact</span>
       <h2 class="p-section-head__title-ja">お問い合わせ</h2>
     </div>
     <div class="p-contact__content">
