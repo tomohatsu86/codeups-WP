@@ -1,0 +1,13 @@
+.p-page-contact-mv{
+  width: 100%;
+  background-image: url(..img/page-contact/page-contact-mv-sp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+    
+  @include mq("tab"){
+    background-image: url(../img/page-contact/page-contact-mv-pc.jpg);
+    
+  }
+}

@@ -49,14 +49,14 @@
   width: calc(100% - #{rem(32)});
 }
 
-.p-pc-global-nav__item.p-pc-global-nav__item--white a{
+.p-pc-global-nav__item:last-of-type a{
   background-color: $white;
   color: $black;
   padding: 0 rem(32);
   margin-left: rem(16);
 }
 
-.p-pc-global-nav__item.p-pc-global-nav__item--white a:hover{
+.p-pc-global-nav__item:last-of-type a:hover{
   background-color: $black;
   color: $white;
 }

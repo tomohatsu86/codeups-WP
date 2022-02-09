@@ -1,0 +1,28 @@
+.c-btn-submit{
+  width: 100%;
+  font-family: $base-font-family;
+  font-size: rem(20);
+  font-weight: $regular;
+  letter-spacing: 0.02em;
+  color: $black;
+  background-color: $white;
+  border: rem(1) solid $white;
+  padding: rem(9) rem(0);
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  text-align: center;
+  transition: all 0.1s ease-in;
+
+  @include mq("tab"){
+  max-width: rem(360);
+  padding: rem(17) rem(0);
+  font-size: rem(16);
+  }
+
+}
+
+.c-btn-submit:hover {
+  background-color: $black;
+  color: $white;
+}

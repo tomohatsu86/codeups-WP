@@ -1,0 +1,19 @@
+.p-page-contact__form{
+  margin-top: rem(0);
+  
+  @include mq("tab"){
+    margin-top: rem(0);
+    
+  }
+}
+
+.p-page-contact__formpage-contact__form{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @include mq("tab"){
+    margin-right: calc( 50.90909% / 2);
+  }
+
+}

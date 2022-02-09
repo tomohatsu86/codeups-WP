@@ -800,6 +800,28 @@ summary {
 	top: 2px;
 }
 
+.c-btn-submit {
+	background-color: #fff;
+	border: 0.0625rem solid #fff;
+	color: #333;
+	display: inline-block;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1.25rem;
+	font-weight: 300;
+	letter-spacing: 0.02em;
+	padding: 0.5625rem 0rem;
+	position: relative;
+	text-align: center;
+	transition: all 0.1s ease-in;
+	width: 100%;
+	z-index: 1;
+}
+
+.c-btn-submit:hover {
+	background-color: #333;
+	color: #fff;
+}
+
 .c-card-new::before {
 	background-color: #FFBA6A;
 	border-radius: 50%;
@@ -1594,6 +1616,100 @@ summary {
 	text-align: center;
 }
 
+.p-form {
+	max-width: 44.375rem;
+	width: 100%;
+}
+
+.p-form__item {
+	margin: 0 auto;
+	max-width: 33.75rem;
+	width: 100%;
+}
+
+.p-form__item + .p-form__item {
+	margin-top: 2rem;
+}
+
+.p-form__title {
+	color: #fff;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 0.875rem;
+	font-weight: 300;
+	letter-spacing: 0.07em;
+}
+
+.p-form__input {
+	background-color: #fff;
+	color: #333;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 0.875rem;
+	font-weight: 300;
+	letter-spacing: 0.07em;
+	margin-top: 1rem;
+	max-width: 33.75rem;
+	padding: 0.75rem 0.5625rem 0.75rem;
+	width: 100%;
+}
+
+.p-form__input input::-moz-placeholder,
+.p-form__input textarea::-moz-placeholder {
+	color: #979797;
+}
+
+.p-form__input input:-ms-input-placeholder,
+.p-form__input textarea:-ms-input-placeholder {
+	color: #979797;
+}
+
+.p-form__input input::placeholder,
+.p-form__input textarea::placeholder {
+	color: #979797;
+}
+
+.p-form__input input {
+	width: 100%;
+}
+
+.p-form__input textarea {
+	height: 12.1875rem;
+	resize: none;
+	width: 100%;
+}
+
+.p-form__btn {
+	margin: 3rem auto 0;
+	max-width: 33.75rem;
+	width: 100%;
+}
+
+.p-form__error {
+	height: 4.3125rem;
+	position: relative;
+	width: 100%;
+}
+
+#nameGroup-error {
+	transp-form: translateX(50%);
+	color: #FF5757;
+	display: block;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	letter-spacing: 0.02em;
+	max-width: 20rem;
+	padding: 1.875rem 0;
+	position: absolute;
+	right: 50%;
+	text-align: center;
+	top: 0;
+	width: 100%;
+}
+
+.p-form__input.p-form__input--error {
+	background-color: #FFDCDC;
+}
+
 .p-header {
 	background-color: #111;
 	height: 3.125rem;
@@ -1755,6 +1871,24 @@ summary {
 	display: block;
 	font-size: 1.25rem;
 	margin-top: 1.5rem;
+}
+
+.p-page-contact-mv {
+	background-image: url(..img/page-contact/page-contact-mv-sp.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+}
+
+.p-page-contact__form {
+	margin-top: 0rem;
+}
+
+.p-page-contact__formpage-contact__form {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
 }
 
 .p-page-content-mv {
@@ -1934,14 +2068,14 @@ summary {
 	width: calc(100% - 2rem);
 }
 
-.p-pc-global-nav__item.p-pc-global-nav__item--white a {
+.p-pc-global-nav__item:last-of-type a {
 	background-color: #fff;
 	color: #333;
 	margin-left: 1rem;
 	padding: 0 2rem;
 }
 
-.p-pc-global-nav__item.p-pc-global-nav__item--white a:hover {
+.p-pc-global-nav__item:last-of-type a:hover {
 	background-color: #333;
 	color: #fff;
 }
@@ -2758,6 +2892,12 @@ html {
 	padding: 1.0625rem 0rem;
 }
 
+.c-btn-submit {
+	font-size: 1rem;
+	max-width: 22.5rem;
+	padding: 1.0625rem 0rem;
+}
+
 .c-img-link__wrapper {
 	padding-top: calc((320 / 320) * 100%);
 }
@@ -3007,6 +3147,45 @@ html {
 	margin-top: 4.0625rem;
 }
 
+.p-form__item {
+	align-items: center;
+	display: flex;
+	justify-content: flex-end;
+	max-width: 44.375rem;
+}
+
+.p-form__item:nth-child(5) {
+	align-items: flex-start;
+}
+
+.p-form__item:nth-child(5) .p-form__title {
+	margin-top: 0.6875rem;
+}
+
+.p-form__item + .p-form__item {
+	margin-top: 2.8125rem;
+}
+
+.p-form__input {
+	margin-left: 1.5rem;
+	margin-top: 0;
+	padding: 0.5625rem 1rem 0.625rem;
+}
+
+.p-form__btn {
+	margin-right: 5.625rem;
+	margin-top: 3.5rem;
+	text-align: right;
+}
+
+.p-form__error {
+	height: 6.1875rem;
+}
+
+#nameGroup-error {
+	right: 38%;
+}
+
 .p-header__inner {
 	padding-left: 32px;
 	padding-right: 0;
@@ -3058,6 +3237,18 @@ html {
 
 .p-mv__sub-title {
 	font-size: 1.5625rem;
+}
+
+.p-page-contact-mv {
+	background-image: url(../img/page-contact/page-contact-mv-pc.jpg);
+}
+
+.p-page-contact__form {
+	margin-top: 0rem;
+}
+
+.p-page-contact__formpage-contact__form {
+	margin-right: calc( 50.90909% / 2);
 }
 
 .p-page-content-mv {
