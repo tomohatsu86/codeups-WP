@@ -1,0 +1,39 @@
+.p-contact-thanks__wrapper{
+  width: 100%;
+  text-align: center;
+  padding-top: rem(130);
+  padding-bottom: rem(120);
+  
+  @include mq("tab"){
+    padding-top: rem(200);
+    padding-bottom: rem(150);
+  }
+}
+
+.p-contact-thanks__title{
+  font-family: $base-font-family;
+  font-size: rem(20);
+  font-weight: $regular;
+  color: $white;
+  
+  @include mq("tab"){
+    font-size: rem(30);
+  }
+  
+}
+
+.p-contact-thanks__text{
+  font-family: $base-font-family;
+  font-size: rem(20);
+  font-weight: $regular;
+  color: $white;
+  margin-top: rem(80);
+  
+  @include mq("tab"){
+    font-size: rem(30);
+  }
+}
+
+.p-contact-thanks__btn{
+  margin-top: rem(80);
+}

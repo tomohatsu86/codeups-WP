@@ -40,13 +40,11 @@ select {
 	-moz-appearance: none;
 	appearance: none;
 	background: none;
-	border: 1px solid #ccc;
+	border: none;
 	border-radius: 0;
-	font-size: 16px;
 	margin-left: 0;
 	margin-right: 0;
 	outline: none;
-	padding: 4px;
 }
 
 textarea {
@@ -147,15 +145,10 @@ button {
 	-webkit-appearance: button;
 	-moz-appearance: button;
 	appearance: button;
-	background: #efefef;
-	border: 1px solid #999;
-	border-radius: 0;
-	color: #000;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 20px;
 	margin: 0;
-	padding: 10px 30px;
 }
 
 /* ブラウザ対策
@@ -203,12 +196,6 @@ input[type="search"]::-webkit-search-decoration {
 ---------------------------------------------------------------------------- */
 
 /* hover */
-
-input:hover,
-textarea:hover,
-select:hover {
-	border-color: #666;
-}
 
 input[type="radio"] + span:hover,
 input[type="checkbox"] + span:hover {
@@ -266,20 +253,11 @@ input[type="radio"]:checked + span::after {
 
 /* button */
 
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-button:hover {
-	background: #3498db;
-	border-color: #3498db;
-	color: #fff;
-}
-
 /* focus */
 
 input:focus,
 textarea:focus {
-	border-color: #3498db;
+	border-color: #fff;
 }
 
 input[type="submit"]:focus,
@@ -1559,6 +1537,32 @@ summary {
 	width: 100%;
 }
 
+.p-contact-thanks__wrapper {
+	padding-bottom: 7.5rem;
+	padding-top: 8.125rem;
+	text-align: center;
+	width: 100%;
+}
+
+.p-contact-thanks__title {
+	color: #fff;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1.25rem;
+	font-weight: 300;
+}
+
+.p-contact-thanks__text {
+	color: #fff;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1.25rem;
+	font-weight: 300;
+	margin-top: 5rem;
+}
+
+.p-contact-thanks__btn {
+	margin-top: 5rem;
+}
+
 .p-contact {
 	background-color: #333;
 	padding-bottom: 4rem;
@@ -1874,18 +1878,22 @@ summary {
 }
 
 .p-page-contact-mv {
-	background-image: url(..img/page-contact/page-contact-mv-sp.jpg);
+	background-image: url(../img/page-contact/page-contact-mv-sp.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
 }
 
+.p-page-contact {
+	margin-bottom: 0rem;
+}
+
 .p-page-contact__form {
 	margin-top: 0rem;
 }
 
-.p-page-contact__formpage-contact__form {
+.p-page-contact__form.p-page-contact__form {
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
@@ -3103,6 +3111,19 @@ html {
 	margin-left: 6.125rem;
 }
 
+.p-contact-thanks__wrapper {
+	padding-bottom: 9.375rem;
+	padding-top: 12.5rem;
+}
+
+.p-contact-thanks__title {
+	font-size: 1.875rem;
+}
+
+.p-contact-thanks__text {
+	font-size: 1.875rem;
+}
+
 .p-contact {
 	padding-bottom: 9.3125rem;
 	padding-top: 5.6875rem;
@@ -3154,11 +3175,11 @@ html {
 	max-width: 44.375rem;
 }
 
-.p-form__item:nth-child(5) {
+.p-form__item:nth-child(6) {
 	align-items: flex-start;
 }
 
-.p-form__item:nth-child(5) .p-form__title {
+.p-form__item:nth-child(6) .p-form__title {
 	margin-top: 0.6875rem;
 }
 
@@ -3243,11 +3264,15 @@ html {
 	background-image: url(../img/page-contact/page-contact-mv-pc.jpg);
 }
 
+.p-page-contact {
+	margin-bottom: 9.375rem;
+}
+
 .p-page-contact__form {
 	margin-top: 0rem;
 }
 
-.p-page-contact__formpage-contact__form {
+.p-page-contact__form.p-page-contact__form {
 	margin-right: calc( 50.90909% / 2);
 }
 

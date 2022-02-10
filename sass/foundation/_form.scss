@@ -40,12 +40,13 @@ textarea,
 select {
 	margin-right: 0;
 	margin-left: 0;
-	padding: 4px;
-	border: 1px solid #ccc;
+	// padding: 4px;
+	// border: 1px solid #ccc;
+	border: none;
 	border-radius: 0;
 	outline: none;
 	background: none;
-	font-size: 16px;
+	// font-size: 16px;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
@@ -139,14 +140,14 @@ input[type="button"],
 button {
 	display: inline-block;
 	margin: 0;
-	padding: 10px 30px;
-	border: 1px solid #999;
-	border-radius: 0;
+	// padding: 10px 30px;
+	// border: 1px solid #999;
+	// border-radius: 0;
 	-webkit-box-sizing: content-box;
 	-webkit-appearance: button;
 	appearance: button;
-	background: #efefef;
-	color: #000;
+	// background: #efefef;
+	// color: #000;
 	font-size: 20px;
 	cursor: pointer;
 }
@@ -199,11 +200,11 @@ input[type="search"]::-webkit-search-decoration {
 /* 挙動
 ---------------------------------------------------------------------------- */
 /* hover */
-input:hover,
-textarea:hover,
-select:hover {
-	border-color: #666;
-}
+// input:hover,
+// textarea:hover,
+// select:hover {
+// 	border-color: #666;
+// }
 
 input[type="radio"] + span:hover,
 input[type="checkbox"] + span:hover  {
@@ -254,19 +255,19 @@ input[type="radio"]:checked + span::after {
 }
 
 /* button */
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-button:hover {
-	border-color: #3498db;
-	background: #3498db;
-	color: #fff;
-}
+// input[type="submit"]:hover,
+// input[type="reset"]:hover,
+// input[type="button"]:hover,
+// button:hover {
+// 	border-color: #3498db;
+// 	background: #3498db;
+// 	color: #fff;
+// }
 
 /* focus */
 input:focus,
 textarea:focus {
-	border-color: #3498db;
+	border-color: $white;
 }
 input[type="submit"]:focus,
 input[type=reset]:focus,
