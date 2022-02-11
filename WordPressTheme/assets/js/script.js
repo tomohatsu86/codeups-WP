@@ -22,6 +22,7 @@ jQuery(function() {
 	// 	jQuery("." + targetClass).toggleClass("is-checked");
 	// 	return false;
 	// });
+
 	
   $(".js-drawer").on('click',function () {
     if($('.js-drawer').hasClass('is-open')){
@@ -215,7 +216,24 @@ jQuery(function() {
 				}
 		});
 	});
+	//---------------------------------------
 
 });
+
+
+	//---------------------------------------
+	//Contact Form7で特定項目のエラーメッセージを別の位置に無理やり動かす
+	//---------------------------------------
+	$(document).on('wpcf7:invalid', function( event ) {
+		$('span .wpcf7-not-valid-tip').insertBefore('p-form__error');
+	});
+
+	//---------------------------------------
+	//サンクスページへ
+	//---------------------------------------
+	$(document).addEventListener( 'wpcf7mailsent', function( event ) {
+		location = 'http://codeupswp.local/thanks/';
+	}, false );
+
 
 });

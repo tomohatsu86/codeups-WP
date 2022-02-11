@@ -27,6 +27,7 @@
     <div class="p-form__error">
 
     </div>
+
     <div class="p-form__item">
       <div class="p-form__title">
         <label class="" for="company">※会社名・団体名</label>
@@ -35,6 +36,7 @@
         <input type="text" class="" name="company" id="company" placeholder="テキストがはいります">
       </div>
     </div>
+    
     <div class="p-form__item">
       <div class="p-form__title">
         <label class="" for="department">※部署名</label>

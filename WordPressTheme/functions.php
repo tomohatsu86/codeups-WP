@@ -210,3 +210,6 @@ function my_custom_query_vars( $query ) {
 	return $query;
 }
 add_action( 'pre_get_posts', 'my_custom_query_vars' );
+
+
+// エラー文言の表示位置の変更の方法
