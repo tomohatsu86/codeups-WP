@@ -211,5 +211,29 @@ function my_custom_query_vars( $query ) {
 }
 add_action( 'pre_get_posts', 'my_custom_query_vars' );
 
-
+//---------------------------------------
 // エラー文言の表示位置の変更の方法
+//---------------------------------------
+function my_wpcf7_ajax_json_echo( $items, $result ) {
+
+	// メッセージを表示させたい場所のタグのエラー用のクラス名.
+	$class = 'wpcf7-item-error';
+
+	// メッセージの位置を変更したい項目名.
+	$required = array( 'text-company', 'your-name', 'text-ruby', 'your-email', 'your-message' );
+
+	// 入力エラーがある場合.
+	if ( isset( $items['invalidFields'] ) ) {
+		foreach ( $items['invalidFields'] as $k => $v ) {
+			$orig = $v['into'];
+			$name = substr( $orig, strrpos( $orig, '.' ) + 1 );
+
+			// 位置を変更したい項目のみ、エラーを設定するタグのクラス名を差替.
+			if ( in_array( $name, $required ) ) {
+				$items['invalidFields'][ $k ]['into'] = ".{$class}.{$name}";
+			}
+		}
+	}
+	return $items;
+}
+add_filter( 'wpcf7_ajax_json_echo', 'my_wpcf7_ajax_json_echo', 10, 2 );
