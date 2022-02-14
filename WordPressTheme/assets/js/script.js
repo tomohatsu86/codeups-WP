@@ -221,29 +221,6 @@ jQuery(function() {
 });
 
 
-	//---------------------------------------
-	//Contact Form7でエラーが出ている項目の背景をピンクにする
-	//---------------------------------------
-	$(".js-form__btn").on("click", function() {
-		if($('.wpcf7-form-control').hasClass('wpcf7-not-valid')){
-			$('.wpcf7-form-control-wrap').addClass('red');
-		}else{
-			$('.wpcf7-form-control-wrap').removeClass('red');
-		}
-	});
 
-	//---------------------------------------
-	//Contact Form7で特定項目のエラーメッセージを別の位置に無理やり動かす
-	//---------------------------------------
-	document.addEventListener('wpcf7invalid', function() {
-		$('span .wpcf7-not-valid-tip').insertBefore('p-form__error');
-	});
-
-	//---------------------------------------
-	//サンクスページへ
-	//---------------------------------------
-	document.addEventListener( 'wpcf7mailsent', function() {
-		location = 'http://codeupswp.local/thanks/';
-	}, false );
 
 });

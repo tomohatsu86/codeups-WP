@@ -15,14 +15,18 @@
 <!-- お問い合わせフォーム -->
 <section class="p-page-contact l-page-contact" id="p-page-contact">
   <div class="l-inner">
+  <div class="p-page-contact__contents">
+  <form class="p-page-contact__form p-form" action="" method="POST">
   <?php if ( have_posts() ) : ?>
     <?php while( have_posts() ) : the_post(); ?>
       <?php the_content(); ?>
     <?php endwhile;?>
   <?php endif; ?>
+  </form>
+</div>
 
 
-<!-- <div class="p-page-contact__contents">
+<div class="p-page-contact__contents">
   <form class="p-page-contact__form p-form" action="" method="POST">
     <div class="p-form__error">
 
@@ -73,7 +77,7 @@
       <input class="c-btn-submit" type="submit" value="送信">
     </div>
   </form>
-</div> -->
+</div>
 
   </div>
 </section>

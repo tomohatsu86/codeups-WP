@@ -40,8 +40,6 @@ select {
 	-moz-appearance: none;
 	appearance: none;
 	border: none;
-	margin-left: 0;
-	margin-right: 0;
 	outline: none;
 }
 
@@ -1619,13 +1617,17 @@ summary {
 }
 
 .p-form {
-	max-width: 44.375rem;
+	max-width: 43.5rem;
 	width: 100%;
 }
 
 .p-form__item {
 	margin: 0 auto;
 	max-width: 33.75rem;
+	width: 100%;
+}
+
+.p-form__item input {
 	width: 100%;
 }
 
@@ -1641,9 +1643,10 @@ summary {
 	letter-spacing: 0.07em;
 }
 
-.wpcf7-form-control-wrap {
+.p-form__input {
 	background-color: #fff;
 	color: #333;
+	display: block;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 0.875rem;
 	font-weight: 300;
@@ -1654,35 +1657,19 @@ summary {
 	width: 100%;
 }
 
-.wpcf7-form-control-wrap input::-moz-placeholder,
-.wpcf7-form-control-wrap textarea::-moz-placeholder {
+.p-form__input input::-moz-placeholder,
+.p-form__input textarea::-moz-placeholder {
 	color: #979797;
 }
 
-.wpcf7-form-control-wrap input:-ms-input-placeholder,
-.wpcf7-form-control-wrap textarea:-ms-input-placeholder {
+.p-form__input input:-ms-input-placeholder,
+.p-form__input textarea:-ms-input-placeholder {
 	color: #979797;
 }
 
-.wpcf7-form-control-wrap input::placeholder,
-.wpcf7-form-control-wrap textarea::placeholder {
+.p-form__input input::placeholder,
+.p-form__input textarea::placeholder {
 	color: #979797;
-}
-
-.wpcf7-form-control-wrap input {
-	width: 100%;
-}
-
-.wpcf7-form-control-wrap textarea {
-	height: 12.1875rem;
-	resize: none;
-	width: 100%;
-}
-
-.wpcf7-form-control-wrap .wpcf7-not-valid,
-.wpcf7-form-control-wrap .wpcf7-not-valid,
-.wpcf7-form-control-wrapt .wpcf7-not-valid {
-	background: #FFDCDC;
 }
 
 .p-form__btn {
@@ -3187,7 +3174,7 @@ html {
 	margin-top: 2.8125rem;
 }
 
-.wpcf7-form-control-wrap {
+.p-form__input {
 	margin-left: 1.5rem;
 	margin-top: 0;
 	padding: 0.5625rem 1rem 0.625rem;
