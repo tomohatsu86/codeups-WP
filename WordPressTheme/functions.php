@@ -222,3 +222,12 @@ function mvwpform_autop_filter() {
   } 
 }
 mvwpform_autop_filter();
+
+// MW WP form でエラーメッセージの変更
+function my_error_message($error, $key, $rule){
+	if($key === 'input' && $rule === 'noempty'){
+			return '※必要事項を入力してください';
+	}
+	return $error;
+}
+add_filter('mwform_error_message_mw-wp-form-300', 'my_error_message', 10, 3);

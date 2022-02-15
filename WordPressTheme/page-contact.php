@@ -25,7 +25,7 @@
   </form>
 </div>
 
-
+<!-- 
 <div class="p-page-contact__contents">
   <form class="p-page-contact__form p-form" action="" method="POST">
     <div class="p-form__error">
@@ -77,7 +77,7 @@
       <input class="c-btn-submit" type="submit" value="送信">
     </div>
   </form>
-</div>
+</div> -->
 
   </div>
 </section>

@@ -44,7 +44,6 @@ select {
 }
 
 textarea {
-	height: 100px;
 	overflow: auto;
 	width: 100%;
 }
@@ -1627,12 +1626,12 @@ summary {
 	width: 100%;
 }
 
-.p-form__item input {
-	width: 100%;
-}
-
 .p-form__item + .p-form__item {
 	margin-top: 2rem;
+}
+
+.p-form__item textarea {
+	height: 18.75rem;
 }
 
 .p-form__title {
@@ -1640,7 +1639,7 @@ summary {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 0.875rem;
 	font-weight: 300;
-	letter-spacing: 0.07em;
+	width: 8.25rem;
 }
 
 .p-form__input {
@@ -1681,24 +1680,17 @@ summary {
 .p-form__error {
 	height: 4.3125rem;
 	position: relative;
+	text-align: center;
 	width: 100%;
 }
 
-#nameGroup-error {
-	transp-form: translateX(50%);
+.mw_wp_form .error {
 	color: #FF5757;
-	display: block;
+	display: inline-block;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
-	letter-spacing: 0.02em;
-	max-width: 20rem;
-	padding: 1.875rem 0;
-	position: absolute;
-	right: 50%;
-	text-align: center;
-	top: 0;
-	width: 100%;
+	letter-spacing: 0.2em;
 }
 
 .p-header {
@@ -3174,6 +3166,10 @@ html {
 	margin-top: 2.8125rem;
 }
 
+.p-form__title {
+	text-align: right;
+}
+
 .p-form__input {
 	margin-left: 1.5rem;
 	margin-top: 0;
@@ -3188,10 +3184,11 @@ html {
 
 .p-form__error {
 	height: 6.1875rem;
+	text-align: right;
 }
 
-#nameGroup-error {
-	right: 38%;
+.mw_wp_form .error {
+	margin-right: 20px;
 }
 
 .p-header__inner {
