@@ -1686,11 +1686,25 @@ summary {
 
 .mw_wp_form .error {
 	color: #FF5757;
-	display: inline-block;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
 	letter-spacing: 0.2em;
+	margin-top: 0.875rem;
+	max-width: 23.4375rem;
+	position: absolute;
+	right: 50%;
+	transform: translateX(50%);
+	width: 100%;
+}
+
+.p-form__item .error {
+	display: none;
+}
+
+.error-pink input,
+.error-pink textarea {
+	background-color: #FFDCDC;
 }
 
 .p-header {
@@ -3184,11 +3198,10 @@ html {
 
 .p-form__error {
 	height: 6.1875rem;
-	text-align: right;
 }
 
 .mw_wp_form .error {
-	margin-right: 20px;
+	right: calc((540 / 672)/2 * 100%);
 }
 
 .p-header__inner {

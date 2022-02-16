@@ -202,25 +202,29 @@ jQuery(function() {
 	thumbs.controller.control = slider;
 
 	//---------------------------------------
-
-	//---------------------------------------
-	//アーカイブページのタブの切り替えCSSあてる
-	//---------------------------------------
-	$(function(){
-		$('.js-category-list li a').each(function(){
-				var $href = $(this).attr('href');
-				if(location.href.match($href)) {
-				$(this).addClass('current');
-				} else {
-				$(this).removeClass('current');
-				}
-		});
-	});
-	//---------------------------------------
-
 });
 
+//---------------------------------------
+//アーカイブページのタブの切り替えCSSあてる
+//---------------------------------------
+$(function(){
+	$('.js-category-list li a').each(function(){
+			var $href = $(this).attr('href');
+			if(location.href.match($href)) {
+			$(this).addClass('current');
+			} else {
+			$(this).removeClass('current');
+			}
+	});
+});
+//---------------------------------------
 
-
+//---------------------------------------
+//MW WP formのエラー項目にCSSを追加して背景色を付ける
+//---------------------------------------
+$(function(){
+// errorクラスのspan要素を持つ親p要素にerror-pinkクラスを適用
+			$(".p-form__item:has('span.error')").addClass("error-pink");
+		});
 
 });

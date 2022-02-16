@@ -57,6 +57,7 @@
   }
 }
 
+
 .p-form__input{
   display: block;
   width: 100%;
@@ -102,19 +103,34 @@
   
   @include mq("tab"){
     height: rem(99);
-    text-align: right;
   }
 }
 
 .mw_wp_form .error{
-  display: inline-block;
+  width: 100%;
+  max-width: rem(375);
   font-family: $base-font-family;
   font-size: rem(16);
   font-weight: $regular;
   letter-spacing: 0.2em;
   color: #FF5757;
-
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  margin-top: rem(14);
+  
   @include mq("tab"){
-    margin-right: 20px;
+    right: calc((540 / 672)/2 * 100%);
   }
+}
+
+// 入力欄に表示されるエラーメッセージは非表示にする
+// エラー項目に背景色を付けるために.errorクラスは挿入されるようにしておく
+.p-form__item .error{
+  display: none;
+}
+
+.error-pink input,
+.error-pink textarea{
+  background-color: #FFDCDC;
 }
