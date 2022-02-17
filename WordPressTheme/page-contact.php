@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php wp_head();?>
 
 <!-- お問い合わせメインビュー -->
 <div class="p-page-contact-mv p-underlayer-mv">
@@ -89,3 +90,4 @@
 </div>
 
 <?php get_footer(); ?>
+<?php wp_footer();?>
