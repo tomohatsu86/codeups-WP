@@ -224,7 +224,7 @@ $(function(){
 //---------------------------------------
 $(function(){
 // errorクラスのspan要素を持つ親p要素にerror-pinkクラスを適用
-			$(".p-form__item:has('span.error')").addClass("error-pink");
-		});
+	$(".p-form__input:has('span.error')").addClass("error-pink");
+});
 
 });

@@ -40,8 +40,14 @@
 }
 
 
+.p-form__item input{
+  width: 100%;
+  padding: 0;
+}
+
 .p-form__item textarea{
   height: rem(300);
+  padding: 0;
 }
 
 .p-form__title{
@@ -129,7 +135,14 @@
 .p-form__item .error{
   display: none;
 }
+.form-input .error{
+  display: none;
+}
+.p-form__error .error:not(:first-child){
+  display: none;
+}
 
+.error-pink,
 .error-pink input,
 .error-pink textarea{
   background-color: #FFDCDC;

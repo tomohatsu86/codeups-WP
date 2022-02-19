@@ -211,6 +211,7 @@ function my_custom_query_vars( $query ) {
 }
 add_action( 'pre_get_posts', 'my_custom_query_vars' );
 
+
 // MW WP form でpタグが自動挿入されるのを無効にする
 function mvwpform_autop_filter() {
   if ( class_exists( 'MW_WP_Form_Admin' ) ) {
@@ -223,6 +224,8 @@ function mvwpform_autop_filter() {
 }
 mvwpform_autop_filter();
 
+
+//-------------------------------------------------------
 // MW WP form でエラーメッセージの変更
 function my_error_message($error, $key, $rule){
 	if($key === 'input' && $rule === 'noempty'){
@@ -231,3 +234,42 @@ function my_error_message($error, $key, $rule){
 	return $error;
 }
 add_filter('mwform_error_message_mw-wp-form-300', 'my_error_message', 10, 3);
+
+
+//-------------------------------------------------------
+// MW WP form でエラーメッセージをひとつにまとめる
+// function add_mwform_validation_rule( $Validation, $data ) {
+// 	$validation_message = 'いずれかの項目が未入力です。';
+//   if ( empty( $data['会社名'] ) ) {
+// 		$Validation->set_rule( '会社名', 'noempty', array( 'message' => $validation_message ) );
+//   } elseif ( empty( $data['名前'] ) ) {
+// 		$Validation->set_rule( '名前', 'noempty', array( 'message' => $validation_message ) );
+//   } elseif ( empty( $data['ふりがな'] ) ) {
+// 		$Validation->set_rule( 'ふりがな', 'noempty', array( 'message' => $validation_message ) );
+//   } elseif ( empty( $data['メール'] ) ) {
+// 		$Validation->set_rule( 'メール', 'noempty', array( 'message' => $validation_message ) );
+//   } elseif ( empty( $data['内容'] ) ) {
+// 		$Validation->set_rule( '内容', 'noempty', array( 'message' => $validation_message ) );
+//   }
+//   return $Validation;
+// }
+// add_filter( 'mwform_validation_mw-wp-form-312', 'add_mwform_validation_rule', 10, 2 );
+
+//↓上記をforeachで書き直す↓ 
+function add_mwform_validation_rule( $Validation, $data ) {
+	$validation_message = '※必要事項を入力してください';
+	$args = array(
+		'会社名',
+		'名前',
+		'ふりがな',
+		'メール',
+		'内容'
+	);
+	foreach($args as $val){
+		if ( empty( $data[$val] ) ) {
+			$Validation->set_rule( $val, 'noempty', array( 'message' => $validation_message ) );
+			return $Validation;
+		} 
+	}
+}
+add_filter( 'mwform_validation_mw-wp-form-312', 'add_mwform_validation_rule', 10, 2 );

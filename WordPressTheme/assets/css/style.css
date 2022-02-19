@@ -1630,8 +1630,14 @@ summary {
 	margin-top: 2rem;
 }
 
+.p-form__item input {
+	padding: 0;
+	width: 100%;
+}
+
 .p-form__item textarea {
 	height: 18.75rem;
+	padding: 0;
 }
 
 .p-form__title {
@@ -1702,6 +1708,15 @@ summary {
 	display: none;
 }
 
+.form-input .error {
+	display: none;
+}
+
+.p-form__error .error:not(:first-child) {
+	display: none;
+}
+
+.error-pink,
 .error-pink input,
 .error-pink textarea {
 	background-color: #FFDCDC;
