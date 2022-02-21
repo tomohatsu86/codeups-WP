@@ -20,6 +20,7 @@
       <p class="p-page-content__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
     </div>
     <div class="p-page-content__contents">
+
       <div class="p-page-content__item p-media" id="item01">
         <figure class="p-media__img">
           <img src="<?php echo get_template_directory_uri() ?>/assets/img/page-content/page-content-img1.jpg" alt="写真：グラフの写真">
@@ -29,6 +30,7 @@
           <p class="p-media__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
         </div>
       </div>
+      
       <div class="p-page-content__item p-media" id="item02">
         <figure class="p-media__img">
           <img src="<?php echo get_template_directory_uri() ?>/assets/img/page-content/page-content-img2.jpg" alt="写真：グラフの写真">
