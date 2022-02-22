@@ -598,7 +598,7 @@ summary {
 }
 
 .l-top-blog {
-	margin-top: 3.875rem;
+	margin-top: 3.5625rem;
 }
 
 .l-top-content {
@@ -610,7 +610,7 @@ summary {
 }
 
 .l-top-overview {
-	margin-top: 5.3125rem;
+	margin-top: 4.875rem;
 }
 
 .l-top-works {
@@ -701,7 +701,7 @@ summary {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1.25rem;
 	font-weight: 300;
-	letter-spacing: 0.02em;
+	letter-spacing: 0.1em;
 	max-width: 20.9375rem;
 	padding: 0.5625rem 0rem;
 	position: relative;
@@ -1579,8 +1579,9 @@ summary {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
-	letter-spacing: 0.125rem;
-	margin-top: 1.125rem;
+	letter-spacing: 0.13em;
+	line-height: 1.5;
+	margin-top: 0.8125rem;
 	text-align: start;
 }
 
@@ -1838,6 +1839,7 @@ summary {
 
 .p-mv {
 	height: 205.33333vw;
+	height: 196.42857vw;
 	position: relative;
 	width: 100%;
 }
@@ -2116,7 +2118,7 @@ summary {
 	font-size: 1rem;
 	font-weight: 300;
 	letter-spacing: 0rem;
-	margin: 0;
+	margin-top: 1rem;
 	max-width: 35.75rem;
 }
 
@@ -2152,7 +2154,6 @@ summary {
 
 .p-section-head {
 	margin: 0 auto;
-	padding: 0 20px;
 	width: 100%;
 }
 
@@ -2499,7 +2500,7 @@ summary {
 	font-size: 1rem;
 	font-weight: 300;
 	letter-spacing: 0.075rem;
-	padding: 0.25rem 0;
+	padding: 0.1875rem 0;
 	position: relative;
 	text-align: center;
 }
@@ -2805,13 +2806,10 @@ summary {
 }
 
 .swiper .p-top-works-slide-img {
-	margin-left: -20px;
-	margin-right: -20px;
 	max-width: 34.8125rem;
 	overflow: hidden;
 	position: relative;
 	width: 100%;
-	width: calc(100% + 40px);
 }
 
 .swiper .p-top-works-slide-img::before {
@@ -2835,8 +2833,8 @@ summary {
 .swiper-pagination-custom,
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-	margin-left: 14.375rem;
-	text-align: left;
+	margin: 0 auto;
+	text-align: center;
 	width: 12.5rem;
 }
 
@@ -3348,6 +3346,7 @@ html {
 }
 
 .p-mv {
+	height: 66.48438vw;
 	height: 65.5624vw;
 }
 
@@ -3454,6 +3453,10 @@ html {
 	width: 53.75rem;
 }
 
+.p-post__body {
+	margin: 0;
+}
+
 .p-recommend-article__content {
 	margin-top: 5rem;
 }
@@ -3465,7 +3468,6 @@ html {
 
 .p-section-head {
 	max-width: 72.75rem;
-	padding: 0;
 }
 
 .p-section-head__title-en {
@@ -3715,6 +3717,14 @@ html {
 
 .swiper .p-top-works-slide-img::before {
 	padding-top: calc((389 / 557 ) * 100%);
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+	margin-left: 14.375rem;
+	text-align: left;
 }
 
 .u-hidden-tab {

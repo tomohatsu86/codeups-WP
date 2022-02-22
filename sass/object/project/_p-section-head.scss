@@ -1,11 +1,9 @@
 .p-section-head{
   width: 100%;
-  padding: 0 $padding-sp;
   margin: 0 auto;
   
   @include mq("tab"){
     max-width: rem(1164);
-    padding: 0;
   }
 }
 

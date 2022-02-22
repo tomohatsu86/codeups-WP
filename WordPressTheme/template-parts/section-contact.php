@@ -8,7 +8,7 @@
       <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
     </div>
     <div class="p-contact__btn">
-      <a href="./page-contact.html" class="c-btn-contact">お問い合わせへ</a>
+      <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="c-btn-contact">お問い合わせへ</a>
     </div>
   </div>
 </section>

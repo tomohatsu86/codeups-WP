@@ -32,10 +32,11 @@
   font-family: $base-font-family;
   font-size: rem(16);
   font-weight: $regular;
-  letter-spacing: rem(2);
+  letter-spacing: 0.13em;
+  line-height: 1.5;
   color: $white;
   text-align: start;
-  margin-top: rem(18);
+  margin-top: rem(13);
   
   @include mq("tab"){
     margin-top: rem(16);
