@@ -94,14 +94,14 @@ jQuery(function() {
 		}
 
 	/* 電話リンク */
-	let ua = navigator.userAgent;
-	if (ua.indexOf("iPhone") < 0 && ua.indexOf("Android") < 0) {
-		jQuery('a[href^="tel:"]')
-			.css("cursor", "default")
-			.on("click", function(e) {
-				e.preventDefault();
-		});
-	}
+	// let ua = navigator.userAgent;
+	// if (ua.indexOf("iPhone") < 0 && ua.indexOf("Android") < 0) {
+	// 	jQuery('a[href^="tel:"]')
+	// 		.css("cursor", "default")
+	// 		.on("click", function(e) {
+	// 			e.preventDefault();
+	// 	});
+	// }
 
 });
 
@@ -193,13 +193,13 @@ jQuery(function() {
 			prevEl: '.swiper-button-prev',
 		},
 		// thumbs: {
-		// //サムネイルのスライダーを指定
-		// swiper: thumbs
-		// },
-	});
-
-	slider.controller.control = thumbs;
-	thumbs.controller.control = slider;
+			// //サムネイルのスライダーを指定
+			// swiper: thumbs
+			// },
+		});
+		
+		slider.controller.control = thumbs;
+		thumbs.controller.control = slider;
 
 	//---------------------------------------
 });

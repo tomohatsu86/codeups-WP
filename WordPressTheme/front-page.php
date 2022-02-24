@@ -16,17 +16,17 @@ $contact = esc_url( home_url( '/contact/' ) );
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="p-mv-slide-img">
-          <img src="<?php echo get_template_directory_uri() ?>./assets/img/top/top-mv1.jpg" alt="画像：オフィスビルを見上げた景色">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-mv1.jpg" alt="画像：オフィスビルを見上げた景色">
         </div>
       </div>
       <div class="swiper-slide">
         <div class="p-mv-slide-img">
-          <img src="<?php echo get_template_directory_uri() ?>./assets/img/top/top-mv2.jpg" alt="画像：オフィスビルを見上げた画像">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-mv2.jpg" alt="画像：オフィスビルを見上げた画像">
         </div>
       </div>
       <div class="swiper-slide">
         <div class="p-mv-slide-img">
-          <img src="<?php echo get_template_directory_uri() ?>./assets/img/top/top-mv3.jpg" alt="画像：オフィス街を見下ろした画像">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-mv3.jpg" alt="画像：オフィス街を見下ろした画像">
         </div>
       </div>
     </div>
@@ -94,7 +94,7 @@ $contact = esc_url( home_url( '/contact/' ) );
         <div class="p-top-content__item c-img-link">
           <div class="c-img-link__wrapper">
             <a href="<?php echo $content ?>">
-              <img src="<?php echo get_template_directory_uri() ?>./assets/img/top/top-content1.jpg" alt="画像：手に持たれた電球">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-content1.jpg" alt="画像：手に持たれた電球">
               <p class="c-img-link__text">経営理念ページへ</p>
             </a>
           </div>
@@ -102,7 +102,7 @@ $contact = esc_url( home_url( '/contact/' ) );
         <div class="p-top-content__item c-img-link">
           <figure class="c-img-link__wrapper">
             <a href="<?php echo $content ?>#item01">
-              <img src="<?php echo get_template_directory_uri() ?>./assets/img/top/top-content2.jpg" alt="画像：談笑している写真">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-content2.jpg" alt="画像：談笑している写真">
               <p class="c-img-link__text">理念1へ</p>
             </a>
           </figure>
@@ -112,7 +112,7 @@ $contact = esc_url( home_url( '/contact/' ) );
         <div class="p-top-content__item c-img-link">
           <figure class="c-img-link__wrapper">
             <a href="<?php echo $content ?>#item02">
-              <img src="<?php echo get_template_directory_uri() ?>./assets/img/top/top-content3.jpg" alt="画像：グラフの写真">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-content3.jpg" alt="画像：グラフの写真">
               <p class="c-img-link__text">理念2へ</p>
             </a>
           </figure>
@@ -120,7 +120,7 @@ $contact = esc_url( home_url( '/contact/' ) );
         <div class="p-top-content__item c-img-link">
           <figure class="c-img-link__wrapper">
             <a href="<?php echo $content ?>#item03">
-              <img src="<?php echo get_template_directory_uri() ?>./assets/img/top/top-content4.jpg" alt="画像：手に持たれたスマホ">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-content4.jpg" alt="画像：手に持たれたスマホ">
               <p class="c-img-link__text">理念3へ</p>
             </a>
           </figure>
@@ -201,7 +201,7 @@ $contact = esc_url( home_url( '/contact/' ) );
     <div class="p-top-overview__wrapper p-top-media">
       <div class="p-top-media__items">
         <figure class="p-top-media__img">
-          <img src="<?php echo get_template_directory_uri() ?>./assets/img/top/top-overview.jpg" alt="">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-overview.jpg" alt="">
         </figure>
         <div class="p-top-media__item">
           <h3 class="p-top-media__title p-top-media__title--overview">メインタイトルが入ります。</h3>

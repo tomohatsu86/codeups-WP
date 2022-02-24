@@ -15,7 +15,7 @@
     <div class="p-header__inner">
       <h1 class="p-header__logo c-logo">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="c-logo__link">
-          <img src="<?php echo get_template_directory_uri() ?>./assets/img/common/logo/CodeUps.svg" alt="ロゴ">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/logo/CodeUps.svg" alt="ロゴ">
         </a>
       </h1>
       
