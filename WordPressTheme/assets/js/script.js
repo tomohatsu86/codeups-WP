@@ -170,7 +170,6 @@ jQuery(function() {
 				slidesPerView: 8,
 				spaceBetween: 8,
 				centeredSlides: false,
-				loop: false,
 				loopedSlides: 8,
 				slideToClickedSlide: true,
 			}
