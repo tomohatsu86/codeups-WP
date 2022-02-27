@@ -171,7 +171,7 @@ jQuery(function() {
 				slidesPerView: contents,
 				spaceBetween: 8,
 				centeredSlides: false,
-				loopedSlides: contents,
+				// loopedSlides: contents,
 				slideToClickedSlide: true,
 			}
 		},
