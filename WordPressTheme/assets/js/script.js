@@ -149,13 +149,14 @@ jQuery(function() {
 	//---------------------------------------
 	//制作実績詳細ページのサムネイルswiper
 	//---------------------------------------
+	var contents = $(".js-single-works__slider .swiper-slide").length;
 	var thumbs = new Swiper('.js-single-works__thumbs', {
 		slidesPerView: 2,
 		spaceBetween: 24,
 		// アクティブサムネイルを中央に固定表示
 		centeredSlides: true,
 		loop: true,
-		loopedSlides: 8,
+		loopedSlides: contents,
 		slideToClickedSlide: true,
 
 		// 各スライドの進行状況を監視
@@ -167,16 +168,15 @@ jQuery(function() {
 		breakpoints:{
 			// 画面幅が 768px 以上の場合（window width >= 768px）
 			768: {
-				slidesPerView: 8,
+				slidesPerView: contents,
 				spaceBetween: 8,
 				centeredSlides: false,
-				loopedSlides: 8,
+				loopedSlides: contents,
 				slideToClickedSlide: true,
 			}
 		},
 		
 	});
-
 	//---------------------------------------
 
 	//---------------------------------------
@@ -186,15 +186,15 @@ jQuery(function() {
 		slidesPerView: 1,
 		centeredSlides: true,
 		loop: true,
-		loopedSlides: 8, //スライドの枚数と同じ値を指定
+		loopedSlides: contents, //スライドの枚数と同じ値を指定
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
 		// thumbs: {
-			// //サムネイルのスライダーを指定
-			// swiper: thumbs
-			// },
+		// 	//サムネイルのスライダーを指定
+		// 	swiper: thumbs
+		// 	},
 		});
 		
 		slider.controller.control = thumbs;
