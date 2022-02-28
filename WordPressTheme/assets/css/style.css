@@ -2370,6 +2370,7 @@ summary {
 	margin-right: -20px;
 	margin-top: 1rem;
 	margin-top: 1rem;
+	overflow: hidden;
 	position: relative;
 	width: calc(100% + 40px);
 }
@@ -2381,8 +2382,10 @@ summary {
 }
 
 .p-single__body img {
+	-o-object-fit: cover;
 	height: 100%;
 	left: 50%;
+	object-fit: cover;
 	position: absolute;
 	top: 50%;
 	transform: translate(-50%, -50%);
@@ -2402,7 +2405,6 @@ summary {
 	display: inline-block;
 	font-size: 1.125rem;
 	letter-spacing: 0.2em;
-	margin-left: 0.75rem;
 	margin-top: 1.5rem;
 	position: relative;
 }
@@ -2460,6 +2462,7 @@ summary {
 	margin-right: -20px;
 	margin-top: 1rem;
 	margin-top: 1rem;
+	overflow: hidden;
 	position: relative;
 	width: calc(100% + 40px);
 }
@@ -2471,8 +2474,10 @@ summary {
 }
 
 .p-single__thumbnail img {
+	-o-object-fit: cover;
 	height: 100%;
 	left: 50%;
+	object-fit: cover;
 	position: absolute;
 	top: 50%;
 	transform: translate(-50%, -50%);
