@@ -14,6 +14,16 @@
   animation: zoomUp 10s linear 0s 1 normal both;  
 }
 
+.p-mv-swiper .swiper-wrapper{
+  width: 100%;
+  height: inherit;
+}
+
+.swiper .swiper-slide{
+  width: 100%;
+  height: inherit;
+}
+
 .swiper .p-mv-slide-img{
   width: 100%;
   height: inherit;

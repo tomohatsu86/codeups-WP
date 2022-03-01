@@ -16,24 +16,24 @@ $contact = esc_url( home_url( '/contact/' ) );
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="p-mv-slide-img">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-mv1.jpg" alt="画像：オフィスビルを見上げた景色">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-mv8.jpg" alt="画像：オフィスビルを見上げた景色">
         </div>
       </div>
       <div class="swiper-slide">
         <div class="p-mv-slide-img">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-mv2.jpg" alt="画像：オフィスビルを見上げた画像">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-mv9.jpg" alt="画像：オフィスビルを見上げた夜の写真">
         </div>
       </div>
       <div class="swiper-slide">
         <div class="p-mv-slide-img">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-mv3.jpg" alt="画像：オフィス街を見下ろした画像">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-mv7.jpg" alt="画像：遠くのオフィス街が写る夕暮れの写真">
         </div>
       </div>
     </div>
   </div>
   <div class="p-mv__text">
-    <span class="p-mv__title">メインタイトルが入ります</span>
-    <span class="p-mv__sub-title">サブタイトルが入ります</span>
+    <span class="p-mv__title">思い通りのWebサイトを<br class="u-mobile">すべての人へ</span>
+    <span class="p-mv__sub-title">あなたのイメージを形にします</span>
   </div>
 </div>
 
