@@ -94,36 +94,36 @@ $contact = esc_url( home_url( '/contact/' ) );
         <div class="p-top-content__item c-img-link">
           <div class="c-img-link__wrapper">
             <a href="<?php echo $content ?>">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-content1.jpg" alt="画像：手に持たれた電球">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-content5.jpg" alt="画像：手に持たれた電球">
               <p class="c-img-link__text">経営理念ページへ</p>
             </a>
           </div>
         </div>
         <div class="p-top-content__item c-img-link">
-          <figure class="c-img-link__wrapper">
+          <div class="c-img-link__wrapper">
             <a href="<?php echo $content ?>#item01">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-content2.jpg" alt="画像：談笑している写真">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-content6.jpg" alt="画像：談笑している写真">
               <p class="c-img-link__text">理念1へ</p>
             </a>
-          </figure>
+          </div>
         </div>
       </div>
       <div class="p-top-content__block">
         <div class="p-top-content__item c-img-link">
-          <figure class="c-img-link__wrapper">
+          <div class="c-img-link__wrapper">
             <a href="<?php echo $content ?>#item02">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-content3.jpg" alt="画像：グラフの写真">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-content7.jpg" alt="画像：グラフの写真">
               <p class="c-img-link__text">理念2へ</p>
             </a>
-          </figure>
+          </div>
         </div>
         <div class="p-top-content__item c-img-link">
-          <figure class="c-img-link__wrapper">
+          <div class="c-img-link__wrapper">
             <a href="<?php echo $content ?>#item03">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-content4.jpg" alt="画像：手に持たれたスマホ">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-content8.jpg" alt="画像：手に持たれたスマホ">
               <p class="c-img-link__text">理念3へ</p>
             </a>
-          </figure>
+          </div>
         </div>
       </div>
     </div>
@@ -177,8 +177,8 @@ $contact = esc_url( home_url( '/contact/' ) );
           </div>
         </div>
         <div class="p-top-works__body">
-          <h3 class="p-top-works__title">メインタイトルが入ります</h3>
-          <p class="p-top-works__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+          <h3 class="p-top-works__title">多くのお客様の思いを<br class="u-mobile">実現してきました</h3>
+          <p class="p-top-works__text">制作実績のページは、カスタム投稿とカスタムフィールドで実装しています。また繰り返しフィールドを使用して、簡単に投稿ができるようにしています。</p>
           <div class="p-top-works__btn">
             <a href="<?php echo $works ?>" class="c-btn-more">詳しく見る</a>
           </div>
@@ -201,11 +201,11 @@ $contact = esc_url( home_url( '/contact/' ) );
     <div class="p-top-overview__wrapper p-top-media">
       <div class="p-top-media__items">
         <figure class="p-top-media__img">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-overview.jpg" alt="">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-overview2.jpg" alt="">
         </figure>
         <div class="p-top-media__item">
-          <h3 class="p-top-media__title p-top-media__title--overview">メインタイトルが入ります。</h3>
-          <p class="p-top-media__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+          <h3 class="p-top-media__title p-top-media__title--overview">管理のしやすいコーディングをいたします</h3>
+          <p class="p-top-media__text">BEMやFLOCSSなどの設計手法を用いて、予測・再利用・保守・拡張のしやすいCSS設計でコーディングをいたします。どのデバイスにおいても表示崩れを起こさず、また修正も容易に対応いたします。</p>
           <div class="p-top-media__btn">
             <a href="<?php echo $overview ?>" class="c-btn-more">詳しく見る</a>
           </div>
