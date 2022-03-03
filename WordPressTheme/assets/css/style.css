@@ -1952,7 +1952,7 @@ summary {
 }
 
 .p-page-content-mv {
-	background-image: url(../img/page-content/page-content-mv-sp.jpg);
+	background-image: url(../img/page-content/page-content-mv-sp2.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -1966,6 +1966,7 @@ summary {
 .p-page-content__head {
 	margin: 0 auto;
 	max-width: 35.5rem;
+	text-align: center;
 	width: 100%;
 }
 
@@ -1975,7 +1976,6 @@ summary {
 	font-size: 1.25rem;
 	font-weight: 300;
 	letter-spacing: 0.125rem;
-	text-align: center;
 }
 
 .p-page-content__text {
@@ -2000,7 +2000,7 @@ summary {
 }
 
 .p-page-overview-mv {
-	background-image: url(../img/page-overview/page-overview-mv-sp.jpg);
+	background-image: url(../img/page-overview/page-overview-mv-sp2.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -3425,7 +3425,7 @@ html {
 }
 
 .p-page-content-mv {
-	background-image: url(../img/page-content/page-content-mv-pc.jpg);
+	background-image: url(../img/page-content/page-content-mv-pc2.jpg);
 }
 
 .p-page-content-top {
@@ -3458,7 +3458,7 @@ html {
 }
 
 .p-page-overview-mv {
-	background-image: url(../img/page-overview/page-overview-mv-pc.jpg);
+	background-image: url(../img/page-overview/page-overview-mv-pc2.jpg);
 }
 
 .p-page-overview__info {

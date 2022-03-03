@@ -16,6 +16,7 @@
   width: 100%;
   max-width: rem(568);
   margin: 0 auto;
+  text-align: center;
 }
 
 
@@ -25,7 +26,6 @@
   font-weight: $regular;
   letter-spacing: rem(2);
   color: $white;
-  text-align: center;
 
   @include mq("tab"){
     font-size: rem(25);
