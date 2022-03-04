@@ -1061,46 +1061,71 @@ summary {
 	text-align: center;
 }
 
-.c-wp-pagenavi--yellow a,
-.c-wp-pagenavi--yellow span {
+.c-wp-pagenavi--yellow span.current {
+	background-color: #F9F871;
+	border: 0.0625rem solid #F9F871;
+	color: #333;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	margin: 0 0.5rem;
+}
+
+.c-wp-pagenavi--yellow a.page {
 	background-color: transparent;
 	border: 0.0625rem solid #fff;
 	color: #fff;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
-	margin-left: 1rem;
+	margin: 0 0.5rem;
+	padding: 0 0.5rem;
 	position: relative;
 	text-transform: uppercase;
 	transition: 0.3s;
 	z-index: 0;
 }
 
-.c-wp-pagenavi--yellow a:hover,
-.c-wp-pagenavi--yellow a:focus,
-.c-wp-pagenavi--yellow span:hover,
-.c-wp-pagenavi--yellow span:focus {
+.c-wp-pagenavi--yellow a.page:hover,
+.c-wp-pagenavi--yellow a.page:focus {
 	background-color: #F9F871;
 	border: 0.0625rem solid #F9F871;
 	color: #333;
 }
 
-.c-wp-pagenavi--yellow span.current {
-	background-color: #fff;
+.c-wp-pagenavi--yellow a.previouspostslink,
+.c-wp-pagenavi--yellow a.nextpostslink {
+	background-color: transparent;
+	border: 0.0625rem solid #fff;
+	color: #fff;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	padding: 0 0.8125rem;
+	position: relative;
+	text-transform: uppercase;
+	transition: 0.3s;
+	z-index: 0;
+}
+
+.c-wp-pagenavi--yellow a.previouspostslink:hover,
+.c-wp-pagenavi--yellow a.previouspostslink:focus,
+.c-wp-pagenavi--yellow a.nextpostslink:hover,
+.c-wp-pagenavi--yellow a.nextpostslink:focus {
+	background-color: #F9F871;
+	border: 0.0625rem solid #F9F871;
 	color: #333;
 }
 
-.c-wp-pagenavi--yellow a.previouspostslink,
+.c-wp-pagenavi--yellow a.previouspostslink {
+	margin-right: 1rem;
+}
+
 .c-wp-pagenavi--yellow a.nextpostslink {
-	margin: 0 1.5rem;
-	padding: 0 0.8125rem;
+	margin-left: 1rem;
 }
 
-.c-wp-pagenavi--yellow a.page {
-	padding: 0 0.5rem;
-}
-
-.c-wp-pagenavi--yellow span.current {
+.c-wp-pagenavi--yellow .current {
 	padding: 0 0.5rem;
 }
 
@@ -1109,60 +1134,83 @@ summary {
 	text-align: center;
 }
 
-.c-wp-pagenavi a,
-.c-wp-pagenavi span {
+.c-wp-pagenavi span.current {
+	background-color: #fff;
+	border: 0.0625rem solid #fff;
+	color: #333;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	margin-left: 1rem;
+	padding: 0 0.5rem;
+}
+
+.c-wp-pagenavi a.page {
 	background-color: transparent;
 	border: 0.0625rem solid #fff;
 	color: #fff;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
-	margin-left: 1rem;
+	margin: 0 0.5rem;
+	padding: 0 0.5rem;
 	position: relative;
 	text-transform: uppercase;
 	transition: 0.3s;
 	z-index: 0;
 }
 
-.c-wp-pagenavi a:hover,
-.c-wp-pagenavi a:focus,
-.c-wp-pagenavi span:hover,
-.c-wp-pagenavi span:focus {
+.c-wp-pagenavi a.page:hover,
+.c-wp-pagenavi a.page:focus {
 	background-color: #fff;
 	border: 0.0625rem solid #fff;
 	color: #333;
-}
-
-.c-wp-pagenavi span.current {
-	background-color: #fff;
-	border: 0.0625rem solid #fff;
-	color: #333;
-}
-
-.c-wp-pagenavi a.page {
-	padding: 0 0.5rem;
-}
-
-.c-wp-pagenavi span.current {
-	padding: 0 0.5rem;
 }
 
 .c-wp-pagenavi a.previouspostslink,
-.c-wp-pagenavi a.nextpostslink {
+.c-wp-pagenavi a.nextpostslink,
+.c-wp-pagenavi .archive-btn {
+	background-color: transparent;
+	border: 0.0625rem solid #fff;
+	color: #fff;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
 	padding: 0 0.8125rem;
+	position: relative;
+	text-transform: uppercase;
+	transition: 0.3s;
+	width: 4.4375rem;
+	z-index: 0;
+}
+
+.c-wp-pagenavi a.previouspostslink:hover,
+.c-wp-pagenavi a.previouspostslink:focus,
+.c-wp-pagenavi a.nextpostslink:hover,
+.c-wp-pagenavi a.nextpostslink:focus,
+.c-wp-pagenavi .archive-btn:hover,
+.c-wp-pagenavi .archive-btn:focus {
+	background-color: #fff;
+	border: 0.0625rem solid #fff;
+	color: #333;
 }
 
 .c-wp-pagenavi a.previouspostslink {
-	margin: 0 1.5rem 0 0;
+	margin-right: 1rem;
 }
 
 .c-wp-pagenavi a.nextpostslink {
-	margin: 0 0 0 1.5rem;
+	margin-left: 1rem;
 }
 
-.c-wp-pagenavi a.archive {
-	margin: 0 1.5rem;
-	padding: 0 1.125rem;
+.c-wp-pagenavi .archive-btn {
+	margin: 0 2rem;
+}
+
+.archive-btn a {
+	display: block;
+	height: inherit;
+	width: 100%;
 }
 
 .p-page-404__wrapper {
@@ -3078,12 +3126,6 @@ html {
 .c-test {
 	color: green;
 	font-size: 3.125rem;
-}
-
-.c-wp-pagenavi--yellow span.current {
-	background-color: #F9F871;
-	border: 0.0625rem solid #F9F871;
-	color: #333;
 }
 
 .p-page-404__wrapper {

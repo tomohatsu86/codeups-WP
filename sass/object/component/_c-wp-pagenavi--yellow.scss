@@ -3,8 +3,19 @@
 	text-align:center;
 }
 
-.c-wp-pagenavi--yellow a,
-.c-wp-pagenavi--yellow span{
+
+.c-wp-pagenavi--yellow span.current{
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+  background-color: #F9F871;
+  border: rem(1) solid #F9F871;
+  color: $black;
+  margin: 0 rem(8);
+}
+
+
+.c-wp-pagenavi--yellow a.page{
   background-color: transparent;
   border: rem(1) solid $white;
   font-family: $base-font-family;
@@ -15,45 +26,49 @@
   transition: 0.3s;
   position: relative;
   z-index: 0;
-  margin-left: rem(16);
+  margin: 0 rem(8);
+  padding: 0 rem(8);
 }
-
-.c-wp-pagenavi--yellow a:hover,
-.c-wp-pagenavi--yellow a:focus,
-.c-wp-pagenavi--yellow span:hover,
-.c-wp-pagenavi--yellow span:focus{
+.c-wp-pagenavi--yellow a.page:hover,
+.c-wp-pagenavi--yellow a.page:focus{
   background-color: #F9F871;
   color: $black;
   border: rem(1) solid #F9F871;
 }
 
-.c-wp-pagenavi--yellow span.current{
-  background-color: $white;
-  color: $black;
-
-  @include mq("tab"){
-    background-color: #F9F871;
-    color: $black;
-    border: rem(1) solid #F9F871;
-  }
-}
 
 .c-wp-pagenavi--yellow a.previouspostslink,
 .c-wp-pagenavi--yellow a.nextpostslink{
+  background-color: transparent;
+  border: rem(1) solid $white;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+  color: $white;
+  text-transform: uppercase;
+  transition: 0.3s;
+  position: relative;
+  z-index: 0;
   padding: 0 rem(13);
-  margin: 0 rem(24);
+}
+.c-wp-pagenavi--yellow a.previouspostslink:hover,
+.c-wp-pagenavi--yellow a.previouspostslink:focus,
+.c-wp-pagenavi--yellow a.nextpostslink:hover,
+.c-wp-pagenavi--yellow a.nextpostslink:focus{
+  background-color: #F9F871;
+  color: $black;
+  border: rem(1) solid #F9F871;
 }
 
-.c-wp-pagenavi--yellow a.page{
+.c-wp-pagenavi--yellow a.previouspostslink{
+  margin-right: rem(16);
+}
+
+.c-wp-pagenavi--yellow a.nextpostslink{
+  margin-left: rem(16);
+}
+
+.c-wp-pagenavi--yellow .current{
   padding: 0 rem(8);
 }
-
-.c-wp-pagenavi--yellow span.current{
-  padding: 0 rem(8);
-}
-
-// .page + .page{
-//   margin-left: rem(16);
-// }
-
 

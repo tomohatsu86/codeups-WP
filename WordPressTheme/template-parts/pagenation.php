@@ -11,19 +11,19 @@
       <?php if (get_previous_post()): ?>
         <?php previous_post_link('%link', 'prev'); ?>
       <?php endif; ?>
-      <div class="archive">
+      <div class="archive-btn">
         <?php if (is_singular( array( 'blog', 'works' )) ): ?>
           <?php $custom_slug = get_query_var('post_type');?>
-          <a href="<?php echo esc_url( home_url('/'). $custom_slug .'/' ); ?>" class="archive">一覧</a>
+          <a href="<?php echo esc_url( home_url('/'). $custom_slug .'/' ); ?>">一覧</a>
           <?php else: ?>
             <?php 
               $post_cat = get_the_category();
               $post_slug  = $post_cat[0]->slug;
             ?>
             <?php if( $post_slug === 'uncategorized' ) : ?>
-              <a id ="aaa" href="<?php echo esc_url( home_url( '/news/' ) ); ?>" class="archive">一覧</a>
+            <a href="<?php echo esc_url( home_url( '/news/' ) ); ?>">一覧</a>
             <?php else: ?>
-            <a id ="aaa" href="<?php echo esc_url( home_url('/'). $post_slug .'/' ); ?>" class="archive">一覧</a>
+            <a href="<?php echo esc_url( home_url('/'). $post_slug .'/' ); ?>">一覧</a>
             <?php endif; ?>
             
         <?php endif; ?>
