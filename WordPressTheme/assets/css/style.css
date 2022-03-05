@@ -1105,6 +1105,7 @@ summary {
 	position: relative;
 	text-transform: uppercase;
 	transition: 0.3s;
+	width: 4.4375rem;
 	z-index: 0;
 }
 
@@ -1141,7 +1142,7 @@ summary {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
-	margin-left: 1rem;
+	margin: 0 0.5rem;
 	padding: 0 0.5rem;
 }
 
@@ -1176,7 +1177,7 @@ summary {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
-	padding: 0;
+	padding: 0 0.8125rem;
 	position: relative;
 	text-transform: uppercase;
 	transition: 0.3s;

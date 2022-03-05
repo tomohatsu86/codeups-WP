@@ -1,29 +1,23 @@
 // ローディング判定
-jQuery(function ($) {
+(function ($) {
 
-jQuery(window).on("load", function() {
-	jQuery("body").attr("data-loading", "true");
+$(window).on("load", function() {
+	$("body").attr("data-loading", "true");
 });
 
-jQuery(function() {
-	// スクロール判定
-	jQuery(window).on("scroll", function() {
-		if (100 < jQuery(this).scrollTop()) {
-			jQuery("body").attr("data-scroll", "true");
-		} else {
-			jQuery("body").attr("data-scroll", "false");
-		}
-	});
-
-	/* ドロワー */
-	// jQuery(".js-drawer").on("click", function(e) {
-	// 	e.preventDefault();
-	// 	let targetClass = jQuery(this).attr("data-target");
-	// 	jQuery("." + targetClass).toggleClass("is-checked");
-	// 	return false;
+// スクロール判定
+$(function() {
+	// $(window).on("scroll", function() {
+	// 	if (100 < $(this).scrollTop()) {
+	// 		$("body").attr("data-scroll", "true");
+	// 	} else {
+	// 		$("body").attr("data-scroll", "false");
+	// 	}
 	// });
+});
 
-	
+// ドロワーメニューアイコンをクリックしたらメニューを開く・閉じる
+$(function() {
   $(".js-drawer").on('click',function () {
     if($('.js-drawer').hasClass('is-open')){
       $('.js-drawer-menu').fadeOut(300);
@@ -35,9 +29,10 @@ jQuery(function() {
       $("html").addClass("is-fixed");
     }
   });
+});
 
-	
-	// ドロワーメニュー内のリンクをクリックしたらメニューを閉じる
+// ドロワーメニュー内のリンクをクリックしたらメニューを閉じる
+$(function() {
 	$(".drawer-nav-link").on("click", function() {
 	let $screenwidth = $(window).width();
 	let $breakpoint_md = 768;
@@ -56,22 +51,24 @@ jQuery(function() {
 		// $("html").toggleClass("is-fixed");
 	}
 	});
+});
 
-	/* スムーススクロール */
-	jQuery('a[href^="#"]').click(function() {
-		let header = jQuery(".js-header").height();
+/* スムーススクロール */
+$(function() {
+	$('a[href^="#"]').click(function() {
+		let header = $(".js-header").height();
 		let speed = 300;
-		let id = jQuery(this).attr("href");
-		let target = jQuery("#" == id ? "html" : id);
-		let position = jQuery(target).offset().top - header;
+		let id = $(this).attr("href");
+		let target = $("#" == id ? "html" : id);
+		let position = $(target).offset().top - header;
 
-		if ("fixed" !== jQuery("#header").css("position")) {
-			position = jQuery(target).offset().top;
+		if ("fixed" !== $("#header").css("position")) {
+			position = $(target).offset().top;
 		}
 		if (0 > position) {
 			position = 0;
 		}
-		jQuery("html, body").animate(
+		$("html, body").animate(
 			{
 				scrollTop: position
 			},
@@ -102,7 +99,6 @@ jQuery(function() {
 	// 			e.preventDefault();
 	// 	});
 	// }
-
 });
 
 jQuery(function() {
@@ -203,9 +199,7 @@ jQuery(function() {
 	//---------------------------------------
 });
 
-//---------------------------------------
 //アーカイブページのタブの切り替えCSSあてる
-//---------------------------------------
 $(function(){
 	$('.js-category-list li a').each(function(){
 			var $href = $(this).attr('href');
@@ -216,14 +210,11 @@ $(function(){
 			}
 	});
 });
-//---------------------------------------
 
-//---------------------------------------
 //MW WP formのエラー項目にCSSを追加して背景色を付ける
-//---------------------------------------
 $(function(){
 // errorクラスのspan要素を持つ親p要素にerror-pinkクラスを適用
 	$(".p-form__input:has('span.error')").addClass("error-pink");
 });
 
-});
+})(jQuery);
