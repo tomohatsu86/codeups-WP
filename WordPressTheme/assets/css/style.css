@@ -776,6 +776,7 @@ summary {
 .c-btn-submit {
 	background-color: #fff;
 	border: 0.0625rem solid #fff;
+	border-radius: 0;
 	color: #333;
 	display: inline-block;
 	font-family: "Noto Sans JP", sans-serif;
@@ -1058,7 +1059,15 @@ summary {
 
 .c-wp-pagenavi--yellow {
 	clear: both;
+	height: 1.5rem;
 	text-align: center;
+}
+
+.c-wp-pagenavi--yellow a,
+.c-wp-pagenavi--yellow span {
+	display: inline-block;
+	line-height: 1.0;
+	margin: 0;
 }
 
 .c-wp-pagenavi--yellow span.current {
@@ -1068,7 +1077,9 @@ summary {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
+	height: inherit;
 	margin: 0 0.5rem;
+	width: 1.5rem;
 }
 
 .c-wp-pagenavi--yellow a.page {
@@ -1078,12 +1089,11 @@ summary {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
+	height: inherit;
 	margin: 0 0.5rem;
-	padding: 0 0.5rem;
-	position: relative;
 	text-transform: uppercase;
 	transition: 0.3s;
-	z-index: 0;
+	width: 1.5rem;
 }
 
 .c-wp-pagenavi--yellow a.page:hover,
@@ -1101,12 +1111,11 @@ summary {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
-	padding: 0 0.8125rem;
-	position: relative;
+	height: inherit;
+	padding: 0.1875rem 0;
 	text-transform: uppercase;
 	transition: 0.3s;
 	width: 4.4375rem;
-	z-index: 0;
 }
 
 .c-wp-pagenavi--yellow a.previouspostslink:hover,
@@ -1126,21 +1135,19 @@ summary {
 	margin-left: 1rem;
 }
 
-.c-wp-pagenavi--yellow .current {
-	padding: 0 0.5rem;
-}
-
 .wp-pagenavi {
 	height: 1.5rem;
 }
 
 .c-wp-pagenavi {
 	clear: both;
+	height: 1.5rem;
 	text-align: center;
 }
 
 .c-wp-pagenavi a,
 .c-wp-pagenavi span {
+	display: inline-block;
 	line-height: 1.0;
 	margin: 0;
 }
@@ -1152,8 +1159,9 @@ summary {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
+	height: inherit;
 	margin: 0 0.5rem;
-	padding: 0 0.5rem;
+	width: 1.5rem;
 }
 
 .c-wp-pagenavi a.page {
@@ -1163,12 +1171,11 @@ summary {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
+	height: inherit;
 	margin: 0 0.5rem;
-	padding: 0 0.5rem;
-	position: relative;
 	text-transform: uppercase;
 	transition: 0.3s;
-	z-index: 0;
+	width: 1.5rem;
 }
 
 .c-wp-pagenavi a.page:hover,
@@ -1180,27 +1187,27 @@ summary {
 
 .c-wp-pagenavi a.previouspostslink,
 .c-wp-pagenavi a.nextpostslink,
-.c-wp-pagenavi .archive-btn {
+.c-wp-pagenavi a.archive-btn {
 	background-color: transparent;
 	border: 0.0625rem solid #fff;
 	color: #fff;
+	display: inline-block;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
-	padding: 0rem 0.8125rem;
-	position: relative;
+	height: inherit;
+	padding: 0.1875rem 0;
 	text-transform: uppercase;
 	transition: 0.3s;
 	width: 4.4375rem;
-	z-index: 0;
 }
 
 .c-wp-pagenavi a.previouspostslink:hover,
 .c-wp-pagenavi a.previouspostslink:focus,
 .c-wp-pagenavi a.nextpostslink:hover,
 .c-wp-pagenavi a.nextpostslink:focus,
-.c-wp-pagenavi .archive-btn:hover,
-.c-wp-pagenavi .archive-btn:focus {
+.c-wp-pagenavi a.archive-btn:hover,
+.c-wp-pagenavi a.archive-btn:focus {
 	background-color: #fff;
 	border: 0.0625rem solid #fff;
 	color: #333;
@@ -1214,14 +1221,8 @@ summary {
 	margin-left: 1rem;
 }
 
-.c-wp-pagenavi .archive-btn {
+.c-wp-pagenavi a.archive-btn {
 	margin: 0 2rem;
-}
-
-.archive-btn a {
-	display: block;
-	height: inherit;
-	width: 100%;
 }
 
 .p-page-404__wrapper {
@@ -1252,8 +1253,8 @@ summary {
 }
 
 .p-archive-blog-mv {
-	background-image: url(../img/archive-blog/archive-blog-mv-sp.jpg);
-	background-position: center;
+	background-image: url(../img/archive-blog/archive-blog-mv-sp2.jpg);
+	background-position: bottom 40% left 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
@@ -1268,8 +1269,8 @@ summary {
 }
 
 .p-archive-news-mv {
-	background-image: url(../img/archive-news/archive-news-mv-sp.jpg);
-	background-position: center;
+	background-image: url(../img/archive-news/archive-news-mv-sp2.jpg);
+	background-position: bottom 20% left 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
@@ -1288,8 +1289,8 @@ summary {
 }
 
 .p-archive-works-mv {
-	background-image: url(../img/archive-works/archive-works-mv-sp.jpg);
-	background-position: center;
+	background-image: url(../img/archive-works/archive-works-mv-sp2.jpg);
+	background-position: bottom 30% left 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
@@ -3150,7 +3151,7 @@ html {
 }
 
 .p-archive-blog-mv {
-	background-image: url(../img/archive-blog/archive-blog-mv-pc.jpg);
+	background-image: url(../img/archive-blog/archive-blog-mv-pc2.jpg);
 }
 
 .p-archive-blog__contents {
@@ -3162,7 +3163,7 @@ html {
 }
 
 .p-archive-news-mv {
-	background-image: url(../img/archive-news/archive-news-mv-pc.jpg);
+	background-image: url(../img/archive-news/archive-news-mv-pc2.jpg);
 }
 
 .p-archive-news__inner {
@@ -3170,7 +3171,7 @@ html {
 }
 
 .p-archive-works-mv {
-	background-image: url(../img/archive-works/archive-works-mv-pc.jpg);
+	background-image: url(../img/archive-works/archive-works-mv-pc2.jpg);
 }
 
 .p-archive-works__contents {

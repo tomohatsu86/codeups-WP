@@ -127,10 +127,10 @@ $(function() {
 	// }
 });
 
+/* swiper */
 $(function() {
-	//---------------------------------------
+
 	//トップページファーストビューのswiper
-	//---------------------------------------
 	let mvSwipeOption = {
 		loop: true,
 		effect: 'fade',
@@ -146,11 +146,7 @@ $(function() {
 	}
 	new Swiper('.p-mv-swiper', mvSwipeOption);
 
-	//---------------------------------------
-
-	//---------------------------------------
 	//トップページワークスのswiper
-	//---------------------------------------
 	let worksSwipeOption = {
 		loop: true,
 		effect: 'slide',
@@ -165,12 +161,8 @@ $(function() {
 		}
 	}
 	new Swiper('.p-top-works__swiper', worksSwipeOption);
-	//---------------------------------------
 
-
-	//---------------------------------------
 	//制作実績詳細ページのサムネイルswiper
-	//---------------------------------------
 	var contents = $(".js-single-works__slider .swiper-slide").length;
 	var thumbs = new Swiper('.js-single-works__thumbs', {
 		slidesPerView: 2,
@@ -199,11 +191,8 @@ $(function() {
 		},
 		
 	});
-	//---------------------------------------
 
-	//---------------------------------------
 	//制作実績詳細ページのメインswiper
-	//---------------------------------------
 	var slider = new Swiper('.js-single-works__slider', {
 		slidesPerView: 1,
 		centeredSlides: true,
@@ -222,7 +211,6 @@ $(function() {
 		slider.controller.control = thumbs;
 		thumbs.controller.control = slider;
 
-	//---------------------------------------
 });
 
 //アーカイブページのタブの切り替えCSSあてる
