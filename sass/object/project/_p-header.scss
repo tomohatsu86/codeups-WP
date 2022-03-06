@@ -1,12 +1,12 @@
 .p-header{
   width: 100%;
   height: rem(50);
-  background-color: #111;
+  background-color: rgba(17, 17, 17, 0.5);
   
 }
 
-.p-header.bg-opacity{
-  background-color: rgba(17, 17, 17, 0.5);
+.p-header.no-opacity{
+  background-color: #111;
 }
 
 .p-header__inner{

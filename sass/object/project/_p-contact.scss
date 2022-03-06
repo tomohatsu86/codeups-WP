@@ -32,20 +32,20 @@
   font-family: $base-font-family;
   font-size: rem(16);
   font-weight: $regular;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.05em;
   line-height: 1.5;
   color: $white;
-  text-align: start;
+  text-align: center;
   margin-top: rem(13);
   
   @include mq("tab"){
     margin-top: rem(16);
-    text-align: center;
   }
 }
 
 .p-contact__btn{
   margin-top: rem(44);
+  letter-spacing: 0.15em;
   text-align: center;
 
   @include mq("tab"){

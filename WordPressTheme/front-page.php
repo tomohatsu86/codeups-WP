@@ -204,7 +204,7 @@ $contact = esc_url( home_url( '/contact/' ) );
           <img src="<?php echo get_template_directory_uri() ?>/assets/img/top/top-overview2.jpg" alt="">
         </figure>
         <div class="p-top-media__item">
-          <h3 class="p-top-media__title p-top-media__title--overview">管理のしやすいコーディングをいたします</h3>
+          <h3 class="p-top-media__title p-top-media__title--overview">管理のしやすい<br class="u-mobile">コーディングをいたします</h3>
           <p class="p-top-media__text">BEMやFLOCSSなどの設計手法を用いて、予測・再利用・保守・拡張のしやすいCSS設計でコーディングをいたします。どのデバイスにおいても表示崩れを起こさず、また修正も容易に対応いたします。</p>
           <div class="p-top-media__btn">
             <a href="<?php echo $overview ?>" class="c-btn-more">詳しく見る</a>

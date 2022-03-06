@@ -5,7 +5,7 @@
       <h2 class="p-section-head__title-ja">お問い合わせ</h2>
     </div>
     <div class="p-contact__content">
-      <p>気になることがございましたら、下記より気軽にお問い合わせください。</p>
+      <p>気になることがございましたら、<br class="u-mobile">下記より気軽にお問い合わせください。</p>
     </div>
     <div class="p-contact__btn">
       <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="c-btn-contact">お問い合わせへ</a>

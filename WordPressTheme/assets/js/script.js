@@ -53,6 +53,32 @@ $(function() {
 	});
 });
 
+/* トップページのヘッダーの透過 */
+$(function(){
+
+  var topmvHeight = $('.p-mv').outerHeight();//トップのmvの画像の高さを取得
+	var undermvHeight = $('.p-underlayer-mv').outerHeight();//下層ページのmvの高さを取得
+
+  //スクロールしたら、ヘッダーの透過が変わる
+  $(window).on('load scroll', function(){
+		if (undermvHeight === undefined){
+			
+			if ($(window).scrollTop() < topmvHeight -50){
+				$('.js-header').removeClass('no-opacity');
+			}else{
+				$('.js-header').addClass('no-opacity');
+			}
+		}else{
+			if ($(window).scrollTop() < undermvHeight -50){
+				$('.js-header').removeClass('no-opacity');
+			}else{
+				$('.js-header').addClass('no-opacity');
+			}
+		}
+
+	});
+});
+
 /* スムーススクロール */
 $(function() {
 	$('a[href^="#"]').click(function() {
@@ -101,7 +127,7 @@ $(function() {
 	// }
 });
 
-jQuery(function() {
+$(function() {
 	//---------------------------------------
 	//トップページファーストビューのswiper
 	//---------------------------------------
