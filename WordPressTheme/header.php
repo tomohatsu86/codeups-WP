@@ -1,10 +1,93 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-<head>
+<head prefix="og: http://ogp.me/ns#">
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <?php
+  if( is_single() && !is_home() || is_page() && !is_front_page()) {
+  //タイトル
+  $title = get_the_title();
+  //ディスクリプション
+  if(!empty($post->post_excerpt)) {
+    $description = str_replace(array("\r\n", "\r", "\n", "&nbsp;"), '', strip_tags($post->post_excerpt));
+  } elseif(!empty($post->post_content)) {
+    $description = str_replace(array("\r\n", "\r", "\n", "&nbsp;"), '', strip_tags($post->post_content));
+    $description_count = mb_strlen($description, 'utf8');
+    if($description_count > 120) {
+      $description = mb_substr($description, 0, 120, 'utf8').'…';
+    }
+  } else {
+    $description = '';
+  }
+  //ページタイプ
+  $page_type = 'article';
+  //ページURL
+  $page_url = get_the_permalink();
+  //OGP用画像
+  if(!empty(get_post_thumbnail_id())) {
+    $ogp_img_data = wp_get_attachment_image_src(get_post_thumbnail_id(),'full');
+    $ogp_img = $ogp_img_data[0];
+  }
+  }else { //ループのページ(home・カテゴリー・タグなど)
+  //先に投稿・固定ページ以外の詳細な条件分岐
+  if(is_category()) {
+    $title = single_cat_title("", false).'の記事一覧';
+    if(!empty(category_description())) {
+      $description = strip_tags(category_description());
+    } else {
+      $description = 'カテゴリー『'.single_cat_title("", false).'』の記事一覧ページです。';
+    }
+  }elseif(is_tag()) {
+    $title = single_cat_title("", false).'の記事一覧';
+    if(!empty(tag_description())) {
+      $description = strip_tags(tag_description());
+    } else {
+      $description = 'タグ『'.single_cat_title("", false).'』の記事一覧ページです。';
+    }
+  }else {
+    $title = '';
+    $description = get_bloginfo( 'description' );
+  }
+  //ページタイプ
+  $page_type = 'website';
+  //ページURL
+  $http = is_ssl() ? 'https'.'://' : 'http'.'://';
+  $page_url = $http.$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];
+  }
+  //OGP用画像
+  if(empty($ogp_img)) {
+    $ogp_img = get_template_directory_uri().'/assets/img/top/top-mv8.jpg';//サイト全てに共通の画像へのパス
+  }
+  //タイトル
+  if(!empty($title)) {
+    $output_title = $title.' | '.get_bloginfo('name');
+  } else {
+    $title = get_bloginfo('name');
+    $output_title = get_bloginfo('name');
+  }
+  ?>
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><?php echo $output_title; ?></title>
+  <!-- SEO系 -->
+  <meta name="description" content="<?php echo $description; ?>">
+  <meta name="keywords" content="" />
+  <!-- OGP -->
+  <meta property="og:title" content="<?php echo $title; ?>">
+  <meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>">
+  <meta property="og:description" content="<?php echo $description; ?>">
+  <meta property="og:type" content="<?php echo $page_type; ?>">
+  <meta property="og:url" content="<?php echo $page_url; ?>">
+  <meta property="og:image" content="<?php echo $ogp_img; ?>">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@tomohatsuchi86">
+  <meta name="format-detection" content="telephone=no">
+  <!-- タッチアイコン -->
+  <link rel="apple-touch-icon" sizes="192x192" href="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo/apple-touch-icon.png">
+  <link rel="icon" type="image/png" size="256x256" href="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo/android-chrome.png">
+  <link rel="shortcut icon" sizes="192x192" href="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo/favicon.ico">
+  <!-- ファビコン -->
+  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo/favicon.ico" />  
   <meta name=”robots” content=”noindex”>
   <?php wp_head(); ?>
 </head>
